@@ -127,7 +127,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Employees\Cashier.cpp" />
+    <ClCompile Include="Employees\catch_config.cpp" />
+    <ClCompile Include="Employees\Employee.cpp" />
+    <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp" />
+    <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp" />
+    <ClCompile Include="Employees\main.cpp" />
+    <ClCompile Include="Employees\Manager.cpp" />
+    <ClCompile Include="Employees\Register.cpp" />
+    <ClCompile Include="Employees\SalaryError.cpp" />
+    <ClCompile Include="Employees\SecurityGuard.cpp" />
+    <ClCompile Include="Employees\tests.cpp" />
+    <ClCompile Include="Employees\Warehouseman.cpp" />
+    <ClCompile Include="Employees\WorkingHoursError.cpp" />
     <ClCompile Include="Supermarket.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Employees\Cashier.h" />
+    <ClInclude Include="Employees\catch.hpp" />
+    <ClInclude Include="Employees\Employee.h" />
+    <ClInclude Include="Employees\EmployeeAlreadyExistsException.h" />
+    <ClInclude Include="Employees\EmployeeDoesNotExistException.h" />
+    <ClInclude Include="Employees\Manager.h" />
+    <ClInclude Include="Employees\Register.h" />
+    <ClInclude Include="Employees\SalaryError.h" />
+    <ClInclude Include="Employees\SecurityGuard.h" />
+    <ClInclude Include="Employees\Warehouseman.h" />
+    <ClInclude Include="Employees\WorkingHoursError.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
