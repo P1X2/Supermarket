@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
@@ -13,84 +9,163 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files\EMP">
+      <UniqueIdentifier>{e1e14887-476a-4fc0-98c7-ae25b31f8fc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PRD">
+      <UniqueIdentifier>{b39070cc-c5a7-43c5-a2ee-1285b08a669f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PRD">
+      <UniqueIdentifier>{e1de8694-4fcb-4958-93b6-131ca1c32e70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EMP">
+      <UniqueIdentifier>{08838b6b-8b5b-4e3f-b596-8816ae774fa2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Supermarket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="products\BarcodeNotUniqueException.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
     <ClCompile Include="Employees\Cashier.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\EMP</Filter>
     </ClCompile>
-    <ClCompile Include="Employees\WorkingHoursError.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\Warehouseman.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\tests.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\SecurityGuard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\SalaryError.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\Register.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\Manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="products\DataBase.cpp">
+      <Filter>Source Files\PRD</Filter>
     </ClCompile>
     <ClCompile Include="Employees\Employee.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\EMP</Filter>
     </ClCompile>
-    <ClCompile Include="Employees\catch_config.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Friut.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Juice.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\Manager.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Meat.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="products\NegativeCaloriesException.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="products\NegativePriceException.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Product.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="products\ProductNotFoundException.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\Register.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\SalaryError.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\SecurityGuard.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\testEMP.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="products\testPRD.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\Warehouseman.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Whiskey.cpp">
+      <Filter>Source Files\PRD</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\WorkingHoursError.cpp">
+      <Filter>Source Files\EMP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employees\WorkingHoursError.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Employees\Warehouseman.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Employees\SecurityGuard.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\EMP</Filter>
     </ClInclude>
     <ClInclude Include="Employees\SalaryError.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Employees\Register.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Employees\Manager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\EMP</Filter>
     </ClInclude>
     <ClInclude Include="Employees\EmployeeDoesNotExistException.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\EMP</Filter>
     </ClInclude>
-    <ClInclude Include="Employees\EmployeeAlreadyExistsException.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Employees\SecurityGuard.h">
+      <Filter>Header Files\EMP</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Register.h">
+      <Filter>Header Files\EMP</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Warehouseman.h">
+      <Filter>Header Files\EMP</Filter>
     </ClInclude>
     <ClInclude Include="Employees\Employee.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\EMP</Filter>
     </ClInclude>
     <ClInclude Include="Employees\catch.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\EMP</Filter>
     </ClInclude>
     <ClInclude Include="Employees\Cashier.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\EMP</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Manager.h">
+      <Filter>Header Files\EMP</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\EmployeeAlreadyExistsException.h">
+      <Filter>Header Files\EMP</Filter>
+    </ClInclude>
+    <ClInclude Include="products\BarcodeNotUniqueException.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\catch.hpp">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\DataBase.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Friut.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Juice.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Meat.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\NegativeCaloriesException.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\NegativePriceException.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Product.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\ProductNotFoundException.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\UI.h">
+      <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Whiskey.h">
+      <Filter>Header Files\PRD</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

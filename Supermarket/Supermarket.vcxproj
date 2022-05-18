@@ -128,18 +128,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Employees\Cashier.cpp" />
-    <ClCompile Include="Employees\catch_config.cpp" />
     <ClCompile Include="Employees\Employee.cpp" />
     <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp" />
     <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp" />
-    <ClCompile Include="Employees\main.cpp" />
     <ClCompile Include="Employees\Manager.cpp" />
     <ClCompile Include="Employees\Register.cpp" />
     <ClCompile Include="Employees\SalaryError.cpp" />
     <ClCompile Include="Employees\SecurityGuard.cpp" />
-    <ClCompile Include="Employees\tests.cpp" />
+    <ClCompile Include="Employees\testEMP.cpp" />
     <ClCompile Include="Employees\Warehouseman.cpp" />
     <ClCompile Include="Employees\WorkingHoursError.cpp" />
+    <ClCompile Include="products\BarcodeNotUniqueException.cpp" />
+    <ClCompile Include="products\DataBase.cpp" />
+    <ClCompile Include="products\Friut.cpp" />
+    <ClCompile Include="products\Juice.cpp" />
+    <ClCompile Include="products\Meat.cpp" />
+    <ClCompile Include="products\NegativeCaloriesException.cpp" />
+    <ClCompile Include="products\NegativePriceException.cpp" />
+    <ClCompile Include="products\Product.cpp" />
+    <ClCompile Include="products\ProductNotFoundException.cpp" />
+    <ClCompile Include="products\testPRD.cpp" />
+    <ClCompile Include="products\Whiskey.cpp" />
     <ClCompile Include="Supermarket.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +163,18 @@
     <ClInclude Include="Employees\SecurityGuard.h" />
     <ClInclude Include="Employees\Warehouseman.h" />
     <ClInclude Include="Employees\WorkingHoursError.h" />
+    <ClInclude Include="products\BarcodeNotUniqueException.h" />
+    <ClInclude Include="products\catch.hpp" />
+    <ClInclude Include="products\DataBase.h" />
+    <ClInclude Include="products\Friut.h" />
+    <ClInclude Include="products\Juice.h" />
+    <ClInclude Include="products\Meat.h" />
+    <ClInclude Include="products\NegativeCaloriesException.h" />
+    <ClInclude Include="products\NegativePriceException.h" />
+    <ClInclude Include="products\Product.h" />
+    <ClInclude Include="products\ProductNotFoundException.h" />
+    <ClInclude Include="products\UI.h" />
+    <ClInclude Include="products\Whiskey.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
