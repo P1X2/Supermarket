@@ -102,6 +102,9 @@
     <ClCompile Include="Supermarket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FileReadError.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employees\WorkingHoursError.h">
@@ -177,6 +180,9 @@
       <Filter>Header Files\EMP</Filter>
     </ClInclude>
     <ClInclude Include="Supermarket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReadError.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

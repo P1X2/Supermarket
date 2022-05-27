@@ -6,10 +6,11 @@
 #include "Employees/Register.h"
 #include "Employees/SecurityGuard.h"
 #include "Employees/Warehouseman.h"
+#include "FileReadError.h"
 
 class Supermarket
 {
-	Register Employees;
+	Register employees;
 
 public:
 	Supermarket();
