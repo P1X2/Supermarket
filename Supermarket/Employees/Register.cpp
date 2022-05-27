@@ -97,3 +97,11 @@ void Register::print_employees()
 		emp_ptr->print_employer();
 	}
 }
+
+void Register::pass_time_unit()
+{
+	for (const auto& emp_ptr : employees)
+	{
+		emp_ptr->set_busy(emp_ptr->get_busy() - 1);
+	}
+}

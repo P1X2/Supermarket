@@ -1,4 +1,4 @@
-
+/*
 #include "catch.hpp"
 #include "DataBase.h"
 #include "Friut.h"
@@ -124,3 +124,4 @@ TEST_CASE("Data base tests")
 		CHECK_THROWS(data.addWhiskey("Whiskey 1", 5000, 170, "Gorzelina Namus³ów", "12312445", 35));
 	}
 }
+*/

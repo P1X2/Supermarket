@@ -26,4 +26,5 @@ public:
 	bool in_register(int);
 	void remove_employee(int);
 	void print_employees();
+	void pass_time_unit();
 };

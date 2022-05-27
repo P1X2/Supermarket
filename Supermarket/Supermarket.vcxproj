@@ -138,6 +138,7 @@
     <ClCompile Include="Employees\testEMP.cpp" />
     <ClCompile Include="Employees\Warehouseman.cpp" />
     <ClCompile Include="Employees\WorkingHoursError.cpp" />
+    <ClCompile Include="Employees\Person.cpp" />
     <ClCompile Include="products\BarcodeNotUniqueException.cpp" />
     <ClCompile Include="products\DataBase.cpp" />
     <ClCompile Include="products\Friut.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="products\ProductNotFoundException.cpp" />
     <ClCompile Include="products\testPRD.cpp" />
     <ClCompile Include="products\Whiskey.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Supermarket.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +165,7 @@
     <ClInclude Include="Employees\SecurityGuard.h" />
     <ClInclude Include="Employees\Warehouseman.h" />
     <ClInclude Include="Employees\WorkingHoursError.h" />
+    <ClInclude Include="Employees\Person.h" />
     <ClInclude Include="products\BarcodeNotUniqueException.h" />
     <ClInclude Include="products\catch.hpp" />
     <ClInclude Include="products\DataBase.h" />
@@ -175,6 +178,7 @@
     <ClInclude Include="products\ProductNotFoundException.h" />
     <ClInclude Include="products\UI.h" />
     <ClInclude Include="products\Whiskey.h" />
+    <ClInclude Include="Supermarket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

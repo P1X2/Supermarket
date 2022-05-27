@@ -3,7 +3,8 @@
 #include "WorkingHoursError.h"
 using namespace std;
 
-Employee::Employee(string n, string sur, int h,int iden)
+Employee::Employee(string n, string sur, int h,int iden):
+	Person()
 {
 	name = n;
 	surname = sur;
