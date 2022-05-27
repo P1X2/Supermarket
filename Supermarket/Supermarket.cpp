@@ -71,3 +71,4 @@ void Supermarket::load_eployees(string path)
 			}
 		}
 	}
+}
