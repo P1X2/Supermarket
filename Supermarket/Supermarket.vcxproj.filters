@@ -43,6 +43,12 @@
     <Filter Include="Header Files\TESTS">
       <UniqueIdentifier>{8da510d7-d8a3-41b1-895d-27224100a489}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ITEMS">
+      <UniqueIdentifier>{6875c887-f789-4b35-aad8-bec57ff9e364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ITMES">
+      <UniqueIdentifier>{46f386e0-abdd-48f7-91c1-15cbbbae50a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -126,13 +132,19 @@
     <ClCompile Include="products\testPRD.cpp">
       <Filter>Source Files\TESTS</Filter>
     </ClCompile>
-    <ClCompile Include="CashRegister.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Checkout.cpp">
+      <Filter>Source Files\ITEMS</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductShelve.cpp">
+      <Filter>Source Files\ITEMS</Filter>
+    </ClCompile>
     <ClCompile Include="Adress.cpp">
+      <Filter>Source Files\ITEMS</Filter>
+    </ClCompile>
+    <ClCompile Include="Address.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -209,14 +221,17 @@
     <ClInclude Include="Employees\WorkingHoursError.h">
       <Filter>Header Files\ERRORS</Filter>
     </ClInclude>
-    <ClInclude Include="CashRegister.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Client.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Adress.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Checkout.h">
+      <Filter>Header Files\ITMES</Filter>
+    </ClInclude>
+    <ClInclude Include="Address.h">
+      <Filter>Header Files\ITMES</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductShelve.h">
+      <Filter>Header Files\ITMES</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

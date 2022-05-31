@@ -127,9 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Address.cpp" />
     <ClCompile Include="Adress.cpp" />
-    <ClCompile Include="CashRegister.cpp" />
+    <ClCompile Include="Checkout.cpp" />
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="ProductShelve.cpp" />
     <ClCompile Include="products\catch_config.cpp" />
     <ClCompile Include="Employees\Cashier.cpp" />
     <ClCompile Include="Employees\Employee.cpp" />
@@ -159,8 +161,8 @@
     <ClCompile Include="Supermarket.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Adress.h" />
-    <ClInclude Include="CashRegister.h" />
+    <ClInclude Include="Address.h" />
+    <ClInclude Include="Checkout.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Employees\Cashier.h" />
     <ClInclude Include="Employees\catch.hpp" />
@@ -175,6 +177,7 @@
     <ClInclude Include="Employees\WorkingHoursError.h" />
     <ClInclude Include="Employees\Person.h" />
     <ClInclude Include="FileReadError.h" />
+    <ClInclude Include="ProductShelve.h" />
     <ClInclude Include="products\BarcodeNotUniqueException.h" />
     <ClInclude Include="products\DataBase.h" />
     <ClInclude Include="products\Friut.h" />
