@@ -27,7 +27,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Supermarket.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="products\BarcodeNotUniqueException.cpp">
@@ -96,7 +96,13 @@
     <ClCompile Include="Employees\WorkingHoursError.cpp">
       <Filter>Source Files\EMP</Filter>
     </ClCompile>
-    <ClCompile Include="products\catch_config.cpp">
+    <ClCompile Include="Employees\Person.cpp">
+      <Filter>Source Files\EMP</Filter>
+    </ClCompile>
+    <ClCompile Include="Supermarket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReadError.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -166,6 +172,15 @@
     </ClInclude>
     <ClInclude Include="products\Whiskey.h">
       <Filter>Header Files\PRD</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Person.h">
+      <Filter>Header Files\EMP</Filter>
+    </ClInclude>
+    <ClInclude Include="Supermarket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReadError.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

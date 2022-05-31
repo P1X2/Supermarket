@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "Person.h"
 using namespace std;
 
-class Employee
+class Employee :public Person 
 {
 	string name;
 	string surname;
