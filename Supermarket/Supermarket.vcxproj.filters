@@ -51,25 +51,25 @@
     <ClCompile Include="Employees\Cashier.cpp">
       <Filter>Source Files\EMP</Filter>
     </ClCompile>
-    <ClCompile Include="Products\DataBase.cpp">
+    <ClCompile Include="products\DataBase.cpp">
       <Filter>Source Files\PRD</Filter>
     </ClCompile>
     <ClCompile Include="Employees\Employee.cpp">
       <Filter>Source Files\EMP</Filter>
     </ClCompile>
-    <ClCompile Include="Products\Friut.cpp">
+    <ClCompile Include="products\Friut.cpp">
       <Filter>Source Files\PRD</Filter>
     </ClCompile>
-    <ClCompile Include="Products\Juice.cpp">
+    <ClCompile Include="products\Juice.cpp">
       <Filter>Source Files\PRD</Filter>
     </ClCompile>
     <ClCompile Include="Employees\Manager.cpp">
       <Filter>Source Files\EMP</Filter>
     </ClCompile>
-    <ClCompile Include="Products\Meat.cpp">
+    <ClCompile Include="products\Meat.cpp">
       <Filter>Source Files\PRD</Filter>
     </ClCompile>
-    <ClCompile Include="Products\Product.cpp">
+    <ClCompile Include="products\Product.cpp">
       <Filter>Source Files\PRD</Filter>
     </ClCompile>
     <ClCompile Include="Employees\Register.cpp">
@@ -84,7 +84,7 @@
     <ClCompile Include="Employees\Warehouseman.cpp">
       <Filter>Source Files\EMP</Filter>
     </ClCompile>
-    <ClCompile Include="Products\Whiskey.cpp">
+    <ClCompile Include="products\Whiskey.cpp">
       <Filter>Source Files\PRD</Filter>
     </ClCompile>
     <ClCompile Include="Employees\Person.cpp">
@@ -105,26 +105,35 @@
     <ClCompile Include="Employees\WorkingHoursError.cpp">
       <Filter>Source Files\ERRORS</Filter>
     </ClCompile>
-    <ClCompile Include="Products\NegativeCaloriesException.cpp">
+    <ClCompile Include="products\NegativeCaloriesException.cpp">
       <Filter>Source Files\ERRORS</Filter>
     </ClCompile>
-    <ClCompile Include="Products\NegativePriceException.cpp">
+    <ClCompile Include="products\NegativePriceException.cpp">
       <Filter>Source Files\ERRORS</Filter>
     </ClCompile>
-    <ClCompile Include="Products\ProductNotFoundException.cpp">
+    <ClCompile Include="products\ProductNotFoundException.cpp">
       <Filter>Source Files\ERRORS</Filter>
     </ClCompile>
-    <ClCompile Include="Products\BarcodeNotUniqueException.cpp">
+    <ClCompile Include="products\BarcodeNotUniqueException.cpp">
       <Filter>Source Files\ERRORS</Filter>
     </ClCompile>
-    <ClCompile Include="Products\catch_config.cpp">
+    <ClCompile Include="products\catch_config.cpp">
       <Filter>Source Files\TESTS</Filter>
     </ClCompile>
     <ClCompile Include="Employees\testEMP.cpp">
       <Filter>Source Files\TESTS</Filter>
     </ClCompile>
-    <ClCompile Include="Products\testPRD.cpp">
+    <ClCompile Include="products\testPRD.cpp">
       <Filter>Source Files\TESTS</Filter>
+    </ClCompile>
+    <ClCompile Include="CashRegister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Adress.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,22 +161,22 @@
     <ClInclude Include="Employees\Manager.h">
       <Filter>Header Files\EMP</Filter>
     </ClInclude>
-    <ClInclude Include="Products\DataBase.h">
+    <ClInclude Include="products\DataBase.h">
       <Filter>Header Files\PRD</Filter>
     </ClInclude>
-    <ClInclude Include="Products\Friut.h">
+    <ClInclude Include="products\Friut.h">
       <Filter>Header Files\PRD</Filter>
     </ClInclude>
-    <ClInclude Include="Products\Juice.h">
+    <ClInclude Include="products\Juice.h">
       <Filter>Header Files\PRD</Filter>
     </ClInclude>
-    <ClInclude Include="Products\Meat.h">
+    <ClInclude Include="products\Meat.h">
       <Filter>Header Files\PRD</Filter>
     </ClInclude>
-    <ClInclude Include="Products\Product.h">
+    <ClInclude Include="products\Product.h">
       <Filter>Header Files\PRD</Filter>
     </ClInclude>
-    <ClInclude Include="Products\Whiskey.h">
+    <ClInclude Include="products\Whiskey.h">
       <Filter>Header Files\PRD</Filter>
     </ClInclude>
     <ClInclude Include="Employees\Person.h">
@@ -185,20 +194,29 @@
     <ClInclude Include="Employees\EmployeeDoesNotExistException.h">
       <Filter>Header Files\ERRORS</Filter>
     </ClInclude>
-    <ClInclude Include="Products\BarcodeNotUniqueException.h">
+    <ClInclude Include="products\BarcodeNotUniqueException.h">
       <Filter>Header Files\ERRORS</Filter>
     </ClInclude>
-    <ClInclude Include="Products\NegativeCaloriesException.h">
+    <ClInclude Include="products\NegativeCaloriesException.h">
       <Filter>Header Files\ERRORS</Filter>
     </ClInclude>
-    <ClInclude Include="Products\NegativePriceException.h">
+    <ClInclude Include="products\NegativePriceException.h">
       <Filter>Header Files\ERRORS</Filter>
     </ClInclude>
-    <ClInclude Include="Products\ProductNotFoundException.h">
+    <ClInclude Include="products\ProductNotFoundException.h">
       <Filter>Header Files\ERRORS</Filter>
     </ClInclude>
     <ClInclude Include="Employees\WorkingHoursError.h">
       <Filter>Header Files\ERRORS</Filter>
+    </ClInclude>
+    <ClInclude Include="CashRegister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Adress.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
