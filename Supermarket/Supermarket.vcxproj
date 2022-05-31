@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="products\catch_config.cpp" />
     <ClCompile Include="Employees\Cashier.cpp" />
     <ClCompile Include="Employees\Employee.cpp" />
     <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp" />
@@ -173,7 +174,6 @@
     <ClInclude Include="products\NegativePriceException.h" />
     <ClInclude Include="products\Product.h" />
     <ClInclude Include="products\ProductNotFoundException.h" />
-    <ClInclude Include="products\UI.h" />
     <ClInclude Include="products\Whiskey.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
