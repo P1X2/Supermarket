@@ -1,4 +1,5 @@
 #include "FileReadError.h"
-
-FileReadError::FileReadError(string data_file) :
-	invalid_argument("Too much or not enough arguments in " + data_file + "file"){}
+#include <string>
+using namespace std;
+FileReadError::FileReadError(string data_file,int line) :
+	invalid_argument("Data error in" + data_file + "file"+ to_string(line)+"line") {}

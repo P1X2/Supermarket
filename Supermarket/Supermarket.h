@@ -4,7 +4,6 @@
 #include "Employees/Manager.h"
 #include "Employees/Person.h"
 #include "Employees/Register.h"
-#include "Employees/SecurityGuard.h"
 #include "Employees/Warehouseman.h"
 #include "FileReadError.h"
 #include <vector>
@@ -17,11 +16,14 @@
 class Supermarket
 {
 	Register employees;
+	vector <string> names;
+	vector <string> surnames;
 	DataBase products;
 	vector<ProductShelve> product_shelve;
 
 public:
 	Supermarket();
-	void load_eployees(string);
+	void load_names_surnames(string);
+	void load_products(string);
 };
 

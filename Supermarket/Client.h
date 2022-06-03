@@ -36,4 +36,3 @@ public:
 
     void update_currently_serched_product();
 };
-

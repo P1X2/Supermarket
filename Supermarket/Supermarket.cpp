@@ -7,68 +7,66 @@ using namespace std;
 Supermarket::Supermarket()
 {
 	Register employees;
+	vector<string>names;
+	vector<string>surnames;
 }
 
-void Supermarket::load_eployees(string path)
+void Supermarket::load_names_surnames(string path)
 {
-	ifstream handle;
-	handle.open(path);
-	string job;
+	fstream elsa,xdxd;
+	elsa.open("names.txt", ios::out);
 	string name;
-	string surname;
-	int hours;
-	int id;
-	float money_per_hour;
-	while (handle.good())
+	string surname;	
+	int j = 0;
+	if (elsa.is_open())
+	{
+		elsa << "xDXXDXD\n";
+		elsa << "xsdafsda";
+		elsa.close();
+	}
+	xdxd.open("names.txt", ios::in);
+	if (xdxd.good())
+	{
+		while (getline(xdxd, name))
+		{
+			cout << name << endl;
+		}
+		xdxd.close();
+	}
+	/*
+	if (handle.is_open())
 	{
 		string line;
-		getline(handle, line);
-		stringstream ss(line);
-		string item;
-		int i = 0;
-		while (getline(ss, item, ' '))
+		while (getline(handle, line))
 		{
-			i++;
-			switch (i)
+			j++;
+			cout << line << endl;
+
+			stringstream ss(line);
+			string item;
+			int i = 0;
+			while (getline(ss, item, ' '))
 			{
-			case 1:
-				job = item;
-			case 2:
-				name = item;
-				break;
-			case 3:
-				surname = item;
-				break;
-			case 4:
-				hours = stoi(item);
-				break;
-			case 5:
-				id = stoi(item);
-				break;
-			case 6:
-				money_per_hour = stof(item);
-				break;
-			}
-			if (i != 6)
-			{
-				throw FileReadError("Employees");
-			}
-			if (job == "cashier")
-			{
-				employees.add_cashier(name, surname, hours, id, money_per_hour);
-			}
-			if (job == "manager")
-			{
-				employees.add_manager(name, surname, hours, id, money_per_hour);
-			}
-			if (job == "securityguard")
-			{
-				employees.add_security_guard(name, surname, hours, id, money_per_hour);
-			}
-			if (job == "warehouseman")
-			{
-				employees.add_warehouseman(name, surname, hours, id, money_per_hour);
+				i++;
+				switch (i)
+				{
+				case 1:
+					names.push_back(item);
+					break;
+				case 2:
+					surnames.push_back(item);
+					break;
+				default:
+					throw FileReadError("names and surnames", j);
+				}
 			}
 		}
+		handle.close();
 	}
+	
+	
+	
+	cout << names.size() << endl;
+	cout << surnames.size() << endl;
+	*/
 }

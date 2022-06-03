@@ -5,6 +5,7 @@
 #include"Employees/Cashier.h"
 #include"products/Meat.h"
 #include "products/Juice.h"
+#include "Supermarket.h"
 #include "RNG.h"
 
 
@@ -41,6 +42,26 @@ int main()
     cout << b[1];
 
 
+    /*
+    Cashier xd("elo", "xd", 160, 20, 30);
+    std::cout << "Hello World!\n";
+    xd.print_employer();
+    Meat xdxd("elo1",12,23,"elss","23123","sdew");
+    Meat xdx("elo2", 12, 23, "elss", "23123", "sdew");
+    std::cout << xdxd.VAT() << endl;
+    std::cout << xd.get_busy();
+    vector<Product> a;
+    a.push_back(xdxd);
+    a.push_back(xdx);
+    vector<Product>::iterator it;
+    for (it = a.begin(); it != a.end(); it++)
+    {
+        cout << it->getName();
+    }
+    */
+    Supermarket super;
+    super.load_names_surnames("names.txt");
+    
 
 }
 

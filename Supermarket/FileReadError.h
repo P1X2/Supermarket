@@ -5,6 +5,6 @@ class FileReadError :
     public invalid_argument
 {
 public:
-    FileReadError(string);
+    FileReadError(string,int);
 };
 
