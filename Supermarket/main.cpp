@@ -5,10 +5,12 @@
 #include"Employees/Cashier.h"
 #include"products/Meat.h"
 #include "products/Juice.h"
+#include "Supermarket.h"
 
 using namespace std;
 int main()
 {
+    /*
     Cashier xd("elo", "xd", 160, 20, 30);
     std::cout << "Hello World!\n";
     xd.print_employer();
@@ -24,7 +26,10 @@ int main()
     {
         cout << it->getName();
     }
-
+    */
+    Supermarket super;
+    super.load_names_surnames("names.txt");
+    
 
 }
 

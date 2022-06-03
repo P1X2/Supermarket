@@ -12,7 +12,7 @@ void Checkout::scan_product()
 int Checkout::total()
 {
 	int total = 0;
-	for (vector<Product>::iterator it = current_client_shopping_cart.begin(); it = current_client_shopping_cart.end(); it++)
+	for (vector<Product>::iterator it = current_client_shopping_cart.begin(); it != current_client_shopping_cart.end(); it++)
 	{
 		total = total + it->getPrice();
 	}
