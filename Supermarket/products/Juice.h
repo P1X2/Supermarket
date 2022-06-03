@@ -6,16 +6,15 @@ class Juice :
 {
 private:
     int sugarPer100;
-    vector<Fruit> Fruits;
 
 public:
-    Juice(string name, int price, int calories, string Producer,string barcode, int sugarPer100, vector<Fruit> fruits);
+    Juice(string name, int price, int calories, string Producer,string barcode, int sugarPer100);
 
     float VAT() const override;
     string Localization() const override;
 
     int getSugarPer100() const;
-    vector<Fruit> getFruitss();
+    
 
     bool operator==(const Juice& second_Juice)const;
 };

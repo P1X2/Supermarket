@@ -31,10 +31,10 @@ void DataBase::addFriut(string name, int price, int calories, string Producer,st
 	products.push_back(move(addedFriut));
 }
 
-void DataBase::addJuice(string name, int price, int calories, string Producer, string barcode, int sugarPer100, vector<Fruit> fruits)
+void DataBase::addJuice(string name, int price, int calories, string Producer, string barcode, int sugarPer100)
 {
 	unique(barcode);
-	unique_ptr<Juice> addedJuice = make_unique<Juice>(name, price, calories, Producer, barcode, sugarPer100, fruits);
+	unique_ptr<Juice> addedJuice = make_unique<Juice>(name, price, calories, Producer, barcode, sugarPer100);
 	products.push_back(move(addedJuice));
 }
 

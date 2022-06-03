@@ -8,6 +8,6 @@
 class RNG
 {
 public:
-	int generate_random_number(int max_l);
+	int generate_random_number(int min_l, int max_l);
 };
 

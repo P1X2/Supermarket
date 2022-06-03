@@ -15,28 +15,9 @@ Supermarket::Supermarket()
 void Supermarket::load_names_surnames(string path)
 {
 	
-	fstream elsa,handle,xdxd;
-	
-	//elsa.open("names.txt", ios::out);
-	string name;
-	string surname;	
+	fstream handle;
 	int j = 0;
-	/*if (elsa.is_open())
-	{
-		elsa << "xDXXDXD\n";
-		elsa << "xsdafsda";
-		elsa.close();
-	}
-	xdxd.open("names.txt", ios::in);
-	if (xdxd.good())
-	{
-		while (getline(xdxd, name))
-		{
-			cout << name << endl;
-		}
-		xdxd.close();
-	}*/
-	handle.open("names.txt",ios::in);
+	handle.open(path,ios::in);
 
 	if (handle.good())
 	{
@@ -44,7 +25,6 @@ void Supermarket::load_names_surnames(string path)
 		while (getline(handle, line))
 		{
 			j++;
-			cout << line << endl;
 
 			stringstream ss(line);
 			string item;
@@ -67,10 +47,59 @@ void Supermarket::load_names_surnames(string path)
 		}
 		handle.close();
 	}
-	
-	
-	
 	cout << names.size() << endl;
 	cout << surnames.size() << endl;
-	
+}
+
+void Supermarket::load_products(string path)
+{
+	fstream handle;
+	int j = 0;
+	handle.open(path, ios::in);
+	if (handle.good())
+	{
+		string line;
+		while (getline(handle, line))
+		{
+			j++;
+			stringstream ss(line);
+			string item;
+			string product;
+			string name;
+			string producer;
+			string barcode;
+			int price;
+			int calories;
+			int i = 0;
+			while (getline(ss, item, ' '))
+			{
+				i++;
+				switch (i)
+				{
+				case 1:
+					product = item;
+					break;
+				case 2:
+					name = item;
+					break;
+				case 3:
+					producer = item;
+					break;
+				case 4:
+					barcode = item;
+					break;
+				case 5:
+					price = stoi(item);
+					break;
+				case 6:
+					calories = stoi(item);
+					break;
+				if (product == "juice")
+				{
+					
+				}
+				}
+			}
+		}
+	}
 }

@@ -35,7 +35,7 @@ int main()
 
     
     RNG rng;
-    cout << rng.generate_random_number(12);
+    cout << rng.generate_random_number(1,12);
 
     vector<int> b;
     b.push_back(1); b.push_back(2);

@@ -18,7 +18,7 @@ private:
 	void unique(string barecode); 
 public:
 	void addFriut(string name, int price, int calories, string Producer,string barcode, string orginCountry);
-	void addJuice(string name, int price, int calories, string Producer, string barcode, int sugarPer100, vector<Fruit> fruits);
+	void addJuice(string name, int price, int calories, string Producer, string barcode, int sugarPer100);
 	void addMeat(string name, int price, int calories, string producer, string barcode, string animalOrgin);
 	void addWhiskey(string name, int price, int calories, string Producer, string barcode, int alcoholPercent);
 
