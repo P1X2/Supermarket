@@ -53,6 +53,7 @@ int Client::ask_question__is_in_stock(vector<Employee> emp)
     
     Employee emp_to_ask = emp[0];
 
+    return 0;
 
 }
 
