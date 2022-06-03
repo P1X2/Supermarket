@@ -158,6 +158,7 @@
     <ClCompile Include="products\testPRD.cpp" />
     <ClCompile Include="products\Whiskey.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RNG.cpp" />
     <ClCompile Include="Supermarket.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +189,7 @@
     <ClInclude Include="products\Product.h" />
     <ClInclude Include="products\ProductNotFoundException.h" />
     <ClInclude Include="products\Whiskey.h" />
+    <ClInclude Include="RNG.h" />
     <ClInclude Include="Supermarket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

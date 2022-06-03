@@ -9,8 +9,8 @@ class Checkout
 	vector<Product> current_client_shopping_cart;
 	int profit;
 public:
-	Checkout(Cashier checkout_cashier);
-	void scan_product();
+	Checkout(Cashier checkout_cashier, bool is_open);
+	void scan_product(); // do zrobienia jak bedzie g³owna petla czasu
 	int total();
 
 	void release_cashier();
@@ -20,5 +20,6 @@ public:
 	void invoice();
 
 	void update_CCSC();
+	void update_profit();
 };
 

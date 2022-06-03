@@ -7,10 +7,18 @@
 #include "Employees/SecurityGuard.h"
 #include "Employees/Warehouseman.h"
 #include "FileReadError.h"
+#include <vector>
+#include "ProductShelve.h"
+#include "products/DataBase.h"
+
+
+
 
 class Supermarket
 {
 	Register employees;
+	DataBase products;
+	vector<ProductShelve> product_shelve;
 
 public:
 	Supermarket();
