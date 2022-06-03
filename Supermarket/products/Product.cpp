@@ -47,4 +47,14 @@ int Product::getPrice() const
 	return price;
 }
 
+bool Product::operator==(const Product& second_product) const
+{
+	return (name == second_product.name);
+}
+
+bool Product::operator!=(const Product& second_product) const
+{
+	return !(*this == second_product);
+}
+
 

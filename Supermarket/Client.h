@@ -4,6 +4,8 @@
 #include "products/Product.h"
 #include "Employees/Person.h"
 #include "Address.h"
+#include "Employees/Employee.h"
+#include <stdexcept>
 
 using namespace std;
 
@@ -17,6 +19,8 @@ class Client :
     vector<Product> shopping_cart;
     Address address;
     bool recipe;
+    int currently_serched_prd = 0; int current_prd_index_in_sh;
+
 public:
     Client(string name, string surname, vector<string> shopping_list, Address adderss, bool recipe);
     string get_name();
@@ -24,9 +28,11 @@ public:
     string get_adress();
     vector<Product> get_shopping_cart();
 
-    void go_to_next_shelve();
-    void grab_product();
-    void ask_question__is_in_stock();
+
+    void serch_product(vector<Product> shop_shelve);
+    void grab_product(vector<Product> shop_shelve, int index);
+    int ask_question__is_in_stock(vector<Employee> emp);
     void go_to_checkout();
-    
+
+    void update_currently_serched_product();
 };

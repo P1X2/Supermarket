@@ -1,6 +1,6 @@
 #include "Checkout.h"
 
-Checkout::Checkout(Cashier checkout_cashier) :checkout_cashier(checkout_cashier)
+Checkout::Checkout(Cashier checkout_cashier, bool is_open) :checkout_cashier(checkout_cashier), is_open(is_open)
 {}
 
 void Checkout::scan_product()
@@ -32,4 +32,9 @@ void Checkout::assign_cashier()
 void Checkout::update_CCSC()
 {
 	current_client_shopping_cart = client_queue[0].get_shopping_cart();
+}
+
+void Checkout::update_profit()
+{
+	profit += total();
 }

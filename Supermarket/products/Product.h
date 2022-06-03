@@ -25,5 +25,9 @@ public:
 	string getBarcode() const;
 	int getCalories() const;
 	int getPrice() const;
+
+	bool operator==(const Product& second_product)const;
+	bool operator!=(const Product& second_product)const;
+
 };
 
