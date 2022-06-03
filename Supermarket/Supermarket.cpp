@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include<iostream>
 using namespace std;
 
 Supermarket::Supermarket()
@@ -13,12 +14,14 @@ Supermarket::Supermarket()
 
 void Supermarket::load_names_surnames(string path)
 {
-	fstream elsa,xdxd;
-	elsa.open("names.txt", ios::out);
+	
+	fstream elsa,handle,xdxd;
+	
+	//elsa.open("names.txt", ios::out);
 	string name;
 	string surname;	
 	int j = 0;
-	if (elsa.is_open())
+	/*if (elsa.is_open())
 	{
 		elsa << "xDXXDXD\n";
 		elsa << "xsdafsda";
@@ -32,9 +35,10 @@ void Supermarket::load_names_surnames(string path)
 			cout << name << endl;
 		}
 		xdxd.close();
-	}
-	/*
-	if (handle.is_open())
+	}*/
+	handle.open("names.txt",ios::in);
+
+	if (handle.good())
 	{
 		string line;
 		while (getline(handle, line))
@@ -68,5 +72,5 @@ void Supermarket::load_names_surnames(string path)
 	
 	cout << names.size() << endl;
 	cout << surnames.size() << endl;
-	*/
+	
 }
