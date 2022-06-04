@@ -1,76 +1,247 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Address.cpp" />
-    <ClCompile Include="Checkout.cpp" />
-    <ClCompile Include="Client.cpp" />
-    <ClCompile Include="ProductShelve.cpp" />
-    <ClCompile Include="products\catch_config.cpp" />
-    <ClCompile Include="Employees\Cashier.cpp" />
-    <ClCompile Include="Employees\Employee.cpp" />
-    <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp" />
-    <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp" />
-    <ClCompile Include="Employees\Manager.cpp" />
-    <ClCompile Include="Employees\SalaryError.cpp" />
-    <ClCompile Include="Employees\SecurityGuard.cpp" />
-    <ClCompile Include="Employees\testEMP.cpp" />
-    <ClCompile Include="Employees\Warehouseman.cpp" />
-    <ClCompile Include="Employees\WorkingHoursError.cpp" />
-    <ClCompile Include="Employees\Person.cpp" />
-    <ClCompile Include="FileReadError.cpp" />
-    <ClCompile Include="products\BarcodeNotUniqueException.cpp" />
-    <ClCompile Include="products\DataBase.cpp" />
-    <ClCompile Include="products\Friut.cpp" />
-    <ClCompile Include="products\Juice.cpp" />
-    <ClCompile Include="products\Meat.cpp" />
-    <ClCompile Include="products\NegativeCaloriesException.cpp" />
-    <ClCompile Include="products\NegativePriceException.cpp" />
-    <ClCompile Include="products\Product.cpp" />
-    <ClCompile Include="products\ProductNotFoundException.cpp" />
-    <ClCompile Include="products\testPRD.cpp" />
-    <ClCompile Include="products\Whiskey.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Employees\RegisterCashiers.cpp" />
-    <ClCompile Include="Employees\RegisterWarehouseman.cpp" />
-    <ClCompile Include="RNG.cpp" />
-    <ClCompile Include="FileReader.cpp" />
-    <ClCompile Include="Supermarket.cpp" />
+    <ClCompile Include="Client.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Address.cpp">
+      <Filter>cpp\items</Filter>
+    </ClCompile>
+    <ClCompile Include="products\BarcodeNotUniqueException.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\Cashier.cpp">
+      <Filter>cpp\emp</Filter>
+    </ClCompile>
+    <ClCompile Include="products\catch_config.cpp">
+      <Filter>cpp\items</Filter>
+    </ClCompile>
+    <ClCompile Include="Checkout.cpp">
+      <Filter>cpp\items</Filter>
+    </ClCompile>
+    <ClCompile Include="products\DataBase.cpp">
+      <Filter>cpp\supermarket</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\Employee.cpp">
+      <Filter>cpp\emp</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>cpp\supermarket</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReadError.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Friut.cpp">
+      <Filter>cpp\products</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Juice.cpp">
+      <Filter>cpp\products</Filter>
+    </ClCompile>
+    <ClCompile Include="products\NegativeCaloriesException.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="products\NegativePriceException.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\Person.cpp">
+      <Filter>cpp\emp</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\Manager.cpp">
+      <Filter>cpp\emp</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Meat.cpp">
+      <Filter>cpp\products</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Product.cpp">
+      <Filter>cpp\products</Filter>
+    </ClCompile>
+    <ClCompile Include="products\ProductNotFoundException.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\RegisterCashiers.cpp">
+      <Filter>cpp\supermarket</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\RegisterWarehouseman.cpp">
+      <Filter>cpp\supermarket</Filter>
+    </ClCompile>
+    <ClCompile Include="RNG.cpp">
+      <Filter>cpp\items</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductShelve.cpp">
+      <Filter>cpp\items</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\SalaryError.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\SecurityGuard.cpp">
+      <Filter>cpp\emp</Filter>
+    </ClCompile>
+    <ClCompile Include="Supermarket.cpp">
+      <Filter>cpp\supermarket</Filter>
+    </ClCompile>
+    <ClCompile Include="products\testPRD.cpp">
+      <Filter>cpp\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\testEMP.cpp">
+      <Filter>cpp\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\Warehouseman.cpp">
+      <Filter>cpp\emp</Filter>
+    </ClCompile>
+    <ClCompile Include="products\Whiskey.cpp">
+      <Filter>cpp\products</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\WorkingHoursError.cpp">
+      <Filter>cpp\errors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Address.h" />
-    <ClInclude Include="Checkout.h" />
-    <ClInclude Include="Client.h" />
-    <ClInclude Include="Employees\Cashier.h" />
-    <ClInclude Include="Employees\catch.hpp" />
-    <ClInclude Include="Employees\Employee.h" />
-    <ClInclude Include="Employees\EmployeeAlreadyExistsException.h" />
-    <ClInclude Include="Employees\EmployeeDoesNotExistException.h" />
-    <ClInclude Include="Employees\Manager.h" />
-    <ClInclude Include="Employees\SalaryError.h" />
-    <ClInclude Include="Employees\SecurityGuard.h" />
-    <ClInclude Include="Employees\Warehouseman.h" />
-    <ClInclude Include="Employees\WorkingHoursError.h" />
-    <ClInclude Include="Employees\Person.h" />
-    <ClInclude Include="FileReadError.h" />
-    <ClInclude Include="ProductShelve.h" />
-    <ClInclude Include="products\BarcodeNotUniqueException.h" />
-    <ClInclude Include="products\DataBase.h" />
-    <ClInclude Include="products\Friut.h" />
-    <ClInclude Include="products\Juice.h" />
-    <ClInclude Include="products\Meat.h" />
-    <ClInclude Include="products\NegativeCaloriesException.h" />
-    <ClInclude Include="products\NegativePriceException.h" />
-    <ClInclude Include="products\Product.h" />
-    <ClInclude Include="products\ProductNotFoundException.h" />
-    <ClInclude Include="products\Whiskey.h" />
-    <ClInclude Include="Employees\RegisterCashiers.h" />
-    <ClInclude Include="Employees\RegisterWarehouseman.h" />
-    <ClInclude Include="RNG.h" />
-    <ClInclude Include="FileReader.h" />
-    <ClInclude Include="Supermarket.h" />
+    <ClInclude Include="Address.h">
+      <Filter>h\itmes</Filter>
+    </ClInclude>
+    <ClInclude Include="products\BarcodeNotUniqueException.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Cashier.h">
+      <Filter>h\emp</Filter>
+    </ClInclude>
+    <ClInclude Include="Checkout.h">
+      <Filter>h\itmes</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>h\itmes</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\catch.hpp">
+      <Filter>h\itmes</Filter>
+    </ClInclude>
+    <ClInclude Include="products\DataBase.h">
+      <Filter>h\supermarket</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Employee.h">
+      <Filter>h\emp</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\EmployeeAlreadyExistsException.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\EmployeeDoesNotExistException.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReader.h">
+      <Filter>h\itmes</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReadError.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Friut.h">
+      <Filter>h\prd</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Juice.h">
+      <Filter>h\prd</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Manager.h">
+      <Filter>h\emp</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Meat.h">
+      <Filter>h\prd</Filter>
+    </ClInclude>
+    <ClInclude Include="products\NegativeCaloriesException.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="products\NegativePriceException.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Person.h">
+      <Filter>h\emp</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Product.h">
+      <Filter>h\prd</Filter>
+    </ClInclude>
+    <ClInclude Include="products\ProductNotFoundException.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductShelve.h">
+      <Filter>h\itmes</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\RegisterCashiers.h">
+      <Filter>h\supermarket</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\RegisterWarehouseman.h">
+      <Filter>h\supermarket</Filter>
+    </ClInclude>
+    <ClInclude Include="RNG.h">
+      <Filter>h\itmes</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\SalaryError.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\SecurityGuard.h">
+      <Filter>h\emp</Filter>
+    </ClInclude>
+    <ClInclude Include="Supermarket.h">
+      <Filter>h\supermarket</Filter>
+    </ClInclude>
+    <ClInclude Include="products\Whiskey.h">
+      <Filter>h\prd</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\WorkingHoursError.h">
+      <Filter>h\errors</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\Warehouseman.h">
+      <Filter>h\emp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="names.txt" />
     <Text Include="products.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{8afd082e-507a-462b-9994-5f0081ec3f7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h">
+      <UniqueIdentifier>{1347414b-9ffe-43e5-80d1-a422a89cc0b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\emp">
+      <UniqueIdentifier>{d8369fca-dec0-4d38-8967-5a6ad84ad771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\prd">
+      <UniqueIdentifier>{c28a2463-dc5d-4aff-89db-d719cf6ec52e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\itmes">
+      <UniqueIdentifier>{0cb34b21-f421-4c97-8dbd-43d9a4b8f1dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\errors">
+      <UniqueIdentifier>{3de26dca-85c3-4720-bc3b-05aa3ae4ba95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\supermarket">
+      <UniqueIdentifier>{5da4b071-f40a-4c63-9556-6098056e02f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\products">
+      <UniqueIdentifier>{15a36ca3-437f-4181-a41f-73d4d9ac0deb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\emp">
+      <UniqueIdentifier>{46f79b01-6fee-4fa0-bdda-4ae150750d01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\items">
+      <UniqueIdentifier>{427c0d98-672b-4fb5-b5fc-aa9afe3f66e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\errors">
+      <UniqueIdentifier>{39efd751-0ef7-4d45-b572-cf85ee324fe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\supermarket">
+      <UniqueIdentifier>{96919e7b-3890-415b-a262-16497560ae2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\tests">
+      <UniqueIdentifier>{939890f9-51a2-4eef-8ab3-469680dadf29}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
