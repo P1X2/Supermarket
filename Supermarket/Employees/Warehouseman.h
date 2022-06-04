@@ -14,6 +14,6 @@ public:
 	virtual void print_schedule() override;
 	float get_money_per_hour();
 
-	Product serch_product(Client client);
+	//Product serch_product(Client client); // zrbic
 };
 

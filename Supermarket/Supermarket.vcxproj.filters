@@ -144,11 +144,11 @@
     <ClCompile Include="RNG.cpp">
       <Filter>Source Files\ITEMS</Filter>
     </ClCompile>
-    <ClCompile Include="Supermarket.cpp">
-      <Filter>Source Files\SUPERMARKET</Filter>
-    </ClCompile>
     <ClCompile Include="FileReader.cpp">
       <Filter>Source Files\ITEMS</Filter>
+    </ClCompile>
+    <ClCompile Include="Supermarket.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -236,11 +236,11 @@
     <ClInclude Include="RNG.h">
       <Filter>Header Files\ITMES</Filter>
     </ClInclude>
-    <ClInclude Include="Supermarket.h">
-      <Filter>Header Files\SUPERMARKET</Filter>
-    </ClInclude>
     <ClInclude Include="FileReader.h">
       <Filter>Header Files\ITMES</Filter>
+    </ClInclude>
+    <ClInclude Include="Supermarket.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

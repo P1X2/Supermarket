@@ -67,7 +67,7 @@ int Client::ask_question__is_in_stock()
     //Warehouseman emp_to_ask = emp[0];
     //emp_to_ask.serch_product(*this);
 
-    //return 0;
+    return 0;
 
 }
 

@@ -60,13 +60,14 @@ int main()
         cout << it->getName();
     }
     */
-    Supermarket super;
-    super.load_names_surnames("names.txt");
+    //Supermarket super;
+    //super.load_names_surnames("names.txt");
     
     map <int, int> w;
     w[1] = 1;
     w[2] = 2;
-    
+    //vector<int> a;
+   // map<vector, int> a;
 
 }
 

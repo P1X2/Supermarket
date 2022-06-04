@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include <map>
-#include "Supermarket.h"
 #include "products/Product.h"
 #include "Employees/Person.h"
 #include "Address.h"
@@ -17,7 +16,7 @@ class Client :
     public Person
 {
     
-
+    
     string name, surname;
     vector<string> shopping_list;
     vector<Product> shopping_cart;

@@ -19,7 +19,7 @@ class FileReader
 	Register employees;
 	vector <string> names;
 	vector <string> surnames;
-	DataBase products;
+	
 
 
 public:
