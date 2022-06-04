@@ -30,4 +30,6 @@ public:
 	vector<Client> clients;
 	RegisterCashiers cashier_register;
 
+
+
 };

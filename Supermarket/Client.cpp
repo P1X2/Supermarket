@@ -55,9 +55,8 @@ void Client::grab_product(map<Product, int> shop_shelve, map<Product, int>::iter
     shopping_cart.push_back(it->first);
 }
 
-int Client::ask_question__is_in_stock(Employee warehauseman)
+int Client::ask_question__is_in_stock()
 {
-    warehauseman.serch_product();
     
     return 0;
 

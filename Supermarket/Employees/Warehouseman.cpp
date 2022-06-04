@@ -2,7 +2,8 @@
 #include "SalaryError.h"
 
 Warehouseman::Warehouseman(string n, string sur, int h, int iden, float mon) :
-	Employee(n, sur, h, iden) {
+	Employee(n, sur, h, iden)
+{
 	set_money_per_hour(mon);
 }
 
@@ -23,29 +24,29 @@ float Warehouseman::get_money_per_hour()
 	return money_per_hour;
 }
 
-void Warehouseman::serch_product(Client whichCL, string product)
-{
-    map<Product, int>::iterator it;
-    map<Product, int> inventory = magazine.get_inventory();
-
-    for (it = inventory.begin(); it != inventory.end(); it++)
-    {
-        Product prd_map = it->first;
-
-        if (prd_map.getName() == product)
-        {
-            if (it->second == 0)
-            {
-                // odpwieada ze mike ma
-            }
-            else
-            {
-                grab_product(inventory, it);
-                magazine.update_inventory(it->first);
-            }
-        };
-    }
-}
+//void Warehouseman::serch_product(string surename, string product)
+//{
+//    map<Product, int>::iterator it;
+//    map<Product, int> inventory = magazine.get_inventory();
+//
+//    for (it = inventory.begin(); it != inventory.end(); it++)
+//    {
+//        Product prd_map = it->first;
+//
+//        if (prd_map.getName() == product)
+//        {
+//            if (it->second == 0)
+//            {
+//                // odpwieada ze mike ma
+//            }
+//            else
+//            {
+//                grab_product(inventory, it);
+//                magazine.update_inventory(it->first);
+//            }
+//        };
+//    }
+//}
 
 void Warehouseman::grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it)
 {

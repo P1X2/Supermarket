@@ -1,8 +1,7 @@
 #pragma once
 
 #include "Employee.h"
-#include "..\ProductShelve.h"
-#include "..\Client.h"
+//#include "..\ProductShelve.h"
 #include <vector>
 
 
@@ -11,7 +10,7 @@
 class Warehouseman : public Employee
 {
 	float money_per_hour;
-	ProductShelve magazine;
+	//ProductShelve magazine;
 	vector<Product> pocket;
 
 public:
@@ -20,7 +19,7 @@ public:
 	virtual void set_money_per_hour(float) override;
 	float get_money_per_hour();
 
-	void serch_product(Client whichCL, string product);
+	void serch_product(string surename, string product);
 	void grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it);
 	void empty_pocket();
 
