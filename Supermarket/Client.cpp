@@ -25,36 +25,55 @@ vector<Product> Client::get_shopping_cart()
     return shopping_cart;
 }
 
-void  Client::serch_product(vector<Product> shop_shelve)
+void  Client::serch_product(map<Product, int> shop_shelve)
 {
-    for (int it = 0; it != shop_shelve.size(); it++)
+    map<Product, int>::iterator it;
+
+    for (it = shop_shelve.begin(); it != shop_shelve.end(); it++)
     {
-        if (shop_shelve[it].getName() == shopping_list[currently_serched_prd])
+        Product prd_map = it->first;
+
+        if (prd_map.getName() == shopping_list[currently_serched_prd])
         {
-            current_prd_index_in_sh = it;
+            if (it->second == 0)
+            {
+               //ask_question__is_in_stock() jak sie wojtas zdecyduje
+            }
+            else
+            {
+                grab_product(shop_shelve, it);
+            }
         }
     }
-    current_prd_index_in_sh =-1;
+
 }
 
-void Client::grab_product(vector<Product> shop_shelve,int index)
+void Client::grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it)
 {
-    if (index == -1)
-    {
-        // akcja jak prd nie ma na pó³ce
-    }
-    shopping_cart.push_back(shop_shelve[index]);
+    int a = it->second;
+    shopping_cart.push_back(it->first);
+    it->second = a - 1;
     //update shopshelve zrobic
 }
 
-int Client::ask_question__is_in_stock(vector<Employee> emp)
+int Client::ask_question__is_in_stock()
 {
-    if (emp.size() == 0)
+    // czekac az wojtaz zrobi database na pracownikow
+
+    //if (emp.size() == 0)
+    //{
+    //    // zaimplementwac czekanko
+    //}
+    //Warehouseman emp_to_ask = emp[0];
+    //emp_to_ask.serch_product(*this);
+
+    //return 0;
+
+}
+
+void Client::go_to_checkout()
+{
     
-    Employee emp_to_ask = emp[0];
-
-    return 0;
-
 }
 
 void Client::update_currently_serched_product()

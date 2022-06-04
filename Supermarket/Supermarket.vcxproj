@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Address.cpp" />
-    <ClCompile Include="Adress.cpp" />
     <ClCompile Include="Checkout.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="ProductShelve.cpp" />
@@ -161,6 +160,7 @@
     <ClCompile Include="Employees\RegisterCashiers.cpp" />
     <ClCompile Include="Employees\RegisterWarehouseman.cpp" />
     <ClCompile Include="RNG.cpp" />
+    <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="Supermarket.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +194,7 @@
     <ClInclude Include="Employees\RegisterCashiers.h" />
     <ClInclude Include="Employees\RegisterWarehouseman.h" />
     <ClInclude Include="RNG.h" />
+    <ClInclude Include="FileReader.h" />
     <ClInclude Include="Supermarket.h" />
   </ItemGroup>
   <ItemGroup>
