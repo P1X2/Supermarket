@@ -147,7 +147,10 @@
     <ClCompile Include="FileReader.cpp">
       <Filter>Source Files\ITEMS</Filter>
     </ClCompile>
-    <ClCompile Include="Supermarket.cpp">
+    <ClCompile Include="Employees\RegisterCashiers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\RegisterWarehouseman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -235,6 +238,15 @@
     </ClInclude>
     <ClInclude Include="RNG.h">
       <Filter>Header Files\ITMES</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\RegisterCashiers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\RegisterWarehouseman.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Supermarket.h">
+      <Filter>Header Files\SUPERMARKET</Filter>
     </ClInclude>
     <ClInclude Include="FileReader.h">
       <Filter>Header Files\ITMES</Filter>
