@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <map>
 #include"Employees/Cashier.h"
 #include"products/Meat.h"
 #include "products/Juice.h"
@@ -61,6 +62,10 @@ int main()
     */
     Supermarket super;
     super.load_names_surnames("names.txt");
+    
+    map <int, int> w;
+    w[1] = 1;
+    w[2] = 2;
     
 
 }

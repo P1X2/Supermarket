@@ -96,9 +96,6 @@
     <ClCompile Include="Employees\Person.cpp">
       <Filter>Source Files\EMP</Filter>
     </ClCompile>
-    <ClCompile Include="Supermarket.cpp">
-      <Filter>Source Files\SUPERMARKET</Filter>
-    </ClCompile>
     <ClCompile Include="FileReadError.cpp">
       <Filter>Source Files\ERRORS</Filter>
     </ClCompile>
@@ -141,13 +138,16 @@
     <ClCompile Include="ProductShelve.cpp">
       <Filter>Source Files\ITEMS</Filter>
     </ClCompile>
-    <ClCompile Include="Adress.cpp">
-      <Filter>Source Files\ITEMS</Filter>
-    </ClCompile>
     <ClCompile Include="Address.cpp">
       <Filter>Source Files\ITEMS</Filter>
     </ClCompile>
     <ClCompile Include="RNG.cpp">
+      <Filter>Source Files\ITEMS</Filter>
+    </ClCompile>
+    <ClCompile Include="Supermarket.cpp">
+      <Filter>Source Files\SUPERMARKET</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
       <Filter>Source Files\ITEMS</Filter>
     </ClCompile>
   </ItemGroup>
@@ -197,9 +197,6 @@
     <ClInclude Include="Employees\Person.h">
       <Filter>Header Files\EMP</Filter>
     </ClInclude>
-    <ClInclude Include="Supermarket.h">
-      <Filter>Header Files\SUPERMARKET</Filter>
-    </ClInclude>
     <ClInclude Include="FileReadError.h">
       <Filter>Header Files\ERRORS</Filter>
     </ClInclude>
@@ -237,6 +234,12 @@
       <Filter>Header Files\ITMES</Filter>
     </ClInclude>
     <ClInclude Include="RNG.h">
+      <Filter>Header Files\ITMES</Filter>
+    </ClInclude>
+    <ClInclude Include="Supermarket.h">
+      <Filter>Header Files\SUPERMARKET</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReader.h">
       <Filter>Header Files\ITMES</Filter>
     </ClInclude>
   </ItemGroup>

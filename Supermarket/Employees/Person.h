@@ -2,8 +2,9 @@
 class Person
 {
 	int busy;
+	Supermarket supermarket;
 public:
-	Person();
+	Person(); // zrobic kostruktor z supermarketem
 	void set_busy(int);
 	int get_busy();
 	bool is_busy();

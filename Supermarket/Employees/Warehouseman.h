@@ -1,5 +1,9 @@
 #pragma once
+
 #include "Employee.h"
+#include"..\Client.h"
+
+
 class Warehouseman : public Employee
 {
 	float money_per_hour;
@@ -9,5 +13,7 @@ public:
 	virtual void set_money_per_hour(float) override;
 	virtual void print_schedule() override;
 	float get_money_per_hour();
+
+	Product serch_product(Client client);
 };
 

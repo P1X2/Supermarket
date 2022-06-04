@@ -21,5 +21,7 @@ public:
 
 	void update_CCSC();
 	void update_profit();
+
+	void add_client_to_queue(Client client);
 };
 

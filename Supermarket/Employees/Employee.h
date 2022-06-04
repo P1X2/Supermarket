@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include "Person.h"
+#include "..\products\Product.h"
 using namespace std;
 
 class Employee :public Person 

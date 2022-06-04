@@ -38,3 +38,8 @@ void Checkout::update_profit()
 {
 	profit += total();
 }
+
+void Checkout::add_client_to_queue(Client client)
+{
+	client_queue.push_back(client);
+}

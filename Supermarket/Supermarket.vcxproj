@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Address.cpp" />
-    <ClCompile Include="Adress.cpp" />
     <ClCompile Include="Checkout.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="ProductShelve.cpp" />
@@ -159,6 +158,7 @@
     <ClCompile Include="products\Whiskey.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RNG.cpp" />
+    <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="Supermarket.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +190,7 @@
     <ClInclude Include="products\ProductNotFoundException.h" />
     <ClInclude Include="products\Whiskey.h" />
     <ClInclude Include="RNG.h" />
+    <ClInclude Include="FileReader.h" />
     <ClInclude Include="Supermarket.h" />
   </ItemGroup>
   <ItemGroup>
