@@ -25,11 +25,12 @@ vector<Product> Client::get_shopping_cart()
     return shopping_cart;
 }
 
-void  Client::serch_product(map<Product, int> shop_shelve)
+void  Client::serch_product(ProductShelve shop_shelve)
 {
     map<Product, int>::iterator it;
+    map<Product, int> inventory = shop_shelve.get_inventory();
 
-    for (it = shop_shelve.begin(); it != shop_shelve.end(); it++)
+    for (it = inventory.begin(); it != inventory.end(); it++)
     {
         Product prd_map = it->first;
 
@@ -41,7 +42,8 @@ void  Client::serch_product(map<Product, int> shop_shelve)
             }
             else
             {
-                grab_product(shop_shelve, it);
+                grab_product(inventory, it);
+                shop_shelve.update_inventory(it->first);
             }
         }
     }
@@ -50,22 +52,12 @@ void  Client::serch_product(map<Product, int> shop_shelve)
 
 void Client::grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it)
 {
-    int a = it->second;
     shopping_cart.push_back(it->first);
-    it->second = a - 1;
-    //update shopshelve zrobic
 }
 
-int Client::ask_question__is_in_stock()
+int Client::ask_question__is_in_stock(Employee warehauseman)
 {
-    // czekac az wojtaz zrobi database na pracownikow
-
-    //if (emp.size() == 0)
-    //{
-    //    // zaimplementwac czekanko
-    //}
-    //Warehouseman emp_to_ask = emp[0];
-    //emp_to_ask.serch_product(*this);
+    warehauseman.serch_product();
     
     return 0;
 
