@@ -9,3 +9,8 @@ int RNG::generate_random_number(int min_l, int max_l)
 
     return dist(generator);
 }
+
+string RNG::random_string_vector_element(vector<string> vec)
+{
+    return vec[generate_random_number(0, vec.size() - 1)];
+}

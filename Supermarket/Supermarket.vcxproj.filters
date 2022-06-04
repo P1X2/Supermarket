@@ -106,6 +106,7 @@
     <ClCompile Include="Employees\RegisterSecurityGuard.cpp">
       <Filter>cpp\supermarket</Filter>
     </ClCompile>
+    <ClCompile Include="RegisterClient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h">
@@ -204,6 +205,7 @@
     <ClInclude Include="Client.h">
       <Filter>h</Filter>
     </ClInclude>
+    <ClInclude Include="RegisterClient.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="names.txt" />

@@ -1,9 +1,8 @@
-﻿produkt,nazwa,producent,id,cena,cukier/kraj pochodzenia/zwierze/alkohol
-juice,sok porzeczkowy,polmost,1,5,10
+﻿juice,sok porzeczkowy,polmost,1,5,10
 juice,sok pomaranczowy,tymbark,11,3,9
 juice,sok jablkowy,polmost,12,2,8
 juice,sok pomidorowy,tymbark,13,7,7
-juice,sok jablko -mieta,polmost,14,12,17
+juice,sok jablko-mieta,polmost,14,12,17
 juice,sok brzoskwiniowy,tymbark,15,3,60
 juice,sok cebulowy,polmost,16,25,2
 juice,sok burakowy,riviva,17,34,1

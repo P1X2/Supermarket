@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include<iostream>
+#include"RNG.h"
 using namespace std;
 
 
@@ -35,7 +36,7 @@ void FileReader::load_names_surnames(string path)
 					surnames.push_back(item);
 					break;
 				default:
-					throw FileReadError("names and surnames", j);
+					throw FileReadError(path, j);
 				}
 			}
 		}
@@ -46,6 +47,98 @@ void FileReader::load_names_surnames(string path)
 }
 
 vector<Product> FileReader::load_products(string path)
+{
+	RNG barcode_generator;
+	vector<Product> products;
+	fstream handle;
+	int j = 0;
+	handle.open(path, ios::in);
+	try
+		{
+			string line;
+			while (getline(handle, line))
+			{
+				j++;
+				stringstream ss(line);
+				string item;
+				string product;
+				string name;
+				string producer;
+				
+				int price;
+				int calories;
+				int i = 0;
+				
+				
+				while (getline(ss, item, ','))
+				{
+					string barcode="";
+					int k;
+					for (k = 1; k <= 10; k++)
+					{
+						barcode = barcode + to_string(barcode_generator.generate_random_number(0, 9));
+					}
+					i++;
+					switch (i)
+					{
+					case 1:
+						product = item;
+						break;
+					case 2:
+						name = item;
+						break;
+					case 3:
+						producer = item;
+						break;
+					case 4:
+						price = stoi(item);
+						break;
+					case 5:
+						calories = stoi(item);
+						break;
+				
+					case 6:
+						if (product == "juice")
+						{
+							int suger_per_100=stoi(item);
+							Juice juice(name, price, calories, producer, barcode, suger_per_100);
+							products.push_back(juice);
+							break;
+						}
+						else if (product == "fruit")
+						{
+							string origin_country = item;
+							Fruit fruit(name, price, calories, producer, barcode, origin_country);
+							products.push_back(fruit);
+							break;
+						}
+						else if (product == "meat")
+						{
+							string animal_origin = item;
+							Meat meat(name, price, calories, producer, barcode, animal_origin);
+							products.push_back(meat);
+							break;
+						}
+						else if (product == "whiskey")
+						{
+							int alcohol_percent = stoi(item);
+							Whiskey whiskey(name, price, calories, producer, barcode, alcohol_percent);
+							products.push_back(whiskey);
+							break;
+						}
+						}
+					}
+				}
+			}
+	catch (const invalid_argument e)
+	{
+		cout <<endl << j << endl;
+	}
+	handle.close();
+	return products;
+}
+
+void FileReader::load_addresses(string path)
 {
 	vector<Product> products;
 	fstream handle;
@@ -86,44 +179,8 @@ vector<Product> FileReader::load_products(string path)
 				case 5:
 					price = stoi(item);
 					break;
-				case 6:
-					calories = stoi(item);
-					break;
-				
-				case 7:
-					if (product == "juice")
-					{
-						int suger_per_100=stoi(item);
-						Juice juice(name, price, calories, producer, barcode, suger_per_100);
-						products.push_back(juice);
-						break;
-					}
-					else if (product == "fruit")
-					{
-						string origin_country = item;
-						Fruit fruit(name, price, calories, producer, barcode, origin_country);
-						products.push_back(fruit);
-						break;
-					}
-					else if (product == "meat")
-					{
-						string animal_origin = item;
-						Meat meat(name, price, calories, producer, barcode, animal_origin);
-						products.push_back(meat);
-						break;
-					}
-					else if (product == "whiskey")
-					{
-						int alcohol_percent = stoi(item);
-						Whiskey whiskey(name, price, calories, producer, barcode, alcohol_percent);
-						products.push_back(whiskey);
-						break;
-					}
-					}
 				}
 			}
 		}
-	handle.close();
-	return products;
+	}
 }
-
