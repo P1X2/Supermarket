@@ -1,4 +1,5 @@
 #pragma once
+#include "..\Supermarket.h"
 class Person
 {
 	int busy;

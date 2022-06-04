@@ -4,12 +4,13 @@
 Cashier::Cashier(string n, string sur, int h,int iden, float mon) :
 	Employee(n, sur,h,iden) {
 	set_money_per_hour(mon);
+	on_checkout = false;
 }
 
 void Cashier::set_money_per_hour(float money)
 {
 	if (money > 40 or money < 15)
-		throw SalaryError(5, 30, "cashier", money);
+		throw SalaryError(15, 40, "cashier", money);
 	else money_per_hour = money;
 }
 

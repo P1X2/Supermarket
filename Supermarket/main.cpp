@@ -65,10 +65,6 @@ int main()
     reg.add_cashier("op", "as", 160, 13, 15);
     reg.add_cashier("oa", "ss", 160, 12, 20);
     cout << endl<< reg.how_many_workers() << endl;
-    Supermarket super;
-    super.load_names_surnames("names.txt");
-    //Supermarket super;
-    //super.load_names_surnames("names.txt");
     
     map <int, int> w;
     w[1] = 1;
