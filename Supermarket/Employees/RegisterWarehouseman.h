@@ -1,5 +1,4 @@
 #pragma once
-#include "Cashier.h"
 #include <list>
 #include "Warehouseman.h"
 class RegisterWarehouseman
