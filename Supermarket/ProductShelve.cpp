@@ -1,31 +1,25 @@
 #include "ProductShelve.h"
 
-ProductShelve::ProductShelve(vector<Product> prd, int shelve_number): shelve_products(prd), shelve_number(shelve_number)
+ProductShelve::ProductShelve(vector<Product> prd, vector<int> prd_number)
 {
-	this->product_count = shelve_products.size();
-}
-
-vector<Product> ProductShelve::get_shelve_products()
-{
-	return shelve_products;
-}
-
-void ProductShelve::remove_product(Product prd)
-{
-	vector<Product>::iterator it;
-	for (it = shelve_products.begin(); it != shelve_products.end(); it++)
+	if (prd.size() != prd_number.size())
 	{
-		if (*it == prd)
-		{
-			shelve_products.erase(it);
-			product_count -= 1;
-			return;
-		
-		
-		}
-
-
-
-
+		throw exception("");
+	}
+	for (int i = 0; i != prd.size(); i++)
+	{
+		inventory.insert(pair<Product, int>(prd[i], prd_number[i]));
 	}
 }
+
+
+map<Product, int> ProductShelve::get_inventory()
+{
+	return inventory;
+}
+
+void ProductShelve::update_inventory(Product prd)
+{
+	inventory[prd] -= 1;
+}
+

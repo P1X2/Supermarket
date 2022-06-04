@@ -28,6 +28,7 @@ public:
 
 	bool operator==(const Product& second_product)const;
 	bool operator!=(const Product& second_product)const;
+	bool operator<(const Product& second_product)const;
 
 };
 

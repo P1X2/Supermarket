@@ -57,4 +57,8 @@ bool Product::operator!=(const Product& second_product) const
 	return !(*this == second_product);
 }
 
+bool Product::operator<(const Product& second_product) const
+{
+	return (price < second_product.price);
+}
 

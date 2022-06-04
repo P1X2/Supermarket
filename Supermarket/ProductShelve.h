@@ -1,20 +1,21 @@
 #pragma once
 #include <vector>
+#include <map>
 #include "products/Product.h"
 #include <string>
+#include <stdexcept>
 
 using namespace std;
 
 class ProductShelve
 {
-	vector<Product> shelve_products;
-	int shelve_number, product_count;
-
+	map <Product, int> inventory;
 
 public:
-	ProductShelve(vector<Product> prd, int shelve_number);
+	ProductShelve(vector<Product> prd, vector<int> prd_number);
 
-	vector<Product> get_shelve_products();
-	void remove_product(Product prd);
+	void update_inventory(Product prd);
+	map <Product, int> get_inventory();
+
 };
 
