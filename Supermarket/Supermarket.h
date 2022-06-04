@@ -9,6 +9,8 @@
 #include "Employees/RegisterSecurityGuard.h"
 #include "RNG.h"
 #include "FileReader.h"
+#include "Employees/Employee.h"
+#include "..\Supermarket\Employees\RegisterCashiers.h"
 
 
 class Supermarket
@@ -24,4 +26,8 @@ class Supermarket
 	void generate_employees();
 public:
 	void simulation(int=1000);
+	map<Product, int> magazine_shelve;
+	vector<Client> clients;
+	RegisterCashiers cashier_register;
+
 };

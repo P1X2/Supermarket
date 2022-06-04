@@ -120,9 +120,6 @@
     <ClInclude Include="Checkout.h">
       <Filter>h\itmes</Filter>
     </ClInclude>
-    <ClInclude Include="Client.h">
-      <Filter>h\itmes</Filter>
-    </ClInclude>
     <ClInclude Include="Employees\catch.hpp">
       <Filter>h\itmes</Filter>
     </ClInclude>
@@ -203,6 +200,9 @@
     </ClInclude>
     <ClInclude Include="Employees\RegisterSecurityGuard.h">
       <Filter>h\supermarket</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>h</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
