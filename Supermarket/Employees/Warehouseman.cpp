@@ -8,6 +8,17 @@ Warehouseman::Warehouseman(string n, string sur, int h, int iden, float mon) :
 	set_money_per_hour(mon);
 }
 
+bool Warehouseman::get_is_serching_prd()
+{
+	return is_serching_prd;
+}
+
+string Warehouseman::get_searched_prd()
+{
+	return searched_prd;
+}
+
+
 void Warehouseman::set_money_per_hour(float money)
 {
 	if (money > 20 or money < 5)
@@ -29,13 +40,21 @@ float Warehouseman::get_money_per_hour()
 
 void Warehouseman::serch_product(string surename, string product)
 {
-	serching_prd = true;
+	is_serching_prd = true;
+	searched_prd = product;
+	served_client = surename;
 }
 
-void Warehouseman::grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it)
+void Warehouseman::stop_searching()
 {
-    pocket.push_back(it->first);
+	is_serching_prd = false;
 }
+
+void Warehouseman::add_prd_to_pocket(Product prd)
+{
+	pocket.push_back(prd);
+}
+
 
 void Warehouseman::empty_pocket()
 {

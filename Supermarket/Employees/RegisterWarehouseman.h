@@ -3,8 +3,12 @@
 #include "Warehouseman.h"
 class RegisterWarehouseman
 {
-	list<unique_ptr<Warehouseman>> employees;
+
+		
 public:
+	list<unique_ptr<Warehouseman>> employees;
+
+
 	void add_warehouseman(string, string, int, int, float);
 	float count_salaries();
 	int how_many_workers();
