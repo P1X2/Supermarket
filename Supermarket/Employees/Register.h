@@ -14,9 +14,7 @@ class Register
 {
 	list<unique_ptr<Employee>> employees;
 public:
-	
-	Register();
-	
+
 	void add_cashier(string, string, int, int, float);
 	void add_warehouseman(string, string, int, int, float);
 	void add_manager(string, string, int, int, float);

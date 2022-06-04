@@ -150,6 +150,12 @@
     <ClCompile Include="RNG.cpp">
       <Filter>Source Files\ITEMS</Filter>
     </ClCompile>
+    <ClCompile Include="Employees\RegisterCashiers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\RegisterWarehouseman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employees\SalaryError.h">
@@ -238,6 +244,12 @@
     </ClInclude>
     <ClInclude Include="RNG.h">
       <Filter>Header Files\ITMES</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\RegisterCashiers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\RegisterWarehouseman.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

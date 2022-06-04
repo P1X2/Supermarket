@@ -1,4 +1,3 @@
-
 #include "Employee.h"
 #include "WorkingHoursError.h"
 using namespace std;
@@ -61,7 +60,6 @@ void Employee::print_employer()
 {
 	cout << "Name: " << get_name() << " " << get_surname();
 	cout << "Salary: " << calculate_salary() << endl;
-	print_schedule();
 }
 
 bool Employee::operator==(const Employee emp)const {
@@ -77,4 +75,4 @@ float Employee::calculate_salary() { return 0; }
 
 void Employee::set_money_per_hour(float) {}
 
-void Employee::print_schedule() {  }
+

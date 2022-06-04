@@ -25,5 +25,4 @@ public:
 	bool operator==(const Employee) const;
 	virtual float calculate_salary();
 	virtual void set_money_per_hour(float);
-	virtual void print_schedule();
 };

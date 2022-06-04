@@ -7,6 +7,7 @@
 #include "products/Juice.h"
 #include "Supermarket.h"
 #include "RNG.h"
+#include "Employees/RegisterCashiers.h"
 
 
 using namespace std;
@@ -59,9 +60,10 @@ int main()
         cout << it->getName();
     }
     */
-    Supermarket super;
-    super.load_names_surnames("names.txt");
-    
+    RegisterCashiers reg;
+    reg.add_cashier("op", "as", 160, 13, 15);
+    reg.add_cashier("oa", "ss", 160, 12, 20);
+    cout << endl<< reg.how_many_workers() << endl;
 
 }
 

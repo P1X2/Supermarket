@@ -158,6 +158,8 @@
     <ClCompile Include="products\testPRD.cpp" />
     <ClCompile Include="products\Whiskey.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Employees\RegisterCashiers.cpp" />
+    <ClCompile Include="Employees\RegisterWarehouseman.cpp" />
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="Supermarket.cpp" />
   </ItemGroup>
@@ -189,6 +191,8 @@
     <ClInclude Include="products\Product.h" />
     <ClInclude Include="products\ProductNotFoundException.h" />
     <ClInclude Include="products\Whiskey.h" />
+    <ClInclude Include="Employees\RegisterCashiers.h" />
+    <ClInclude Include="Employees\RegisterWarehouseman.h" />
     <ClInclude Include="RNG.h" />
     <ClInclude Include="Supermarket.h" />
   </ItemGroup>

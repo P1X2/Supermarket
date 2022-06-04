@@ -1,11 +1,6 @@
 #include "Register.h"
 #include "EmployeeDoesNotExistException.h"
 
-Register::Register()
-{
-	list<unique_ptr<Employee>> employees;
-}
-
 void Register::add_warehouseman(string name, string surname, int hours,int id, float money)
 {
 	unique_ptr<Warehouseman> warehouseman = make_unique<Warehouseman>(name, surname, hours, id, money);
