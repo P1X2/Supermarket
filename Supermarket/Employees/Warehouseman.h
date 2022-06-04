@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Employee.h"
-//#include "..\ProductShelve.h"
 #include <vector>
 
 
@@ -10,8 +9,8 @@
 class Warehouseman : public Employee
 {
 	float money_per_hour;
-	//ProductShelve magazine;
 	vector<Product> pocket;
+	bool serching_prd;
 
 public:
 	Warehouseman(string, string, int, int, float);

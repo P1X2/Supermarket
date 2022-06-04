@@ -96,22 +96,31 @@ int main()
     cout << endl<< reg.how_many_workers() << endl;*/
     
     map <int, int> w;
-    w[1] = 1;
+    w[1] = 237846;
     w[2] = 2;
-    Supermarket super;
-    super.simulation();
-    //vector<int> a;
-   // map<vector, int> a;
-    // test polki na bulki
-    vector<int> f;
-    vector<Product> y;
-    f.push_back(3); f.push_back(2); y.push_back(xdxd); y.push_back(xdx);
 
-    ProductShelve c(y,f);
-    cout << endl<<endl<<c.get_inventory()[xdxd];
-    c.update_inventory(xdxd);
-    c.update_inventory(xdxd);
-    cout << endl << endl << c.get_inventory()[xdxd];
+    map<int, int>::iterator it;
 
+    it = w.begin();
+    int a = it->first;
+    cout << w[1] << endl << a;
+
+        
+
+//    Supermarket super;
+//    super.simulation();
+//    //vector<int> a;
+//   // map<vector, int> a;
+//    // test polki na bulki
+//    vector<int> f;
+//    vector<Product> y;
+//    f.push_back(3); f.push_back(2); y.push_back(xdxd); y.push_back(xdx);
+//
+//    ProductShelve c(y,f);
+//    cout << endl<<endl<<c.get_inventory()[xdxd];
+//    c.update_inventory(xdxd);
+//    c.update_inventory(xdxd);
+//    cout << endl << endl << c.get_inventory()[xdxd];
+//
 }
 

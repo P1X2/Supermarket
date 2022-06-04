@@ -2,6 +2,8 @@
 #include <vector>
 #include <map>
 #include "products/Product.h"
+#include "Employees/Warehouseman.h"
+#include "Employees/RegisterWarehouseman.h"
 #include <string>
 #include <stdexcept>
 
@@ -17,5 +19,6 @@ public:
 	void update_inventory(Product prd);
 	map <Product, int> get_inventory();
 
+	void is_looking_for_prd(RegisterWarehouseman registerWHM);
 };
 

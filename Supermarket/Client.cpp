@@ -55,12 +55,11 @@ void Client::grab_product(map<Product, int> shop_shelve, map<Product, int>::iter
     shopping_cart.push_back(it->first);
 }
 
-int Client::ask_question__is_in_stock()
+void Client::ask_question__is_in_stock(Warehouseman WHM)
 {
-    
-    return 0;
-
+    WHM.serch_product(surname, shopping_list[currently_serched_prd]);
 }
+
 
 void Client::go_to_checkout()
 {
