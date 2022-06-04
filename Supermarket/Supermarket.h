@@ -29,5 +29,4 @@ public:
 	map<Product, int> magazine_shelve;
 
 
-
 };

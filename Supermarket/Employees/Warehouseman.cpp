@@ -1,11 +1,23 @@
 #include "Warehouseman.h"
 #include "SalaryError.h"
+//#include "..\Supermarket.h"
 
 Warehouseman::Warehouseman(string n, string sur, int h, int iden, float mon) :
 	Employee(n, sur, h, iden)
 {
 	set_money_per_hour(mon);
 }
+
+bool Warehouseman::get_is_serching_prd()
+{
+	return is_serching_prd;
+}
+
+string Warehouseman::get_searched_prd()
+{
+	return searched_prd;
+}
+
 
 void Warehouseman::set_money_per_hour(float money)
 {
@@ -24,34 +36,25 @@ float Warehouseman::get_money_per_hour()
 	return money_per_hour;
 }
 
-//void Warehouseman::serch_product(string surename, string product)
-//{
-//    map<Product, int>::iterator it;
-//    map<Product, int> inventory = magazine.get_inventory();
-//
-//    for (it = inventory.begin(); it != inventory.end(); it++)
-//    {
-//        Product prd_map = it->first;
-//
-//        if (prd_map.getName() == product)
-//        {
-//            if (it->second == 0)
-//            {
-//                // odpwieada ze mike ma
-//            }
-//            else
-//            {
-//                grab_product(inventory, it);
-//                magazine.update_inventory(it->first);
-//            }
-//        };
-//    }
-//}
 
-void Warehouseman::grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it)
+
+void Warehouseman::serch_product(string surename, string product)
 {
-    pocket.push_back(it->first);
+	is_serching_prd = true;
+	searched_prd = product;
+	served_client = surename;
 }
+
+void Warehouseman::stop_searching()
+{
+	is_serching_prd = false;
+}
+
+void Warehouseman::add_prd_to_pocket(Product prd)
+{
+	pocket.push_back(prd);
+}
+
 
 void Warehouseman::empty_pocket()
 {
@@ -59,6 +62,7 @@ void Warehouseman::empty_pocket()
     it = pocket.begin();
     pocket.erase(it);
 }
+
 
 
 

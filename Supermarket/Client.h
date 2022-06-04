@@ -7,6 +7,7 @@
 #include "Address.h"
 #include <stdexcept>
 #include "ProductShelve.h"
+#include "Employees/Warehouseman.h"
 
 using namespace std;
 
@@ -35,7 +36,7 @@ public:
 
     void serch_product(ProductShelve shop_shelve);
     void grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it);
-    int ask_question__is_in_stock();
+    void ask_question__is_in_stock(Warehouseman WHM);
     void go_to_checkout();
 
     void update_currently_serched_product();
