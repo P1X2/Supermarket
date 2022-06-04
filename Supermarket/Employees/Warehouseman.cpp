@@ -23,9 +23,8 @@ float Warehouseman::get_money_per_hour()
 	return money_per_hour;
 }
 
-Product Warehouseman::serch_product(Client client)
+void Warehouseman::serch_product()
 {
-	;
 }
 
 ostream& operator<<(ostream& os, Warehouseman emp)

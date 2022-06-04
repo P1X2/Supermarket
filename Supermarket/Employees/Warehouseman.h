@@ -13,6 +13,6 @@ public:
 	virtual void set_money_per_hour(float) override;
 	float get_money_per_hour();
 
-	Product serch_product(Client client);
+	void serch_product();
 };
 

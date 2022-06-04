@@ -137,7 +137,6 @@
     <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp" />
     <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp" />
     <ClCompile Include="Employees\Manager.cpp" />
-    <ClCompile Include="Employees\Register.cpp" />
     <ClCompile Include="Employees\SalaryError.cpp" />
     <ClCompile Include="Employees\SecurityGuard.cpp" />
     <ClCompile Include="Employees\testEMP.cpp" />
@@ -173,7 +172,6 @@
     <ClInclude Include="Employees\EmployeeAlreadyExistsException.h" />
     <ClInclude Include="Employees\EmployeeDoesNotExistException.h" />
     <ClInclude Include="Employees\Manager.h" />
-    <ClInclude Include="Employees\Register.h" />
     <ClInclude Include="Employees\SalaryError.h" />
     <ClInclude Include="Employees\SecurityGuard.h" />
     <ClInclude Include="Employees\Warehouseman.h" />
