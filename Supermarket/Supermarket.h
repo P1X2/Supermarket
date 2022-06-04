@@ -23,6 +23,7 @@ class Supermarket
 	RegisterSecurityGuard security_guards;
 	FileReader file_reader;
 
+	void generate_client();
 	void generate_employees();
 public:
 	void simulation(int=1000);
