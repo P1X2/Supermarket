@@ -58,6 +58,7 @@ void RegisterCashiers::remove_employee(int id)
 
 void RegisterCashiers::print_employees()
 {
+	cout << "Cashiers:" << endl;
 	for (const auto& emp_ptr : employees)
 	{
 		emp_ptr->print_employer();

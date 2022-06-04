@@ -16,14 +16,15 @@
 
 class FileReader
 {
+public:
 	vector <string> names;
 	vector <string> surnames;
 	
 
 
-public:
+
 
 	void load_names_surnames(string);
-	void load_products(string);
+	vector<Product> load_products(string);
 };
 

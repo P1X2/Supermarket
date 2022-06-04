@@ -8,14 +8,14 @@ SecurityGuard::SecurityGuard(string n, string sur, int h, int iden, float mon) :
 
 void SecurityGuard::set_money_per_hour(float money)
 {
-	if (money > 40 or money < 10)
-		throw SalaryError(40, 10, "SecurityGuard", money);
+	if (money > 1000 or money < 500)
+		throw SalaryError(1000, 500, "SecurityGuard", money);
 	else money_per_hour = money;
 }
 
 float SecurityGuard::calculate_salary()
 {
-	return (160 * get_money_per_hour() + (get_hours() - 160) * (get_money_per_hour() + 7));
+	return (160 * get_money_per_hour() + (get_hours() - 160) * (get_money_per_hour() + 200));
 }
 
 float SecurityGuard::get_money_per_hour()

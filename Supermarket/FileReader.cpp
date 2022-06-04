@@ -9,7 +9,6 @@ using namespace std;
 
 void FileReader::load_names_surnames(string path)
 {
-	
 	fstream handle;
 	int j = 0;
 	handle.open(path,ios::in);
@@ -46,8 +45,9 @@ void FileReader::load_names_surnames(string path)
 	cout << surnames.size() << endl;
 }
 
-void FileReader::load_products(string path)
+vector<Product> FileReader::load_products(string path)
 {
+	vector<Product> products;
 	fstream handle;
 	int j = 0;
 	handle.open(path, ios::in);
@@ -94,25 +94,29 @@ void FileReader::load_products(string path)
 					if (product == "juice")
 					{
 						int suger_per_100=stoi(item);
-						//Dodaj do database
+						Juice juice(name, price, calories, producer, barcode, suger_per_100);
+						products.push_back(juice);
 						break;
 					}
 					else if (product == "fruit")
 					{
-						string orgin_country = item;
-						//Dodaj do database
+						string origin_country = item;
+						Fruit fruit(name, price, calories, producer, barcode, origin_country);
+						products.push_back(fruit);
 						break;
 					}
 					else if (product == "meat")
 					{
 						string animal_origin = item;
-						//Dodaj do database
+						Meat meat(name, price, calories, producer, barcode, animal_origin);
+						products.push_back(meat);
 						break;
 					}
 					else if (product == "whiskey")
 					{
 						int alcohol_percent = stoi(item);
-						//Dodaj do database
+						Whiskey whiskey(name, price, calories, producer, barcode, alcohol_percent);
+						products.push_back(whiskey);
 						break;
 					}
 					}
@@ -120,4 +124,6 @@ void FileReader::load_products(string path)
 			}
 		}
 	handle.close();
-	}
+	return products;
+}
+

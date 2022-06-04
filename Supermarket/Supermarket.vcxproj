@@ -158,6 +158,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Employees\RegisterCashiers.cpp" />
     <ClCompile Include="Employees\RegisterWarehouseman.cpp" />
+    <ClCompile Include="Employees\RegisterSecurityGuard.cpp" />
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="Supermarket.cpp" />
@@ -191,6 +192,7 @@
     <ClInclude Include="products\Whiskey.h" />
     <ClInclude Include="Employees\RegisterCashiers.h" />
     <ClInclude Include="Employees\RegisterWarehouseman.h" />
+    <ClInclude Include="Employees\RegisterSecurityGuard.h" />
     <ClInclude Include="RNG.h" />
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="Supermarket.h" />

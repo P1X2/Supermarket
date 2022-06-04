@@ -59,7 +59,7 @@ vector<int> Employee::get_schedule()
 void Employee::print_employer()
 {
 	cout << "Name: " << get_name() << " " << get_surname();
-	cout << "Salary: " << calculate_salary() << endl;
+	cout << "   Salary: " << calculate_salary() << endl;
 }
 
 bool Employee::operator==(const Employee emp)const {

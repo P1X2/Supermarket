@@ -34,9 +34,6 @@
     <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp">
       <Filter>cpp\errors</Filter>
     </ClCompile>
-    <ClCompile Include="FileReader.cpp">
-      <Filter>cpp\supermarket</Filter>
-    </ClCompile>
     <ClCompile Include="FileReadError.cpp">
       <Filter>cpp\errors</Filter>
     </ClCompile>
@@ -102,6 +99,12 @@
     </ClCompile>
     <ClCompile Include="Employees\WorkingHoursError.cpp">
       <Filter>cpp\errors</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>cpp\items</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees\RegisterSecurityGuard.cpp">
+      <Filter>cpp\supermarket</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +200,9 @@
     </ClInclude>
     <ClInclude Include="Employees\Warehouseman.h">
       <Filter>h\emp</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees\RegisterSecurityGuard.h">
+      <Filter>h\supermarket</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

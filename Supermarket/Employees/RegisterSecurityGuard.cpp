@@ -1,20 +1,18 @@
-#include "RegisterWarehouseman.h"
-
+#include "RegisterSecurityGuard.h"
 #include "EmployeeDoesNotExistException.h"
 #include "EmployeeAlreadyExistsException.h"
 
-void RegisterWarehouseman::add_warehouseman(string name, string surname, int hours, int id, float money)
+void RegisterSecurityGuard::add_security_guard(string name, string surname, int hours, int id, float money)
 {
-	unique_ptr<Warehouseman> warehouseman = make_unique<Warehouseman>(name, surname, hours, id, money);
-	if (in_register(warehouseman->get_id()))
+	unique_ptr<SecurityGuard> guard = make_unique<SecurityGuard>(name, surname, hours, id, money);
+	if (in_register(guard->get_id()))
 	{
 		throw EmployeeAlreadyExistsException();
 	}
-	employees.push_back(move(warehouseman));
+	employees.push_back(move(guard));
 }
 
-
-float RegisterWarehouseman::count_salaries()
+float RegisterSecurityGuard::count_salaries()
 {
 	float sum = 0;
 	for (const auto& emp_ptr : employees)
@@ -24,12 +22,12 @@ float RegisterWarehouseman::count_salaries()
 	return sum;
 }
 
-int RegisterWarehouseman::how_many_workers()
+int RegisterSecurityGuard::how_many_workers()
 {
 	return employees.size();
 }
 
-bool RegisterWarehouseman::in_register(int id)
+bool RegisterSecurityGuard::in_register(int id)
 {
 	bool x = false;
 
@@ -41,7 +39,7 @@ bool RegisterWarehouseman::in_register(int id)
 
 }
 
-void RegisterWarehouseman::remove_employee(int id)
+void RegisterSecurityGuard::remove_employee(int id)
 {
 	if (in_register(id))
 	{
@@ -58,18 +56,17 @@ void RegisterWarehouseman::remove_employee(int id)
 		throw EmployeeDoesNotExistException();
 }
 
-void RegisterWarehouseman::print_employees()
+void RegisterSecurityGuard::print_employees()
 {
-	cout << "Warehousemen:" << endl;
+	cout << "Security Guards:" << endl;
 	for (const auto& emp_ptr : employees)
 	{
 		emp_ptr->print_employer();
 	}
 }
 
-void RegisterWarehouseman::pass_time_unit()
+void RegisterSecurityGuard::pass_time_unit()
 {
-
 	for (const auto& emp_ptr : employees)
 	{
 		emp_ptr->set_busy(emp_ptr->get_busy() - 1);
