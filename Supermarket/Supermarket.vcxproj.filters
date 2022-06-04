@@ -242,5 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="names.txt" />
+    <Text Include="products.txt" />
   </ItemGroup>
 </Project>

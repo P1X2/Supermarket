@@ -71,7 +71,7 @@ void Supermarket::load_products(string path)
 			int price;
 			int calories;
 			int i = 0;
-			while (getline(ss, item, ' '))
+			while (getline(ss, item, ','))
 			{
 				i++;
 				switch (i)
@@ -94,12 +94,35 @@ void Supermarket::load_products(string path)
 				case 6:
 					calories = stoi(item);
 					break;
-				if (product == "juice")
-				{
-					
-				}
+				
+				case 7:
+					if (product == "juice")
+					{
+						int suger_per_100=stoi(item);
+						//Dodaj do database
+						break;
+					}
+					else if (product == "fruit")
+					{
+						string orgin_country = item;
+						//Dodaj do database
+						break;
+					}
+					else if (product == "meat")
+					{
+						string animal_origin = item;
+						//Dodaj do database
+						break;
+					}
+					else if (product == "whiskey")
+					{
+						int alcohol_percent = stoi(item);
+						//Dodaj do database
+						break;
+					}
+					}
 				}
 			}
 		}
+	handle.close();
 	}
-}
