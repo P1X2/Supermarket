@@ -128,8 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Address.cpp" />
+    <ClCompile Include="Bill.cpp" />
     <ClCompile Include="Checkout.cpp" />
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Invoice.cpp" />
     <ClCompile Include="ProductShelve.cpp" />
     <ClCompile Include="products\catch_config.cpp" />
     <ClCompile Include="Employees\Cashier.cpp" />
@@ -167,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />
+    <ClInclude Include="Bill.h" />
     <ClInclude Include="Checkout.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Employees\Cashier.h" />
@@ -181,6 +184,7 @@
     <ClInclude Include="Employees\WorkingHoursError.h" />
     <ClInclude Include="Employees\Person.h" />
     <ClInclude Include="FileReadError.h" />
+    <ClInclude Include="Invoice.h" />
     <ClInclude Include="ProductShelve.h" />
     <ClInclude Include="products\BarcodeNotUniqueException.h" />
     <ClInclude Include="products\DataBase.h" />
