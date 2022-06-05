@@ -8,7 +8,7 @@ class RegisterWarehouseman
 public:
 
 
-
+	
 	void add_warehouseman(string, string, int, int, float);
 	float count_salaries();
 	int how_many_workers();
