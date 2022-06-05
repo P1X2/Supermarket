@@ -1,5 +1,5 @@
 #include "Checkout.h"
-
+#include <stdexcept>
 
 Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0)
 {
@@ -13,8 +13,17 @@ void Checkout::scan_product()
 	int cs = current_shopping_cart_index;
 	for (int i = current_shopping_cart_index; i < get_scanning_speed()+cs; i++)
 	{
-		current_cart_profit += current_client_shopping_cart[i].getPrice();
-		current_shopping_cart_index++;
+		try
+		{
+			current_cart_profit += current_client_shopping_cart[i].getPrice();
+			current_shopping_cart_index++;
+
+		}
+		catch (exception)
+		{
+			break;
+		}
+		
 	}
 }
 

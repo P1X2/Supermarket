@@ -67,7 +67,7 @@ void Supermarket_sandbox::give_prd_to_client() // 3
 		}
 }
 
-void Supermarket_sandbox::opening_checkouts()
+void Supermarket_sandbox::opening_checkouts() //4
 {
 	int clients_checkout_sum = 0, opened_checkouts =0;
 
@@ -94,11 +94,11 @@ void Supermarket_sandbox::opening_checkouts()
 
 }
 
-void Supermarket_sandbox::scan_products()
+void Supermarket_sandbox::scan_products() // 5
 {
 	for (vector<Checkout>::iterator it = checkouts.begin(); it != checkouts.end(); it++)
 	{
-
+		it->checkout_action();
 	}
 }
 
