@@ -17,6 +17,7 @@
 class FileReader
 {
 public:
+
 	vector <string> names;
 	vector <string> surnames;
 	vector <Address> addresses;

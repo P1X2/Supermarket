@@ -23,12 +23,17 @@ void Supermarket::simulation(int iterations)
 	{
 		cout<<pr.getName()<<"  "<<pr.getBarcode() << endl;
 	}
+	
 	generate_employees();
 	int i = 0;
 	cashiers.print_employees();
 	warehousemen.print_employees();
 	security_guards.print_employees();
-
+	generate_client(10);
+	for (Client cl : clients.get_clients())
+	{
+		cout << cl.get_name() << " " << cl.get_surename() << " "<<cl.get_adress() << endl;
+	}
 	while (iterations<++i)
 	{
 		
@@ -65,14 +70,33 @@ void Supermarket::generate_employees()
 
 void Supermarket::generate_client(int number_to_generate)
 {
+	string name;
+	string surname;
+	vector<string>shopping_list;
+	int reccp;
+	bool recipe;
 	for (int i = 1; i < number_to_generate; i++)
 	{
+		shopping_list.clear();
+		name = rng_machine.random_string_vector_element(file_reader.names);
+		surname = rng_machine.random_string_vector_element(file_reader.surnames);
+		int shop_cart_len = rng_machine.generate_random_number(1, 20);
+		for (int k = 1; k < shop_cart_len; k++)
+		{
+			string product = products[rng_machine.generate_random_number(0, products.size()-1)].getName();
+			shopping_list.push_back(product);
+		}
+		recipe = rng_machine.generate_random_number(0,1);
+		Address sa = file_reader.addresses[rng_machine.generate_random_number(0, file_reader.addresses.size()-1)];
+		Client client(name, surname, shopping_list,
+			sa, recipe);
+		clients.add_client(client);
 		
 	}
 }
 
-Supermarket::Supermarket() :
-	products(file_reader.load_products("products.txt")),
+Supermarket::Supermarket(string products_path) :
+	products(file_reader.load_products(products_path)),
 	shop_shelve(products, rng_machine.random_numbers_vector(1, 3, products.size())),
 		magazine(products, rng_machine.random_numbers_vector(1, 3, products.size()))
 {}
