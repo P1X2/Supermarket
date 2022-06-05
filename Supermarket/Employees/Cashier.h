@@ -10,6 +10,7 @@ public:
 	virtual float calculate_salary() override;
 	virtual void set_money_per_hour(float) override;
 	float get_money_per_hour();
+	friend ostream& operator<<(ostream& os, const Cashier emp);
 };
 
-ostream& operator<<(ostream&, Cashier);
+ostream& operator<<(ostream& os, const Cashier emp);

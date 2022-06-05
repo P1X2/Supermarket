@@ -10,9 +10,16 @@ Checkout::Checkout(Cashier checkout_cashier, bool is_open) :checkout_cashier(che
 
 void Checkout::scan_product()
 {
-	// zaimplementowaæ czekanko
+	for (int i = current_shopping_cart_index; i < get_scanning_speed()+current_shopping_cart_index; i++)
+	{
+		current_cart_profit += current_client_shopping_cart[i].getPrice();
+	}
 }
 
+int Checkout::get_scanning_speed()
+{
+	return get_client_queue_lenght() * 2;
+}
 
 int Checkout::total()
 {

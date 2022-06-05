@@ -25,7 +25,9 @@ float Cashier::get_money_per_hour()
 }
 
 ostream& operator<<(ostream& os, Cashier emp)
-{
-	emp.print_employer();
+{	
+	
+	os << emp.get_name() << " " << emp.get_surname();
+	
 	return os;
 }

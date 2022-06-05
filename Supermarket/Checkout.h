@@ -10,8 +10,12 @@ class Checkout
 	
 	vector<Client> client_queue;
 	vector<Product> current_client_shopping_cart;
+
+	int current_shopping_cart_index;
+	int current_cart_profit;
 	int profit;
 	bool is_open;
+	int get_scanning_speed();
 public:
 	Checkout();
 	Checkout(Cashier checkout_cashier, bool is_open);
@@ -19,6 +23,7 @@ public:
 	void scan_product(); // do zrobienia jak bedzie g³owna petla czasu
 	int total();
 	int get_client_queue_lenght();
+	
 
 	void release_cashier();
 	void assign_cashier();

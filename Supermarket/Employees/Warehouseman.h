@@ -19,6 +19,7 @@ public:
 
 	bool get_is_serching_prd();
 	string get_searched_prd();
+	string action;
 
 	virtual float calculate_salary() override;
 	virtual void set_money_per_hour(float) override;
@@ -29,6 +30,11 @@ public:
 	void add_prd_to_pocket(Product prd);
 	void empty_pocket();
 
+	void go_to_magazine();
+	void gave_to_client();
+
 	friend class Supermarket_sandbox;
+	friend ostream& operator<<(ostream& os, const Warehouseman emp);
 };
 
+ostream& operator<<(ostream& os, const Warehouseman emp);

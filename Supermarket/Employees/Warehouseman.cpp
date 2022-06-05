@@ -63,11 +63,28 @@ void Warehouseman::empty_pocket()
     pocket.erase(it);
 }
 
+void Warehouseman::go_to_magazine()
+{
+	action = "is going to the magazine";
+	set_busy(3);
+}
 
-
+void Warehouseman::gave_to_client()
+{
+	action = "gave product to the client";
+	set_busy(1);
+}
 
 ostream& operator<<(ostream& os, Warehouseman emp)
 {
-	emp.print_employer();
+	if (emp.action == "is going to the magazine")
+	{
+		os << emp.get_name() << " " << emp.get_surname() << " " << emp.action;
+		os << " to look for " << emp.pocket[0] << endl;
+	}
+	else if (emp.action == "gave product to the client")
+	{
+		os << emp.get_name() << " " << emp.get_surname() << " " << emp.action;
+	}
 	return os;
 }
