@@ -111,8 +111,7 @@ int main()
 
         
 
-    Supermarket super;
-    super.simulation();
+    
 //    //vector<int> a;
 //   // map<vector, int> a;
 //    // test polki na bulki

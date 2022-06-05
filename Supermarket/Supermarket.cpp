@@ -4,11 +4,12 @@
 
 void Supermarket::simulation(int iterations)
 {
-	file_reader.load_names_surnames("names.txt");
+	
 	vector<Product> xd;
 	try
 	{
-		xd = file_reader.load_products("products.txt");
+		file_reader.load_names_surnames("names.txt");
+		
 	}
 	catch (const FileReadError e)
 	{
@@ -65,3 +66,8 @@ void Supermarket::generate_client(int number_to_generate)
 		
 	}
 }
+
+Supermarket::Supermarket() :
+	shop_shelve(file_reader.load_products("products.txt"), rng_machine.random_numbers_vector(1, 3, file_reader.load_products("products.txt").size())),
+		magazine(file_reader.load_products("products.txt"), rng_machine.random_numbers_vector(1, 3, file_reader.load_products("products.txt").size()))
+{}

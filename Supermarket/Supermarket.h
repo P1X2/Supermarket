@@ -22,19 +22,14 @@ class Supermarket
 	RegisterCashiers cashiers;
 	RegisterWarehouseman warehousemen;
 	RegisterSecurityGuard security_guards;
-	RegisterCashiers cashiers;
-
-	RNG rng_machine;
 
 	FileReader file_reader;
 	RegisterClient clients;
 	void generate_client(int=1);
 	void generate_employees();
 public:
+	Supermarket();
 	void simulation(int=1000);
-	map<Product, int> magazine_shelve;
-	vector<Client> clients;
-	RegisterCashiers cashier_register;
 
 
 };
