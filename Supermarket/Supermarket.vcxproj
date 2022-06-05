@@ -163,6 +163,7 @@
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="Supermarket.cpp" />
+    <ClCompile Include="Supermarket_sandbox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />
@@ -198,6 +199,7 @@
     <ClInclude Include="RNG.h" />
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="Supermarket.h" />
+    <ClInclude Include="Supermarket_sandbox.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="addresses.txt" />

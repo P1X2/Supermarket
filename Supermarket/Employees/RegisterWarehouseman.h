@@ -6,7 +6,7 @@ class RegisterWarehouseman
 
 		
 public:
-	list<unique_ptr<Warehouseman>> employees;
+	vector<Warehouseman> employees ;
 
 
 	void add_warehouseman(string, string, int, int, float);

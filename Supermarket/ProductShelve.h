@@ -19,7 +19,7 @@ public:
 	void update_inventory(Product prd);
 	map <Product, int> get_inventory();
 
-	void who_is_looking_for_prd(RegisterWarehouseman registerWHM);
+	void who_is_looking_for_prd(RegisterWarehouseman &registerWHM);
 	Product search_prd(string prd_name);
 };
 

@@ -5,19 +5,19 @@
 
 void RegisterWarehouseman::add_warehouseman(string name, string surname, int hours, int id, float money)
 {
-	unique_ptr<Warehouseman> warehouseman = make_unique<Warehouseman>(name, surname, hours, id, money);
-	if (in_register(warehouseman->get_id()))
+	Warehouseman warehouseman(name, surname, hours, id, money);
+	if (in_register(warehouseman.get_id() == true))
 	{
 		throw EmployeeAlreadyExistsException();
 	}
-	employees.push_back(move(warehouseman));
+	employees.push_back((warehouseman));
 }
 
 
 float RegisterWarehouseman::count_salaries()
 {
 	float sum = 0;
-	for (const auto& emp_ptr : employees)
+	for (vector<Warehouseman>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end();emp_ptr++)
 	{
 		sum += emp_ptr->calculate_salary();
 	}
@@ -33,7 +33,7 @@ bool RegisterWarehouseman::in_register(int id)
 {
 	bool x = false;
 
-	for (const auto& emp_ptr : employees)
+	for (vector<Warehouseman>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end();emp_ptr++)
 	{
 		if (id == emp_ptr->get_id()) x = true;
 	}
@@ -45,11 +45,11 @@ void RegisterWarehouseman::remove_employee(int id)
 {
 	if (in_register(id))
 	{
-		for (const auto& emp_ptr : employees)
+		for (vector<Warehouseman>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end();emp_ptr++)
 		{
 			if (id == emp_ptr->get_id())
 			{
-				employees.remove(emp_ptr); break;
+				employees.erase(emp_ptr); break;
 			}
 		}
 	}
@@ -61,7 +61,7 @@ void RegisterWarehouseman::remove_employee(int id)
 void RegisterWarehouseman::print_employees()
 {
 	cout << "Warehousemen:" << endl;
-	for (const auto& emp_ptr : employees)
+	for (vector<Warehouseman>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end();emp_ptr++)
 	{
 		emp_ptr->print_employer();
 	}
@@ -70,7 +70,7 @@ void RegisterWarehouseman::print_employees()
 void RegisterWarehouseman::pass_time_unit()
 {
 
-	for (const auto& emp_ptr : employees)
+	for (vector<Warehouseman>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end();emp_ptr++)
 	{
 		emp_ptr->set_busy(emp_ptr->get_busy() - 1);
 	}

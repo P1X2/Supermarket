@@ -18,19 +18,21 @@ map<Product, int> ProductShelve::get_inventory()
 	return inventory;
 }
 
-void ProductShelve::who_is_looking_for_prd(RegisterWarehouseman registerWHM)
+void ProductShelve::who_is_looking_for_prd(RegisterWarehouseman &registerWHM)
 {
-	for (const auto& emp_ptr : registerWHM.employees)
+	for (vector<Warehouseman>::iterator emp_ptr = registerWHM.employees.begin(); emp_ptr != registerWHM.employees.end(); emp_ptr++)
 	{
 		if (emp_ptr->get_is_serching_prd() == true)
 		{
 			Product serched_prd = search_prd(emp_ptr->get_searched_prd());
+			emp_ptr->add_prd_to_pocket(serched_prd);
 		}
 		else
 		{
 			continue;
 		}
 	}
+	return;
 }
 
 Product ProductShelve::search_prd(string prd_name)

@@ -34,7 +34,7 @@ vector<Product> Client::get_shopping_cart()
     return shopping_cart;
 }
 
-int  Client::serch_product(ProductShelve shop_shelve)
+int  Client::serch_product(ProductShelve &shop_shelve)
 {
     map<Product, int>::iterator it;
     map<Product, int> inventory = shop_shelve.get_inventory();
@@ -47,12 +47,13 @@ int  Client::serch_product(ProductShelve shop_shelve)
         {
             if (it->second == 0)
             {
-                return -1;
+                return 1; // spr w supersamie
             }
             else
             {
                 grab_product(inventory, it);
                 shop_shelve.update_inventory(it->first);
+                update_currently_serched_product();
                 check_if_done();
                 return 0;
             }
@@ -66,9 +67,20 @@ void Client::grab_product(map<Product, int> shop_shelve, map<Product, int>::iter
     shopping_cart.push_back(it->first);
 }
 
-void Client::ask_question__is_in_stock(Warehouseman WHM)
+void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
 {
-    WHM.serch_product(surname,shopping_list[currently_serched_prd]);
+    for (vector<Warehouseman>::iterator emp_ptr = registerWHM.employees.begin(); emp_ptr != registerWHM.employees.end(); emp_ptr++)
+    {
+        if (emp_ptr->get_is_serching_prd() == false)
+        {
+            emp_ptr->serch_product(surname, shopping_list[currently_serched_prd]);
+            return;
+        }
+        else
+        {
+            continue;
+        }
+    }
 }
 
 void Client::update_currently_serched_product()
