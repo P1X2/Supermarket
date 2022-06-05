@@ -47,6 +47,11 @@ int Product::getPrice() const
 	return price;
 }
 
+int Product::get_vat() const
+{
+	return vat;
+}
+
 bool Product::operator==(const Product& second_product) const
 {
 	return (name == second_product.name);

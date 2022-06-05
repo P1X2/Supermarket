@@ -6,7 +6,7 @@ class Invoice :
     string name, surname;
     Address address;
 public:
-    Invoice(string name, string surname, int money, Address address,vector<Product> products);
+    Invoice(string name, string surname, Address address,vector<Product> products);
     int count_total();
     void print_bill();
 };

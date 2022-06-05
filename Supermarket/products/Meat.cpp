@@ -2,7 +2,9 @@
 
 Meat::Meat(string name, int price, int calories, string producer,string barcode, string animalOrgin)
 	:Product(name, producer,barcode, price, calories), animal(animal)
-{}
+{
+	vat = 15;
+}
 float Meat::VAT() const
 {
 	return price*0.21;

@@ -5,6 +5,7 @@ Fruit::Fruit(string name, int price, int calories, string Producer, string barco
 	Product(name,Producer,barcode, price, calories)
 {
 	this->orginCountry = orginCountry;
+	vat = 8;
 }
 
 float Fruit::VAT() const

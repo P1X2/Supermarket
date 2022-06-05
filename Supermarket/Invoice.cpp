@@ -1,7 +1,7 @@
 #include "Invoice.h"
 
-Invoice::Invoice(string name, string surname, int money, Address address, vector<Product> products) :
-	Bill(money, products), name(name),surname(surname),address(address) {}
+Invoice::Invoice(string name, string surname,Address address, vector<Product> products) :
+	Bill(products), name(name),surname(surname),address(address) {}
 
 int Invoice::count_total()
 {

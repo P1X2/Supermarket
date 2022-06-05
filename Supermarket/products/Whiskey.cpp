@@ -2,7 +2,9 @@
 
 Whiskey::Whiskey(string name, int price, int calories, string Producer, string barcode, int alcoholPercent)
 	:Product(name, Producer,barcode, price, calories), alcoholPercent(alcoholPercent)
-{}
+{
+	vat = 23;
+}
 
 float Whiskey::VAT() const
 {

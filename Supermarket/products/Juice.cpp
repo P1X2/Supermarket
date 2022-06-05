@@ -3,6 +3,7 @@
 Juice::Juice(string name, int price, int calories, string Producer, string barcode, int sugarPer100)
 	:Product(name, Producer, barcode, price, calories), sugarPer100(sugarPer100)
 {
+	vat = 8;
 }
 
 float Juice::VAT() const

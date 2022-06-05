@@ -157,7 +157,7 @@ int main()
     vector<Product> lsl;
     lsl.push_back(xdxd);
     lsl.push_back(xdx);
-    Invoice inv("bart", "dab", 140, ads, lsl);
+    Invoice inv("bart", "dab", ads, lsl);
 
     inv.print_bill();
     return 1;
