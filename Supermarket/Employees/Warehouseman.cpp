@@ -38,6 +38,8 @@ float Warehouseman::get_money_per_hour()
 
 
 
+
+
 void Warehouseman::serch_product(string surename, string product)
 {
 	is_serching_prd = true;

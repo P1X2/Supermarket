@@ -66,6 +66,18 @@ void Supermarket_sandbox::give_prd_to_client() // 3
 		}
 }
 
+void Supermarket_sandbox::scanning_checkouts()
+{
+	for (vector<Checkout>::iterator it = checkouts.begin(); it != checkouts.end(); it++)
+	{
+		if (it->is_open && it->client_queue.size() != 0)
+		{
+
+		}
+	}
+
+}
+
 
 
 

@@ -35,9 +35,7 @@ public:
 	void do_shopping();
 	void go_to_magazine();
 	void give_prd_to_client();
+	void scanning_checkouts();
 
-
-
-	
 };
 
