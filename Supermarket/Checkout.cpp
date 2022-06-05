@@ -10,15 +10,31 @@ Checkout::Checkout(Cashier checkout_cashier, bool is_open) :checkout_cashier(che
 
 void Checkout::scan_product()
 {
-	for (int i = current_shopping_cart_index; i < get_scanning_speed()+current_shopping_cart_index; i++)
+	int cs = current_shopping_cart_index;
+	for (int i = current_shopping_cart_index; i < get_scanning_speed()+cs; i++)
 	{
 		current_cart_profit += current_client_shopping_cart[i].getPrice();
+		current_shopping_cart_index++;
 	}
 }
 
 int Checkout::get_scanning_speed()
 {
 	return get_client_queue_lenght() * 2;
+}
+
+void Checkout::checkout_action()
+{
+	if (current_shopping_cart_index < current_client_shopping_cart.size())
+	{
+		scan_product();
+	}
+	else
+	{
+		current_shopping_cart_index = 0;
+		//wystawia fakture
+	}
+	
 }
 
 int Checkout::total()

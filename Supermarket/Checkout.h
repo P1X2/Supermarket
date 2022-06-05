@@ -20,6 +20,7 @@ public:
 	Checkout();
 	Checkout(Cashier checkout_cashier, bool is_open);
 	
+	void checkout_action(); //metoda do wywo³ywania w symulacji co obrót pêtli
 	void scan_product(); // do zrobienia jak bedzie g³owna petla czasu
 	int total();
 	int get_client_queue_lenght();
