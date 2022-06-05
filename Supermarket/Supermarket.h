@@ -29,8 +29,7 @@ class Supermarket
 	void generate_client(int=1);
 	void generate_employees();
 public:
-	Supermarket();
 	void simulation(int=1000);
-
+	Supermarket(string products_path);
 
 };

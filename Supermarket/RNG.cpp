@@ -12,7 +12,7 @@ int RNG::generate_random_number(int min_l, int max_l)
 
 string RNG::random_string_vector_element(vector<string> vec)
 {
-    return vec[generate_random_number(0, vec.size() - 1)];
+    return vec[generate_random_number(0, vec.size()-1)];
 }
 
 vector<int> RNG::random_numbers_vector(int min, int max,int n)
