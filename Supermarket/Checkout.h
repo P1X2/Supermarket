@@ -29,8 +29,8 @@ public:
 	void release_cashier();
 	void assign_cashier();
 
-	void recipe();
-	void invoice();
+	void recipe(Client cl);
+	void invoice(Client cl);
 
 	void update_CCSC();
 	void update_profit();

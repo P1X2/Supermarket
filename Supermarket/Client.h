@@ -30,11 +30,14 @@ class Client :
 
 public:
     Client(string name, string surname, vector<string> shopping_list, Address adderss, bool recipe);
+
     string get_name();
     string get_surename();
     string get_adress();
     bool get_is_done();
     vector<Product> get_shopping_cart();
+    bool get_recipe();
+
 
 
     int serch_product(ProductShelve &shop_shelve);

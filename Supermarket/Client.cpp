@@ -39,6 +39,11 @@ vector<Product> Client::get_shopping_cart()
     return shopping_cart;
 }
 
+bool Client::get_recipe()
+{
+    return recipe;
+}
+
 int  Client::serch_product(ProductShelve &shop_shelve)
 {
     map<Product, int>::iterator it;
