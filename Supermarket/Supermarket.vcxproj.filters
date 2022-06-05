@@ -112,6 +112,8 @@
     <ClCompile Include="Supermarket_sandbox.cpp">
       <Filter>cpp\supermarket</Filter>
     </ClCompile>
+    <ClCompile Include="Bill.cpp" />
+    <ClCompile Include="Invoice.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h">
@@ -216,6 +218,8 @@
     <ClInclude Include="Supermarket_sandbox.h">
       <Filter>h\supermarket</Filter>
     </ClInclude>
+    <ClInclude Include="Bill.h" />
+    <ClInclude Include="Invoice.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="names.txt" />
