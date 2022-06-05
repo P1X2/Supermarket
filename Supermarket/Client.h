@@ -43,4 +43,8 @@ public:
     void ask_question__is_in_stock(RegisterWarehouseman &registerWHM);
 
     void update_currently_serched_product();
+
+    friend ostream& operator<<(ostream& os, const Client& cl);
 };
+
+ostream& operator<<(ostream& os, const Client& cl);

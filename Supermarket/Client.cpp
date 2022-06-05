@@ -99,3 +99,13 @@ void Client::update_currently_serched_product()
 {
     currently_serched_prd++;
 }
+
+ostream& operator<<(ostream& os, const Client& cl)
+{
+    os << cl.name << " " << cl.surname << " Shopping cart: ";
+    for (Product prod : cl.shopping_cart)
+    {
+        os << prod << ",";
+    }
+    return os;
+}

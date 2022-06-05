@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <ostream>
+#include <iostream>
 
 
 using namespace std;
@@ -30,5 +32,8 @@ public:
 	bool operator!=(const Product& second_product)const;
 	bool operator<(const Product& second_product)const;
 
+	friend ostream& operator<<(ostream& os, const Product& prod);
 };
+
+ostream& operator<<(ostream& os, const Product& prod);
 

@@ -58,3 +58,12 @@ bool Checkout::operator<(const Checkout& second_checkout) const
 {
 	return (client_queue.size() < second_checkout.client_queue.size());
 }
+
+ostream& operator<<(ostream& os, const Checkout& check)
+{
+	if (check.is_open)
+	{
+		os << "Cashier on checkout: " << check.checkout_cashier << " Number of clients in line: " << check.client_queue.size() << endl;
+	}
+	return os;
+}
