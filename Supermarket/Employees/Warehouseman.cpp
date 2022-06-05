@@ -45,6 +45,7 @@ void Warehouseman::serch_product(string surename, string product)
 	is_serching_prd = true;
 	searched_prd = product;
 	served_client = surename;
+	this->set_busy(2); // rng
 }
 
 void Warehouseman::stop_searching()

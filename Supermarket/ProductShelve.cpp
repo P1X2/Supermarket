@@ -22,10 +22,17 @@ void ProductShelve::who_is_looking_for_prd(RegisterWarehouseman &registerWHM)
 {
 	for (vector<Warehouseman>::iterator emp_ptr = registerWHM.employees.begin(); emp_ptr != registerWHM.employees.end(); emp_ptr++)
 	{
-		if (emp_ptr->get_is_serching_prd() == true)
+		if (emp_ptr->get_is_serching_prd() == true && emp_ptr->get_busy() == 0)
 		{
 			Product serched_prd = search_prd(emp_ptr->get_searched_prd());
 			emp_ptr->add_prd_to_pocket(serched_prd);
+			emp_ptr->stop_searching();
+			return;
+		}
+		if (emp_ptr->get_is_serching_prd() == true && emp_ptr->get_busy() != 0)
+		{
+			emp_ptr->set_busy(emp_ptr->get_busy() - 1);
+			continue;
 		}
 		else
 		{

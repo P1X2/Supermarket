@@ -133,14 +133,24 @@ int main()
 
     RegisterClient regc;
     regc.add_client(cl);
-
-    int flag1 = cl.serch_product(c);
-    if (flag1 == 0) 
-    {}
-    else
-    {
-       cl.ask_question__is_in_stock(regW);
+    int i = 0;
+    while (i<=2) {
+        int flag1 = cl.serch_product(c);
+        if (flag1 == 0)
+        {
+        }
+        if(flag1==1)
+        {
+            cl.ask_question__is_in_stock(regW);
+        }
+        else
+        {
+            i++;
+            continue;
+        }
+        i++;
     }
+
     
 
 
@@ -151,7 +161,8 @@ int main()
     vector<int> test;
     test.push_back(1); test.push_back(2);
     vector<int>::iterator it = test.begin();
-    cout << *it;
+    test.erase(it);
+    cout << test[0];
 
 
 

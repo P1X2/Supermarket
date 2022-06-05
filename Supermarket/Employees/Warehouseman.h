@@ -2,6 +2,7 @@
 
 #include "Employee.h"
 #include <vector>
+#include "..\RNG.h"
 
 
 
@@ -10,9 +11,12 @@ class Warehouseman : public Employee
 {
 	float money_per_hour;
 	vector<Product> pocket;
+
 	bool is_serching_prd;
+
 	string searched_prd;
 	string served_client;
+	RNG RNG;
 
 public:
 	Warehouseman(string, string, int, int, float);
