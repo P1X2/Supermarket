@@ -33,7 +33,7 @@ int main()
 
     ////cout << endl << (xdxd == xdx);
 
-    Supermarket super;
+    Supermarket super("products.txt");
     super.simulation();
 
 
