@@ -11,6 +11,7 @@
 #include "Employees/RegisterWarehouseman.h"
 #include "ProductShelve.h"
 #include "Invoice.h"
+#include "Recipe.h"
 
 
 using namespace std;
@@ -19,8 +20,8 @@ int main()
     //Cashier xd("elo", "xd", 160, 20, 30);
     //std::cout << "Hello World!\n";
     //xd.print_employer();
-    Meat xdxd("a", 1, 23, "ess", "23123", "w");
-    Meat xdx("b", 12, 3, "elss", "23", "sdew");
+    Meat xdxd("a", 10000, 23, "ess", "23123", "w");
+    Meat xdx("b", 12222, 3, "elss", "23", "sdew");
     //std::cout << xdxd.VAT() << endl;
     //std::cout << xd.get_busy();
     //vector<Product> a;
@@ -157,7 +158,7 @@ int main()
 
     //regW.employees[0].serch_product("ania", "21478");
     //regW.employees[0].stop_searching();
-    m.who_is_looking_for_prd(regW);
+    /*m.who_is_looking_for_prd(regW);
 
     vector<int> test;
     test.push_back(1); test.push_back(2);
@@ -166,15 +167,18 @@ int main()
     cout << test[0];
 
 
-    cout << *it;
+    cout << *it;*/
     Address ads("polsza", "kielcze", "war", 12);
     vector<Product> lsl;
     lsl.push_back(xdxd);
     lsl.push_back(xdx);
     Invoice inv("bart", "dab", ads, lsl);
-
     inv.print_bill();
-    return 1;
+    Recipe rec(lsl);
+    rec.print_bill();
+    
+    
+    return 0;
 
 
 }
