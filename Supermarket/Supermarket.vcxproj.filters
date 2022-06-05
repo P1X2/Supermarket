@@ -114,6 +114,7 @@
     </ClCompile>
     <ClCompile Include="Bill.cpp" />
     <ClCompile Include="Invoice.cpp" />
+    <ClCompile Include="Recipe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h">
@@ -220,6 +221,7 @@
     </ClInclude>
     <ClInclude Include="Bill.h" />
     <ClInclude Include="Invoice.h" />
+    <ClInclude Include="Recipe.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="names.txt" />

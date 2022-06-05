@@ -10,6 +10,7 @@
 #include "RNG.h"
 #include "Employees/RegisterWarehouseman.h"
 #include "ProductShelve.h"
+#include "Invoice.h"
 
 
 using namespace std;
@@ -152,9 +153,13 @@ int main()
     test.push_back(1); test.push_back(2);
     vector<int>::iterator it = test.begin();
     cout << *it;
+    Address ads("polsza", "kielcze", "war", 12);
+    vector<Product> lsl;
+    lsl.push_back(xdxd);
+    lsl.push_back(xdx);
+    Invoice inv("bart", "dab", 140, ads, lsl);
 
-
-
+    inv.print_bill();
     return 1;
 
 
