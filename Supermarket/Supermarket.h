@@ -17,6 +17,7 @@ class Supermarket
 {
 	ProductShelve shop_shelve;
 	ProductShelve magazine;
+	vector<Product> products;
 
 	RNG rng_machine;
 	RegisterCashiers cashiers;

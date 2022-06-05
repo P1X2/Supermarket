@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <ostream>
 using namespace std;
 
 class Address
@@ -14,3 +15,4 @@ public:
 	string get_country();
 };
 
+ostream& operator<<(ostream&, Address);

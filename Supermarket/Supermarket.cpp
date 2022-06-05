@@ -9,11 +9,15 @@ void Supermarket::simulation(int iterations)
 	try
 	{
 		file_reader.load_names_surnames("names.txt");
-		
+		file_reader.load_addresses("addresses.txt");
 	}
 	catch (const FileReadError e)
 	{
 		cout << "Caught an exception FileReadError" << endl << e.what() << endl;
+	}
+	for (Address adr : file_reader.addresses)
+	{
+		cout << adr << endl;
 	}
 	for (Product pr : xd)
 	{
@@ -68,6 +72,7 @@ void Supermarket::generate_client(int number_to_generate)
 }
 
 Supermarket::Supermarket() :
-	shop_shelve(file_reader.load_products("products.txt"), rng_machine.random_numbers_vector(1, 3, file_reader.load_products("products.txt").size())),
-		magazine(file_reader.load_products("products.txt"), rng_machine.random_numbers_vector(1, 3, file_reader.load_products("products.txt").size()))
+	products(file_reader.load_products("products.txt")),
+	shop_shelve(products, rng_machine.random_numbers_vector(1, 3, products.size())),
+		magazine(products, rng_machine.random_numbers_vector(1, 3, products.size()))
 {}

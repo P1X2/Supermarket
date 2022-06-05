@@ -200,6 +200,7 @@
     <ClInclude Include="Supermarket.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="addresses.txt" />
     <Text Include="names.txt" />
     <Text Include="products.txt" />
   </ItemGroup>
