@@ -1,6 +1,6 @@
 #include "Warehouseman.h"
 #include "SalaryError.h"
-//#include "..\Supermarket.h"
+#include "..\Supermarket.h"
 
 Warehouseman::Warehouseman(string n, string sur, int h, int iden, float mon) :
 	Employee(n, sur, h, iden)
