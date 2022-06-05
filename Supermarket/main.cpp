@@ -33,8 +33,8 @@ int main()
 
     ////cout << endl << (xdxd == xdx);
 
-    Supermarket super;
-    super.simulation();
+   // Supermarket super;
+    //super.simulation();
 
 
 
