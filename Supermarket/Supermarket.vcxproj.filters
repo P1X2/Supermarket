@@ -106,7 +106,12 @@
     <ClCompile Include="Employees\RegisterSecurityGuard.cpp">
       <Filter>cpp\supermarket</Filter>
     </ClCompile>
-    <ClCompile Include="RegisterClient.cpp" />
+    <ClCompile Include="RegisterClient.cpp">
+      <Filter>cpp\supermarket</Filter>
+    </ClCompile>
+    <ClCompile Include="Supermarket_sandbox.cpp">
+      <Filter>cpp\supermarket</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h">
@@ -205,7 +210,12 @@
     <ClInclude Include="Client.h">
       <Filter>h</Filter>
     </ClInclude>
-    <ClInclude Include="RegisterClient.h" />
+    <ClInclude Include="RegisterClient.h">
+      <Filter>h\supermarket</Filter>
+    </ClInclude>
+    <ClInclude Include="Supermarket_sandbox.h">
+      <Filter>h\supermarket</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="names.txt" />

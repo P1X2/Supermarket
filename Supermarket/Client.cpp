@@ -47,7 +47,7 @@ int  Client::serch_product(ProductShelve shop_shelve)
         {
             if (it->second == 0)
             {
-                return -1;
+                return -1; // spr w supersamie
             }
             else
             {
@@ -68,7 +68,7 @@ void Client::grab_product(map<Product, int> shop_shelve, map<Product, int>::iter
 
 void Client::ask_question__is_in_stock(Warehouseman WHM)
 {
-    WHM.serch_product(*this, shopping_list[currently_serched_prd]);
+    WHM.serch_product(surname, shopping_list[currently_serched_prd]);
 }
 
 void Client::update_currently_serched_product()

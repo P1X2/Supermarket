@@ -1,4 +1,5 @@
 #pragma once
+#pragma once
 #include <map>
 #include <list>
 #include"products/Product.h"
@@ -11,8 +12,7 @@
 #include "RNG.h"
 #include "FileReader.h"
 
-
-class Supermarket
+class Supermarket_sandbox
 {
 	ProductShelve shop_shelve;
 	ProductShelve magazine;
@@ -26,11 +26,13 @@ class Supermarket
 
 	FileReader file_reader;
 	RegisterClient clients;
-	void generate_client(int=1);
+	void generate_client(int = 1);
 	void generate_employees();
 public:
-	void simulation(int=1000);
+	void simulation(int = 1000);
 
 
 
+	
 };
+
