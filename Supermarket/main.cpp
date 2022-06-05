@@ -134,6 +134,9 @@ int main()
     Address ad("awa", "bw","af", 12);
     Client cl("a", "b",p , ad, false);
 
+    RegisterClient regc;
+    regc.add_client(cl);
+
     int flag1 = cl.serch_product(c);
     if (flag1 == 0) 
     {}

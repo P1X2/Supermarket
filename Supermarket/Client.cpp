@@ -29,6 +29,11 @@ string Client::get_adress()
     return (address.get_country() + ", " + address.get_city() + "\n" + address.get_street() +" " + to_string(address.get_house_number()));
 }
 
+bool Client::get_is_done()
+{
+    return is_done;
+}
+
 vector<Product> Client::get_shopping_cart()
 {
     return shopping_cart;
@@ -51,7 +56,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
             }
             else
             {
-                grab_product(inventory, it);
+                grab_product(it);
                 shop_shelve.update_inventory(it->first);
                 update_currently_serched_product();
                 check_if_done();
@@ -62,9 +67,16 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 
 }
 
-void Client::grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it)
+void Client::grab_product(map<Product, int>::iterator it)
 {
     shopping_cart.push_back(it->first);
+}
+
+void Client::grab_product_from_emplyee(Product prd)
+{
+    shopping_cart.push_back(prd);
+    update_currently_serched_product();
+    check_if_done();
 }
 
 void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)

@@ -1,6 +1,8 @@
 #pragma once
 #include "Employees/Cashier.h"
 #include "Client.h"
+#include "RegisterClient.h"
+
 class Checkout
 {
 	Cashier checkout_cashier;
@@ -9,9 +11,11 @@ class Checkout
 	vector<Product> current_client_shopping_cart;
 	int profit;
 public:
+	Checkout();
 	Checkout(Cashier checkout_cashier, bool is_open);
 	void scan_product(); // do zrobienia jak bedzie g³owna petla czasu
 	int total();
+	int get_client_queue_lenght();
 
 	void release_cashier();
 	void assign_cashier();
@@ -23,5 +27,8 @@ public:
 	void update_profit();
 
 	void add_client_to_queue(Client client);
+
+	friend class Supermarket_sandbox;
+	bool operator<(const Checkout& second_checkout)const;
 };
 
