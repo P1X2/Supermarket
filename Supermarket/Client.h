@@ -33,11 +33,13 @@ public:
     string get_name();
     string get_surename();
     string get_adress();
+    bool get_is_done();
     vector<Product> get_shopping_cart();
 
 
     int serch_product(ProductShelve &shop_shelve);
-    void grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it);
+    void grab_product( map<Product, int>::iterator it); // modyfikacja 
+    void grab_product_from_emplyee(Product prd);
     void ask_question__is_in_stock(RegisterWarehouseman &registerWHM);
 
     void update_currently_serched_product();

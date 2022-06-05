@@ -3,58 +3,73 @@
 
 #pragma once
 
-void Supermarket_sandbox::simulation(int iterations)
+
+	
+
+
+void Supermarket_sandbox::do_shopping() //1
 {
-	file_reader.load_names_surnames("names.txt");
-	vector<Product> xd = file_reader.load_products("products.txt");
-	for (Product pr : xd)
+	for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
 	{
-		cout << pr.getName() << "  " << pr.getBarcode() << endl;
-	}
-	generate_employees();
-	int i = 0;
-	cashiers.print_employees();
-	warehousemen.print_employees();
-	security_guards.print_employees();
-
-	while (iterations < ++i)
-	{
-
+		if (it->get_is_done() == true)
+		{
+			Checkout best_checkout;
+			int min_queue = 9999999;
+			for (vector<Checkout>::iterator it2 = checkouts.begin(); it2 != checkouts.end(); it++)
+			{
+				if (it2->get_client_queue_lenght() <= min_queue)
+				{
+					best_checkout = *it2;
+				}
+				best_checkout.add_client_to_queue(*it);
+				clients.clients.erase(it);
+				return;
+			}
+		}
+		else
+		{
+			int flag = it->serch_product(shop_shelve);
+			if (flag == 1)
+			{
+				it->ask_question__is_in_stock(warehousemen);
+			}
+		}
 	}
 }
 
-void Supermarket_sandbox::generate_employees()
+void Supermarket_sandbox::go_to_magazine() //2
 {
-	for (int i = 1; i < rng_machine.generate_random_number(1, 10); i++)
-	{
-		string name = rng_machine.random_string_vector_element(file_reader.names);
-		string surname = rng_machine.random_string_vector_element(file_reader.surnames);
-		int hours = rng_machine.generate_random_number(160, 320);
-		float money_per_hour = rng_machine.generate_random_number(15, 40);
-		cashiers.add_cashier(name, surname, hours, i, money_per_hour);
-	}
-	for (int j = 1; j < rng_machine.generate_random_number(1, 50); j++)
-	{
-		string name = rng_machine.random_string_vector_element(file_reader.names);
-		string surname = rng_machine.random_string_vector_element(file_reader.surnames);
-		int hours = rng_machine.generate_random_number(160, 320);
-		float money_per_hour = rng_machine.generate_random_number(5, 20);
-		warehousemen.add_warehouseman(name, surname, hours, j + 4, money_per_hour);
-	}
-	for (int j = 1; j < rng_machine.generate_random_number(1, 50); j++)
-	{
-		string name = rng_machine.random_string_vector_element(file_reader.names);
-		string surname = rng_machine.random_string_vector_element(file_reader.surnames);
-		int hours = rng_machine.generate_random_number(160, 320);
-		float money_per_hour = rng_machine.generate_random_number(500, 1000);
-		security_guards.add_security_guard(name, surname, hours, j + 4, money_per_hour);
-	}
+	magazine.who_is_looking_for_prd(warehousemen);
 }
 
-void Supermarket_sandbox::generate_client(int number_to_generate)
+void Supermarket_sandbox::give_prd_to_client() // 3
 {
-	for (int i = 1; i < number_to_generate; i++)
-	{
-
-	}
+	for (vector<Warehouseman>::iterator it = warehousemen.employees.begin(); it != warehousemen.employees.end(); it++)
+		if (it->pocket.size() == 1)
+		{
+			for (vector<Client>::iterator it2 = clients.clients.begin(); it2 != clients.clients.end(); it2++)
+			{
+				if (it2->get_surename() == it->served_client)
+				{
+					it2->grab_product_from_emplyee(it->pocket[0]);
+					it->empty_pocket();
+				}
+				else
+				{
+					continue;
+				}
+			}
+		}
+		else 
+		{
+			continue;
+		}
 }
+
+
+
+
+
+
+
+

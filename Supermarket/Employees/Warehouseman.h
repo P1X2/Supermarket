@@ -29,5 +29,6 @@ public:
 	void add_prd_to_pocket(Product prd);
 	void empty_pocket();
 
+	friend class Supermarket_sandbox;
 };
 

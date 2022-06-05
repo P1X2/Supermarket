@@ -1,5 +1,10 @@
 #include "Checkout.h"
 
+
+Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0)
+{
+}
+
 Checkout::Checkout(Cashier checkout_cashier, bool is_open) :checkout_cashier(checkout_cashier), is_open(is_open)
 {}
 
@@ -17,6 +22,11 @@ int Checkout::total()
 		total = total + it->getPrice();
 	}
 	return total;
+}
+
+int Checkout::get_client_queue_lenght()
+{
+	return client_queue.size();
 }
 
 void Checkout::release_cashier()
@@ -42,4 +52,9 @@ void Checkout::update_profit()
 void Checkout::add_client_to_queue(Client client)
 {
 	client_queue.push_back(client);
+}
+
+bool Checkout::operator<(const Checkout& second_checkout) const
+{
+	return (client_queue.size() < second_checkout.client_queue.size());
 }

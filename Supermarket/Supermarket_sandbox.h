@@ -21,15 +21,20 @@ class Supermarket_sandbox
 	RegisterCashiers cashiers;
 	RegisterWarehouseman warehousemen;
 	RegisterSecurityGuard security_guards;
+	RegisterClient clients;
+	vector<Checkout> checkouts;
 
 
 
 	FileReader file_reader;
-	RegisterClient clients;
-	void generate_client(int = 1);
-	void generate_employees();
+
+
 public:
-	void simulation(int = 1000);
+
+
+	void do_shopping();
+	void go_to_magazine();
+	void give_prd_to_client();
 
 
 

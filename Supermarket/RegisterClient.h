@@ -2,14 +2,21 @@
 #include <vector>
 #include "Client.h"
 #include <ostream>
+
+
 using namespace std;
 class RegisterClient
 {
 	vector<Client> clients;
 public:
 	vector<Client> get_clients();
-	void add_client(Client);
+	void set_clients(vector<Client> clients);
+	void add_client(Client client);
 	void pass_time_unit();
+
+	friend class Supermarket_sandbox;
+	
+
 };
 
 //przeci¹¿yæ operator

@@ -3,10 +3,10 @@
 #include "Warehouseman.h"
 class RegisterWarehouseman
 {
-
+	vector<Warehouseman> employees;
 		
 public:
-	vector<Warehouseman> employees ;
+
 
 
 	void add_warehouseman(string, string, int, int, float);
@@ -16,5 +16,8 @@ public:
 	void remove_employee(int);
 	void print_employees();
 	void pass_time_unit();
+	friend class Client;
+	friend class ProductShelve;
+	friend class Supermarket_sandbox;
 };
 
