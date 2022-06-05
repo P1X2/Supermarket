@@ -5,7 +5,15 @@
 void Supermarket::simulation(int iterations)
 {
 	file_reader.load_names_surnames("names.txt");
-	vector<Product> xd = file_reader.load_products("products.txt");
+	vector<Product> xd;
+	try
+	{
+		xd = file_reader.load_products("products.txt");
+	}
+	catch (const FileReadError e)
+	{
+		cout << "Caught an exception FileReadError" << endl << e.what() << endl;
+	}
 	for (Product pr : xd)
 	{
 		cout<<pr.getName()<<"  "<<pr.getBarcode() << endl;

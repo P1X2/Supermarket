@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include <vector>
 #include <map>
@@ -17,8 +18,6 @@ using namespace std;
 class Client :
     public Person
 {
-    
-    
     string name, surname;
     vector<string> shopping_list;
     vector<Product> shopping_cart;
@@ -37,9 +36,9 @@ public:
     vector<Product> get_shopping_cart();
 
 
-    int serch_product(ProductShelve shop_shelve);
+    int serch_product(ProductShelve &shop_shelve);
     void grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it);
-    void ask_question__is_in_stock(Warehouseman WHM);
+    void ask_question__is_in_stock(RegisterWarehouseman &registerWHM);
 
     void update_currently_serched_product();
 };

@@ -12,6 +12,7 @@
 #include "FileReader.h"
 
 
+
 class Supermarket
 {
 	ProductShelve shop_shelve;
