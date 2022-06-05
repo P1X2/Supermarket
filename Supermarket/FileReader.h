@@ -10,7 +10,7 @@
 #include "products/DataBase.h"
 #include "Employees/RegisterCashiers.h"
 #include "Employees/RegisterWarehouseman.h"
-
+#include "Address.h"
 
 
 
@@ -19,6 +19,7 @@ class FileReader
 public:
 	vector <string> names;
 	vector <string> surnames;
+	vector <Address> addresses;
 	
 
 
@@ -26,5 +27,6 @@ public:
 
 	void load_names_surnames(string);
 	vector<Product> load_products(string);
+	void load_addresses(string);
 };
 

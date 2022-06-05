@@ -7,10 +7,9 @@
 #include "Employees/RegisterCashiers.h"
 #include "Employees/RegisterWarehouseman.h"
 #include "Employees/RegisterSecurityGuard.h"
+#include "RegisterClient.h"
 #include "RNG.h"
 #include "FileReader.h"
-#include "Employees/Warehouseman.h"
-#include "..\Supermarket\Employees\RegisterCashiers.h"
 
 
 class Supermarket
@@ -18,7 +17,8 @@ class Supermarket
 	ProductShelve shop_shelve;
 	ProductShelve magazine;
 
-	vector<Client> cl;
+	RNG rng_machine;
+	RegisterCashiers cashiers;
 	RegisterWarehouseman warehousemen;
 	RegisterSecurityGuard security_guards;
 	RegisterCashiers cashiers;
@@ -26,12 +26,14 @@ class Supermarket
 	RNG rng_machine;
 
 	FileReader file_reader;
-
-	void generate_client();
+	RegisterClient clients;
+	void generate_client(int=1);
 	void generate_employees();
 public:
 	void simulation(int=1000);
-
+	map<Product, int> magazine_shelve;
+	vector<Client> clients;
+	RegisterCashiers cashier_register;
 
 
 };
