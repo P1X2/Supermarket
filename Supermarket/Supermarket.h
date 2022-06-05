@@ -12,6 +12,7 @@
 #include "FileReader.h"
 
 
+
 class Supermarket
 {
 //Zaimplementowaæ konstruktor inicjuj¹cy FileReadera œcie¿kami do plików

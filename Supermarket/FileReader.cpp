@@ -53,7 +53,7 @@ vector<Product> FileReader::load_products(string path)
 	fstream handle;
 	int j = 0;
 	handle.open(path, ios::in);
-	try
+	if (handle.good())
 		{
 			string line;
 			while (getline(handle, line))
@@ -96,7 +96,6 @@ vector<Product> FileReader::load_products(string path)
 					case 5:
 						calories = stoi(item);
 						break;
-				
 					case 6:
 						if (product == "juice")
 						{
@@ -127,20 +126,21 @@ vector<Product> FileReader::load_products(string path)
 							break;
 						}
 						}
+			
 					}
+				if (i != 6)
+				{
+					throw FileReadError(path, j);
+				}
 				}
 			}
-	catch (const invalid_argument e)
-	{
-		cout <<endl << j << endl;
-	}
 	handle.close();
 	return products;
 }
 
 void FileReader::load_addresses(string path)
 {
-	vector<Product> products;
+	vector<Address> addresses;
 	fstream handle;
 	int j = 0;
 	handle.open(path, ios::in);
@@ -152,12 +152,10 @@ void FileReader::load_addresses(string path)
 			j++;
 			stringstream ss(line);
 			string item;
-			string product;
-			string name;
-			string producer;
-			string barcode;
-			int price;
-			int calories;
+			string country;
+			string city;
+			string street;
+			int house_number;
 			int i = 0;
 			while (getline(ss, item, ','))
 			{
@@ -165,22 +163,27 @@ void FileReader::load_addresses(string path)
 				switch (i)
 				{
 				case 1:
-					product = item;
+					country = item;
 					break;
 				case 2:
-					name = item;
+					city = item;
 					break;
 				case 3:
-					producer = item;
+					street = item;
 					break;
 				case 4:
-					barcode = item;
-					break;
-				case 5:
-					price = stoi(item);
+					house_number = stoi(item);
 					break;
 				}
 			}
+			handle.close();
+			if (i != 4)
+			{
+					throw FileReadError(path, j);
+			}
+			Address adr(country, city, street, house_number);
+			addresses.push_back(adr);
 		}
 	}
+	
 }

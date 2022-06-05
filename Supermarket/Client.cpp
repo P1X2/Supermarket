@@ -1,5 +1,5 @@
 #include "Client.h"
-
+#include "Supermarket.h"
 Client::Client(string name, string surname, vector<string> shopping_list, Address adderss, bool recipe) : name(name), surname(surname), shopping_list(shopping_list),
 address(adderss), recipe(recipe)
 {
@@ -70,5 +70,3 @@ void Client::update_currently_serched_product()
 {
     currently_serched_prd++;
 }
-
-

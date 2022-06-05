@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include <vector>
 #include <map>
@@ -8,7 +9,7 @@
 #include <stdexcept>
 #include "ProductShelve.h"
 #include "Employees/Warehouseman.h"
-
+class Supermarket;
 using namespace std;
 
 // dorobic czasy wykonywana czynnoœci
@@ -16,8 +17,6 @@ using namespace std;
 class Client :
     public Person
 {
-    
-    
     string name, surname;
     vector<string> shopping_list;
     vector<Product> shopping_cart;
