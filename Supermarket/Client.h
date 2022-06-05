@@ -9,6 +9,7 @@
 #include <stdexcept>
 #include "ProductShelve.h"
 #include "Employees/Warehouseman.h"
+#include "RNG.h"
 
 
 using namespace std;
@@ -18,15 +19,20 @@ using namespace std;
 class Client :
     public Person
 {
+
     string name, surname;
     vector<string> shopping_list;
     vector<Product> shopping_cart;
     Address address;
+
     bool recipe;
     bool is_done;
-    int currently_serched_prd = 0; 
+    bool rng=true;
+    int currently_serched_prd = 0;
+    RNG RNG;
 
-    void check_if_done(); // WYWO£AC W SUPERMARKECIE !!!!!!!!!!!!
+
+    void check_if_done();
 
 public:
     Client(string name, string surname, vector<string> shopping_list, Address adderss, bool recipe);

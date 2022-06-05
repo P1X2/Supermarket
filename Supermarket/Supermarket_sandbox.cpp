@@ -22,10 +22,11 @@ void Supermarket_sandbox::do_shopping() //1
 				{
 					best_checkout = *it2;
 				}
-				best_checkout.add_client_to_queue(*it);
-				clients.clients.erase(it);
-				return;
 			}
+			best_checkout.add_client_to_queue(*it);
+			clients.clients.erase(it);
+			continue;
+			
 		}
 		else
 		{
@@ -34,6 +35,13 @@ void Supermarket_sandbox::do_shopping() //1
 			{
 				it->ask_question__is_in_stock(warehousemen);
 			}
+			if (flag == 0)
+			{}
+			else
+			{
+				continue;
+			}
+
 		}
 	}
 }

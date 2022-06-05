@@ -21,6 +21,7 @@ string Client::get_name()
 string Client::get_surename()
 {
     return surname;
+    
 }
 
 string Client::get_adress()
@@ -46,30 +47,44 @@ bool Client::get_recipe()
 
 int  Client::serch_product(ProductShelve &shop_shelve)
 {
+    if (rng == true)
+    {
+        //set_busy(RNG.generate_random_number(0, 2));
+        set_busy(2);
+        rng = false;
+    }
     map<Product, int>::iterator it;
     map<Product, int> inventory = shop_shelve.get_inventory();
-
-    for (it = inventory.begin(); it != inventory.end(); it++)
+    if (this->get_busy() == 0)
     {
-        Product prd_map = it->first;
-
-        if (prd_map.getName() == shopping_list[currently_serched_prd])
+        for (it = inventory.begin(); it != inventory.end(); it++)
         {
-            if (it->second == 0)
+            Product prd_map = it->first;
+
+            if (prd_map.getName() == shopping_list[currently_serched_prd])
             {
-                return 1; // spr w supersamie
-            }
-            else
-            {
-                grab_product(it);
-                shop_shelve.update_inventory(it->first);
-                update_currently_serched_product();
-                check_if_done();
-                return 0;
+                if (it->second == 0)
+                {
+                    rng = true;
+                    return 1; // spr w supersamie
+                }
+                else
+                {
+                    grab_product(it);
+                    shop_shelve.update_inventory(it->first);
+                    update_currently_serched_product();
+                    check_if_done();
+                    rng = true;
+                    return 0;
+                }
             }
         }
     }
-    return 0;
+    else
+    {
+        this->set_busy(this->get_busy() - 1);
+    }
+    
 }
 
 void Client::grab_product(map<Product, int>::iterator it)

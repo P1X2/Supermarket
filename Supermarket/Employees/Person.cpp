@@ -14,7 +14,7 @@ int Person::get_busy()
 
 void Person::set_busy(int bus)
 {
-	if (bus > 0)
+	if (bus >= 0)
 	{
 		busy = bus;
 	}
