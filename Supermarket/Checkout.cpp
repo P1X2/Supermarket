@@ -40,17 +40,17 @@ void Checkout::checkout_action()
 	}
 	else
 	{
-		if (client_queue[0].get_recipe() == true)
+		if (true == true)
 		{
-		//	recipe(client_queue[0]);
-		//	vector<Client>::iterator it = client_queue.begin();
-		//	client_queue.erase(it);
-		//}
-		//else
-		//{
-		//	invoice(client_queue[0]);
-		//	vector<Client>::iterator it = client_queue.begin();
-		//	client_queue.erase(it);
+			recipe(client_queue[0]);
+			vector<Client>::iterator it = client_queue.begin();
+			client_queue.erase(it);
+		}
+		else
+		{
+			invoice(client_queue[0]);
+			vector<Client>::iterator it = client_queue.begin();
+			vector<Client>::iterator it2 = client_queue.erase(it);
 		}
 
 	}
@@ -80,6 +80,14 @@ void Checkout::release_cashier()
 void Checkout::assign_cashier()
 {
 	is_open = true;
+}
+
+void Checkout::recipe(Client cl)
+{
+}
+
+void Checkout::invoice(Client cl)
+{
 }
 
 void Checkout::update_CCSC()

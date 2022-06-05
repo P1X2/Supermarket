@@ -148,7 +148,10 @@ int main()
     //regW.employees[0].stop_searching();
     m.who_is_looking_for_prd(regW);
 
-    //string a = p[32];
+    vector<int> test;
+    test.push_back(1); test.push_back(2);
+    vector<int>::iterator it = test.begin();
+    cout << *it;
 
 
 
