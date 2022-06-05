@@ -17,21 +17,20 @@ class Supermarket
 {
 	ProductShelve shop_shelve;
 	ProductShelve magazine;
+	vector<Product> products;
 
 	RNG rng_machine;
 	RegisterCashiers cashiers;
 	RegisterWarehouseman warehousemen;
 	RegisterSecurityGuard security_guards;
 
-
-
 	FileReader file_reader;
 	RegisterClient clients;
 	void generate_client(int=1);
 	void generate_employees();
 public:
+	Supermarket();
 	void simulation(int=1000);
-
 
 
 };

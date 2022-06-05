@@ -140,7 +140,6 @@ vector<Product> FileReader::load_products(string path)
 
 void FileReader::load_addresses(string path)
 {
-	vector<Address> addresses;
 	fstream handle;
 	int j = 0;
 	handle.open(path, ios::in);
@@ -157,7 +156,7 @@ void FileReader::load_addresses(string path)
 			string street;
 			int house_number;
 			int i = 0;
-			while (getline(ss, item, ','))
+			while (getline(ss, item, ' '))
 			{
 				i++;
 				switch (i)
@@ -176,7 +175,7 @@ void FileReader::load_addresses(string path)
 					break;
 				}
 			}
-			handle.close();
+			
 			if (i != 4)
 			{
 					throw FileReadError(path, j);
@@ -184,6 +183,7 @@ void FileReader::load_addresses(string path)
 			Address adr(country, city, street, house_number);
 			addresses.push_back(adr);
 		}
+		handle.close();
 	}
 	
 }

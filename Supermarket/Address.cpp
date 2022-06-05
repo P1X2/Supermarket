@@ -23,3 +23,9 @@ string Address::get_country()
 {
     return country;
 }
+
+ostream& operator<<(ostream& os, Address adr)
+{
+    os << adr.get_country() << " " << adr.get_city() << " " << adr.get_street() << " " << adr.get_house_number() << endl;
+    return os;
+}
