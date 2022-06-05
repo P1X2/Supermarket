@@ -11,6 +11,7 @@ void Supermarket_sandbox::do_shopping() //1
 {
 	for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
 	{
+
 		if (it->get_is_done() == true)
 		{
 			Checkout best_checkout;
@@ -37,7 +38,7 @@ void Supermarket_sandbox::do_shopping() //1
 	}
 }
 
-void Supermarket_sandbox::go_to_magazine() //2
+void Supermarket_sandbox::go_to_magazine() // 2
 {
 	magazine.who_is_looking_for_prd(warehousemen);
 }
@@ -66,17 +67,42 @@ void Supermarket_sandbox::give_prd_to_client() // 3
 		}
 }
 
-void Supermarket_sandbox::scanning_checkouts()
+void Supermarket_sandbox::opening_checkouts()
 {
+	int clients_checkout_sum = 0, opened_checkouts =0;
+
 	for (vector<Checkout>::iterator it = checkouts.begin(); it != checkouts.end(); it++)
 	{
-		if (it->is_open && it->client_queue.size() != 0)
+		if (it->is_open)
 		{
+			clients_checkout_sum = +it->client_queue.size();
+			opened_checkouts += 1;
+		}
+	}
 
+	float new_checkout_condition = clients_checkout_sum / opened_checkouts;
+	if (new_checkout_condition >= 6)
+	{
+		if (opened_checkouts == checkouts.size())
+		{
+		}
+		else
+		{
+			checkouts[opened_checkouts].assign_cashier();
 		}
 	}
 
 }
+
+void Supermarket_sandbox::scan_products()
+{
+	for (vector<Checkout>::iterator it = checkouts.begin(); it != checkouts.end(); it++)
+	{
+
+	}
+}
+
+
 
 
 

@@ -70,11 +70,6 @@ int main()
     reg.add_cashier("op", "as", 160, 13, 15);
     reg.add_cashier("oa", "ss", 160, 12, 20);
     cout << endl<< reg.how_many_workers() << endl;*/
-  
-
-
-        
-
     //Supermarket super;
     //super.simulation();
     //vector<int> a;

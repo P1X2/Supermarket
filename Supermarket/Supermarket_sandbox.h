@@ -16,16 +16,14 @@ class Supermarket_sandbox
 {
 	ProductShelve shop_shelve;
 	ProductShelve magazine;
+	vector<Checkout> checkouts;
 
-	RNG rng_machine;
 	RegisterCashiers cashiers;
 	RegisterWarehouseman warehousemen;
 	RegisterSecurityGuard security_guards;
 	RegisterClient clients;
-	vector<Checkout> checkouts;
 
-
-
+	RNG rng_machine;
 	FileReader file_reader;
 
 
@@ -35,7 +33,7 @@ public:
 	void do_shopping();
 	void go_to_magazine();
 	void give_prd_to_client();
-	void scanning_checkouts();
-
+	void opening_checkouts();
+	void scan_products();
 };
 

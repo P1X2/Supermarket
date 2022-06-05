@@ -4,8 +4,8 @@
 
 void RegisterCashiers::add_cashier(string name, string surname, int hours, int id, float money)
 {
-	unique_ptr<Cashier> cashier = make_unique<Cashier>(name, surname, hours, id, money);
-	if (in_register(cashier->get_id()))
+	Cashier cashier(name, surname, hours, id, money);
+	if (in_register(cashier.get_id()))
 	{
 		throw EmployeeAlreadyExistsException();
 	}
@@ -15,7 +15,7 @@ void RegisterCashiers::add_cashier(string name, string surname, int hours, int i
 float RegisterCashiers::count_salaries()
 {
 	float sum = 0;
-	for (const auto& emp_ptr : employees)
+	for (vector<Cashier>::iterator emp_ptr = employees.begin(); emp_ptr!=employees.end();emp_ptr++)
 	{
 		sum += emp_ptr->calculate_salary();
 	}
@@ -31,7 +31,7 @@ bool RegisterCashiers::in_register(int id)
 {
 	bool x = false;
 
-	for (const auto& emp_ptr : employees)
+	for (vector<Cashier>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end(); emp_ptr++)
 	{
 		if (id == emp_ptr->get_id()) x = true;
 	}
@@ -43,11 +43,11 @@ void RegisterCashiers::remove_employee(int id)
 {
 	if (in_register(id))
 	{
-		for (const auto& emp_ptr : employees)
+		for (vector<Cashier>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end(); emp_ptr++)
 		{
 			if (id == emp_ptr->get_id())
 			{
-				employees.remove(emp_ptr); break;
+				employees.erase(emp_ptr); break;
 			}
 		}
 	}
@@ -59,7 +59,7 @@ void RegisterCashiers::remove_employee(int id)
 void RegisterCashiers::print_employees()
 {
 	cout << "Cashiers:" << endl;
-	for (const auto& emp_ptr : employees)
+	for (vector<Cashier>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end(); emp_ptr++)
 	{
 		emp_ptr->print_employer();
 	}
@@ -67,7 +67,7 @@ void RegisterCashiers::print_employees()
 
 void RegisterCashiers::pass_time_unit()
 {
-	for (const auto& emp_ptr : employees)
+	for (vector<Cashier>::iterator emp_ptr = employees.begin(); emp_ptr != employees.end(); emp_ptr++)
 	{
 		emp_ptr->set_busy(emp_ptr->get_busy() - 1);
 	}
