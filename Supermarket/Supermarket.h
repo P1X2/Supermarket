@@ -19,13 +19,16 @@ class Supermarket
 	ProductShelve magazine;
 	vector<Product> products;
 
+	vector<Checkout> checkouts;
+
 	RNG rng_machine;
 	RegisterCashiers cashiers;
 	RegisterWarehouseman warehousemen;
 	RegisterSecurityGuard security_guards;
+	RegisterClient clients;
 
 	FileReader file_reader;
-	RegisterClient clients;
+
 	void generate_client(int=1);
 	void generate_employees();
 public:

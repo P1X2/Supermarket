@@ -34,6 +34,8 @@ void Supermarket::simulation(int iterations)
 
 void Supermarket::generate_employees()
 {
+	int flag1 = 0; 
+
 	for (int i=1;i<rng_machine.generate_random_number(1, 10);i++)
 	{
 		string name = rng_machine.random_string_vector_element(file_reader.names);
@@ -41,6 +43,18 @@ void Supermarket::generate_employees()
 		int hours = rng_machine.generate_random_number(160, 320);
 		float money_per_hour = rng_machine.generate_random_number(15, 40);
 		cashiers.add_cashier(name,surname,hours,i,money_per_hour);
+		if (flag1 == 0)
+		{
+			checkouts.push_back(Checkout(Cashier(name, surname, hours, i, money_per_hour),true));
+			flag1 += 1;
+		}
+		else 
+		{
+			checkouts.push_back(Checkout(Checkout(Cashier(name, surname, hours, i, money_per_hour), false)));
+		}
+		
+
+
 	}
 	for (int j = 1; j < rng_machine.generate_random_number(1, 50); j++)
 	{

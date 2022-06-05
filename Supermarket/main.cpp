@@ -33,8 +33,8 @@ int main()
 
     ////cout << endl << (xdxd == xdx);
 
-    Supermarket super("products.txt","names.txt","addresses.txt");
-    super.simulation();
+   // Supermarket super;
+    //super.simulation();
 
 
 
@@ -70,11 +70,6 @@ int main()
     reg.add_cashier("op", "as", 160, 13, 15);
     reg.add_cashier("oa", "ss", 160, 12, 20);
     cout << endl<< reg.how_many_workers() << endl;*/
-  
-
-
-        
-
     //Supermarket super;
     //super.simulation();
     //vector<int> a;
