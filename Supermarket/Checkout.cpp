@@ -42,15 +42,15 @@ void Checkout::checkout_action()
 	{
 		if (client_queue[0].get_recipe() == true)
 		{
-			recipe(client_queue[0]);
-			vector<Client>::iterator it = client_queue.begin();
-			client_queue.erase(it);
-		}
-		else
-		{
-			invoice(client_queue[0]);
-			vector<Client>::iterator it = client_queue.begin();
-			client_queue.erase(it);
+		//	recipe(client_queue[0]);
+		//	vector<Client>::iterator it = client_queue.begin();
+		//	client_queue.erase(it);
+		//}
+		//else
+		//{
+		//	invoice(client_queue[0]);
+		//	vector<Client>::iterator it = client_queue.begin();
+		//	client_queue.erase(it);
 		}
 
 	}

@@ -148,7 +148,7 @@ int main()
     //regW.employees[0].stop_searching();
     m.who_is_looking_for_prd(regW);
 
-    string a = p[32];
+    //string a = p[32];
 
 
 

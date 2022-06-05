@@ -69,7 +69,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
             }
         }
     }
-
+    return 0;
 }
 
 void Client::grab_product(map<Product, int>::iterator it)
