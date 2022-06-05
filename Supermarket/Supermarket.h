@@ -15,21 +15,23 @@
 
 class Supermarket
 {
-	map<Product, int> shop_shelve;
+	ProductShelve shop_shelve;
+	ProductShelve magazine;
+
 	vector<Client> cl;
-	RNG rng_machine;
-	RegisterCashiers cashiers;
 	RegisterWarehouseman warehousemen;
 	RegisterSecurityGuard security_guards;
+	RegisterCashiers cashiers;
+
+	RNG rng_machine;
+
 	FileReader file_reader;
 
 	void generate_client();
 	void generate_employees();
 public:
 	void simulation(int=1000);
-	map<Product, int> magazine_shelve;
-	vector<Client> clients;
-	RegisterCashiers cashier_register;
+
 
 
 };

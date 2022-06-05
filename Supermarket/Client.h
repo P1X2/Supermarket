@@ -9,6 +9,7 @@
 #include "ProductShelve.h"
 #include "Employees/Warehouseman.h"
 
+
 using namespace std;
 
 // dorobic czasy wykonywana czynnoœci
@@ -23,8 +24,10 @@ class Client :
     vector<Product> shopping_cart;
     Address address;
     bool recipe;
+    bool is_done;
     int currently_serched_prd = 0; 
 
+    void check_if_done(); // WYWO£AC W SUPERMARKECIE !!!!!!!!!!!!
 
 public:
     Client(string name, string surname, vector<string> shopping_list, Address adderss, bool recipe);
@@ -34,10 +37,9 @@ public:
     vector<Product> get_shopping_cart();
 
 
-    void serch_product(ProductShelve shop_shelve);
+    int serch_product(ProductShelve shop_shelve);
     void grab_product(map<Product, int> shop_shelve, map<Product, int>::iterator it);
     void ask_question__is_in_stock(Warehouseman WHM);
-    void go_to_checkout();
 
     void update_currently_serched_product();
 };

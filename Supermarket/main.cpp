@@ -36,9 +36,13 @@ int main()
 
 
 
-    //
-    //RNG rng;
-    //cout << rng.generate_random_number(12,13);
+    
+    RNG rng;
+    for (int i = 1; i != 10; i++)
+    {
+        cout << rng.generate_random_number(1, 9);
+    }
+    cout << rng.generate_random_number(1,100);
 
     //vector<int> b;
     //b.push_back(1); b.push_back(2);
@@ -95,15 +99,15 @@ int main()
     reg.add_cashier("oa", "ss", 160, 12, 20);
     cout << endl<< reg.how_many_workers() << endl;*/
     
-    map <int, int> w;
-    w[1] = 237846;
-    w[2] = 2;
+    //map <int, int> w;
+    //w[1] = 237846;
+    //w[2] = 2;
 
-    map<int, int>::iterator it;
+    //map<int, int>::iterator it;
 
-    it = w.begin();
-    int a = it->first;
-    cout << w[1] << endl << a;
+    //it = w.begin();
+    //int a = it->first;
+    //cout << w[1] << endl << a;
 
         
 
