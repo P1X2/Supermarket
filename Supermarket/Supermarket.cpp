@@ -93,7 +93,7 @@ void Supermarket::generate_client(int number_to_generate)
 			string product = products[rng_machine.generate_random_number(0, products.size()-1)].getName();
 			shopping_list.push_back(product);
 		}
-		recipe = rng_machine.generate_random_number(0,1);
+		recipe = rng_machine.generate_random_number(0,2); // impostor wojtas
 		Address sa = file_reader.addresses[rng_machine.generate_random_number(0, file_reader.addresses.size()-1)];
 		Client client(name, surname, shopping_list,
 			sa, recipe);
@@ -180,13 +180,19 @@ void Supermarket::do_shopping() //1
 
 		}
 	}
-
-	for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
+	for (int i = 0; i != to_delete.size(); i++)
 	{
-		if ()
+		for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
+		{
+			int index = 0;
+			if (*it == to_delete[index])
+			{
+				clients.clients.erase(it);
+				index++;
+				break;
+			}
+		}
 	}
-
-
 }
 
 void Supermarket::go_to_magazine() // 2

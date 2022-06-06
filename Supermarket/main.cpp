@@ -178,14 +178,14 @@ int main()
     //inv.print_bill();
     //return 1;
     //cout << *it;
-    RegisterBills sas;
+    /*RegisterBills sas;
     Address ads("polsza", "kielcze", "war", 12);
     vector<Product> lsl;
     lsl.push_back(xdxd);
     lsl.push_back(xdx);
     sas.add_invoice("das", "dsa", ads, lsl);
     sas.add_recipe(lsl);
-    cout << sas;
+    cout << sas;*/
     /*Invoice inv("bart", "dab", ads, lsl);
     inv.print_bill();
     Recipe rec(lsl);
