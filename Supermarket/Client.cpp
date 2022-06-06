@@ -4,7 +4,7 @@ void Client::check_if_done()
 {
     if (shopping_list.size() == currently_serched_prd)
     {
-        cout << "isdone" << endl;
+        cout << "Client " << name<<" " << surname <<" has ended shopping, now he's going to checkout"<< endl;
         is_done = true;
     }
 }
@@ -60,7 +60,6 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 {
     if (rng == true)
     {
-        cout << "sukanie" << endl;
         set_busy(RNG.generate_random_number(0, 4));
         rng = false;
     }
@@ -77,7 +76,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
                 if (it->second == 0)
                 {
                     rng = true;
-                    return 1; // spr w supersamie
+                    return 1; 
                 }
                 else
                 {

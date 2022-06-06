@@ -194,23 +194,7 @@ int main()
     
 
     Supermarket sprm("products.txt", "names.txt", "addresses.txt");
-   // sprm.simulation();
-    sprm.simulation();
-   // sprm.ghost_prd();
-    int i = 0;
-    while (i <= 50)
-    {
-        sprm.do_shopping();
-        sprm.go_to_magazine();
-        sprm.give_prd_to_client();
-        sprm.opening_checkouts();
-        sprm.scan_products();
-
-        i++;
-        if (i == 50)
-        {
-            continue;
-        }
-    }
+    sprm.load_registers();
+    sprm.simulation(30);
 }
 
