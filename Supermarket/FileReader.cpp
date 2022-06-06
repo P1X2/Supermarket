@@ -6,7 +6,11 @@
 #include"RNG.h"
 using namespace std;
 
-
+void FileReader::set_saving_files(string bills, string simulation)
+{
+	bills_file = bills;
+	simulation_file = simulation;
+}
 
 void FileReader::load_names_surnames(string path)
 {
@@ -42,8 +46,6 @@ void FileReader::load_names_surnames(string path)
 		}
 		handle.close();
 	}
-	cout << names.size() << endl;
-	cout << surnames.size() << endl;
 }
 
 vector<Product> FileReader::load_products(string path)
@@ -193,11 +195,52 @@ void FileReader::load_addresses(string path)
 void FileReader::write_bills_to_file(RegisterBills& bills)
 {
 	fstream handle;
-	Warehouseman war("ad", "ads", 160, 20, 20);
-	handle.open("bills.txt", ios::out);
+	handle.open(bills_file, ios::out);
 	if (handle.good())
 	{
 		handle << bills;
+		handle.close();
+	}
+}
+
+void FileReader::write_clients_to_simulation_file(RegisterClient register_clients)
+{
+	fstream handle;
+	handle.open(bills_file, ios::app);
+	if (handle.good())
+	{
+		handle << register_clients;
+		handle.close();
+	}
+}
+//
+//void FileReader::write_checkout_to_simulation_file(Checkout checkout)
+//{
+//	fstream handle;
+//	handle.open(bills_file, ios::app);
+//	if (handle.good())
+//	{
+//		handle << checkout;
+//		handle.close();
+//	}
+////}
+void FileReader::write_warehousemen_to_simulation_file(RegisterWarehouseman warehousemen)
+{
+	fstream handle;
+	handle.open(bills_file, ios::app);
+	if (handle.good())
+	{
+		handle << warehousemen;
+		handle.close();
+	}
+}
+void FileReader::write_securityguard_to_simulation_file(RegisterSecurityGuard scurity_guard)
+{
+	fstream handle;
+	handle.open(bills_file, ios::app);
+	if (handle.good())
+	{
+		handle << scurity_guard;
 		handle.close();
 	}
 }

@@ -14,5 +14,7 @@ public:
 	void remove_employee(int);
 	void print_employees();
 	void pass_time_unit();
+
+	friend ostream& operator<<(ostream& os, RegisterCashiers rc);
 };
 

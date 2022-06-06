@@ -23,6 +23,11 @@ void RegisterClient::pass_time_unit()
 	}
 }
 
-
-
-
+ostream& operator<<(ostream& os, RegisterClient& rc)
+{
+	for (Client cl : rc.clients)
+	{
+		os << cl << endl;
+	}
+	return os;
+}

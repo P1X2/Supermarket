@@ -20,5 +20,7 @@ public:
 	friend class ProductShelve;
 	friend class Supermarket;
 	friend class Supermarket_sandbox;
+
+	friend ostream& operator<<(ostream& os, RegisterWarehouseman& rw);
 };
 

@@ -23,8 +23,9 @@ float SecurityGuard::get_money_per_hour()
 	return money_per_hour;
 }
 
-ostream& operator<<(ostream& os, SecurityGuard emp)
+ostream& operator<<(ostream& os, SecurityGuard& emp)
 {
-	emp.print_employer();
+	os << emp.get_name()<<endl;
 	return os;
 }
+
