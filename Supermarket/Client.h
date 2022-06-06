@@ -26,7 +26,8 @@ class Client :
     Address address;
 
     bool recipe;
-    bool is_done;
+    bool w8ting = false;
+    bool is_done = false;
     bool rng=true;
     int currently_serched_prd = 0;
     RNG RNG;
@@ -43,6 +44,7 @@ public:
     bool get_is_done();
     vector<Product> get_shopping_cart();
     bool get_recipe();
+    bool get_is_w8ting();
 
 
 

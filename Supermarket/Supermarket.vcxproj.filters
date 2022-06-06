@@ -219,14 +219,26 @@
     <ClInclude Include="Supermarket_sandbox.h">
       <Filter>h\supermarket</Filter>
     </ClInclude>
-    <ClInclude Include="Bill.h" />
-    <ClInclude Include="Invoice.h" />
-    <ClInclude Include="Recipe.h" />
+    <ClInclude Include="Bill.h">
+      <Filter>h\bills</Filter>
+    </ClInclude>
+    <ClInclude Include="Invoice.h">
+      <Filter>h\bills</Filter>
+    </ClInclude>
+    <ClInclude Include="Recipe.h">
+      <Filter>h\bills</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="names.txt" />
-    <Text Include="products.txt" />
-    <Text Include="addresses.txt" />
+    <Text Include="names.txt">
+      <Filter>h\txt files</Filter>
+    </Text>
+    <Text Include="products.txt">
+      <Filter>h\txt files</Filter>
+    </Text>
+    <Text Include="addresses.txt">
+      <Filter>h\txt files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="cpp">
@@ -267,6 +279,12 @@
     </Filter>
     <Filter Include="cpp\tests">
       <UniqueIdentifier>{939890f9-51a2-4eef-8ab3-469680dadf29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\txt files">
+      <UniqueIdentifier>{341082ae-a148-4055-90a2-7511edd880e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\bills">
+      <UniqueIdentifier>{2ed67dbf-d2e5-43a0-8cdd-999086e2c017}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

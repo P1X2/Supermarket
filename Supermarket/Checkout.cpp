@@ -11,20 +11,24 @@ Checkout::Checkout(Cashier checkout_cashier, bool is_open) :checkout_cashier(che
 void Checkout::scan_product()
 {
 	int cs = current_shopping_cart_index;
-	for (int i = current_shopping_cart_index; i < get_scanning_speed()+cs; i++)
+	if (current_client_shopping_cart.size() - (cs + 1) < this->get_scanning_speed())
 	{
-		try
+		int krk = current_client_shopping_cart.size() - (cs+1);
+		for (int i = current_shopping_cart_index; i < krk+current_shopping_cart_index; i++)
 		{
 			current_cart_profit += current_client_shopping_cart[i].getPrice();
 			current_shopping_cart_index++;
-
 		}
-		catch (exception)
-		{
-			break;
-		}
-		
 	}
+	else
+	{
+		for (int i = current_shopping_cart_index; i < get_scanning_speed() + cs; i++)
+		{
+			current_cart_profit += current_client_shopping_cart[i].getPrice();
+			current_shopping_cart_index++;
+		}
+	}
+	
 }
 
 int Checkout::get_scanning_speed()
@@ -40,7 +44,7 @@ void Checkout::checkout_action()
 	}
 	else
 	{
-		if (true == true)
+		if (client_queue[0].get_recipe() == true)
 		{
 			recipe(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();

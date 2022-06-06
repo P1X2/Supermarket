@@ -9,9 +9,9 @@ Cashier::Cashier(string n, string sur, int h,int iden, float mon) :
 
 void Cashier::set_money_per_hour(float money)
 {
-	if (money > 40 or money < 15)
-		throw SalaryError(15, 40, "cashier", money);
-	else money_per_hour = money;
+	//if (money > 40 or money < 15)
+	//	throw SalaryError(15, 40, "cashier", money);
+	 money_per_hour = money; // symka changes
 }
 
 float Cashier::calculate_salary()

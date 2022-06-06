@@ -38,6 +38,7 @@ public:
 	void add_client_to_queue(Client client);
 
 	friend class Supermarket_sandbox;
+	friend class Supermarket;
 	bool operator<(const Checkout& second_checkout)const;
 	friend ostream& operator<<(ostream& os, const Checkout& check);
 };

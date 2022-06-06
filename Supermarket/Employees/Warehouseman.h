@@ -38,6 +38,8 @@ public:
 	void gave_to_client();
 
 	friend class Supermarket_sandbox;
+	friend class Supermarket;
+
 	friend ostream& operator<<(ostream& os, const Warehouseman emp);
 };
 

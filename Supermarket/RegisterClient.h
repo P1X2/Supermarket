@@ -15,6 +15,7 @@ public:
 	void pass_time_unit();
 
 	friend class Supermarket_sandbox;
+	friend class Supermarket;
 	
 
 };
