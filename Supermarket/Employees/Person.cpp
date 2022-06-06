@@ -26,6 +26,11 @@ bool Person::is_busy()
 	return busy > 0;
 }
 
+void Person::set_activity(string activity)
+{
+	this->activity = activity;
+}
+
 int Person::get_id()
 {
 	return id;

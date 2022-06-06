@@ -2,36 +2,10 @@
 
 #pragma once
 
-void Supermarket::simulation(int iterations)
+void Supermarket::load_registers()
 {
-
-	/*vector<Product> xd;
-
-	for (Address adr : file_reader.addresses)
-	{
-		cout << adr << endl;
-	}
-	for (Product pr : xd)
-	{
-		cout<<pr.getName()<<"  "<<pr.getBarcode() << endl;
-	}
-
 	generate_employees();
-	
-	cashiers.print_employees();
-	warehousemen.print_employees();
-	security_guards.print_employees();*/
-	generate_employees();
-	generate_client(20);
-	/*for (Client cl : clients.get_clients())
-	{
-		cout << cl.get_name() << " " << cl.get_surename() << " "<<cl.get_adress() << endl;
-	}*/
-	int i = 0;
-	/*while (iterations < ++i)
-	{
-		
-	}*/
+	generate_client(rng_machine.generate_random_number(20,41));
 }
 
 void Supermarket::generate_employees()
@@ -78,11 +52,12 @@ void Supermarket::generate_employees()
 
 void Supermarket::randomly_generate_client(int percent)
 {
-	if (rng_machine.generate_random_number(1, 101) < percent)
+	if (rng_machine.generate_random_number(1, 101) <= percent)
 	{
 		generate_client();
 	}
 }
+
 
 void Supermarket::generate_client(int number_to_generate)
 {
@@ -91,7 +66,7 @@ void Supermarket::generate_client(int number_to_generate)
 	vector<string>shopping_list;
 	int reccp;
 	bool recipe;
-	for (int i = 1; i < number_to_generate; i++)
+	for (int i = 1; i <= number_to_generate; i++)
 	{
 		shopping_list.clear();
 		name = rng_machine.random_string_vector_element(file_reader.names);
@@ -209,7 +184,7 @@ void Supermarket::do_shopping() //1
 			}
 		}
 	}
-	cout << "1";
+
 }
 
 void Supermarket::go_to_magazine() // 2
@@ -250,7 +225,7 @@ void Supermarket::give_prd_to_client() // 3
 		{
 			continue;
 		}
-	cout << "2";
+
 }
 
 void Supermarket::opening_checkouts() //4
@@ -277,7 +252,7 @@ void Supermarket::opening_checkouts() //4
 			checkouts[opened_checkouts].assign_cashier();
 		}
 	}
-	cout << "3";
+
 }
 
 void Supermarket::scan_products() // 5
@@ -294,6 +269,29 @@ void Supermarket::scan_products() // 5
 		}
 
 	}
-	cout << "4";
+
 }
 
+void Supermarket::simulation(int iterations)
+{
+	int it = 0;
+	while (it<=iterations)
+	{
+
+		do_shopping();
+		go_to_magazine();
+		give_prd_to_client();
+		opening_checkouts();
+		scan_products();
+
+		int i = rng_machine.generate_random_number(1, 4);
+		for (int w = 0; w != i; w++)
+		{
+			int chance = 15;
+			randomly_generate_client(chance);
+		}
+		it++;
+	}
+
+
+}
