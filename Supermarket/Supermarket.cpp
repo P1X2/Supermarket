@@ -5,7 +5,7 @@
 void Supermarket::load_registers()
 {
 	generate_employees();
-	generate_client(rng_machine.generate_random_number(20,41));
+	generate_client(rng_machine.generate_random_number(2,4));
 }
 
 void Supermarket::generate_employees()
@@ -105,9 +105,9 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 
 	Product Ghost("", "", "", 0, 0);
 	vector<Product>::iterator it = products.begin();
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(50, 100, products.size())); 
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(0, 1, products.size())); 
 	products.insert(it, Ghost);
-	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size()));
+	magazine.set_inventory(products, rng_machine.random_numbers_vector(1, 2, products.size()));
 	vector<Product>::iterator it2 = products.begin();
 	products.erase(it2);
 }
@@ -209,6 +209,7 @@ void Supermarket::give_prd_to_client() // 3
 						it2->is_w8ting_end();
 						it2->update_currently_serched_product();
 						it->empty_pocket();
+						break;
 					}
 					else
 					{
@@ -216,6 +217,7 @@ void Supermarket::give_prd_to_client() // 3
 						it2->is_w8ting_end();
 						it2->update_currently_serched_product();
 						it->empty_pocket();
+						break;
 					}
 				}
 				else

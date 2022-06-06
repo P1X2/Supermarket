@@ -113,7 +113,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 void Client::grab_product(map<Product, int>::iterator it)
 {
 
-    shopping_cart.push_back(it->first);
+    shopping_cart.push_back(it->first); // nie tu
     set_activity("shopping");
     cout << *this;
     //Sleep(1000);
@@ -133,7 +133,10 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
     {
         if (emp_ptr->get_is_serching_prd() == false)
         {
-            emp_ptr->serch_product(get_id(), shopping_list[currently_serched_prd]);
+            emp_ptr->serch_product(get_id(),get_name(),get_surname(), shopping_list[currently_serched_prd]);
+            w8ting = true;
+            set_activity("w8 WHM");
+            cout << *this;
             return;
         }
         else 
@@ -141,8 +144,7 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
             continue;
         }
     }
-    w8ting = true;
-    set_activity("w8 WHM");
+
 }
 
 void Client::update_currently_serched_product()
@@ -159,11 +161,11 @@ ostream& operator<<(ostream& os, Client& cl)
     else if (cl.get_activity() == "shopping")
     {
         //wojtas is sus
-        os << "Client " << cl.get_name() << " " << cl.get_surname() << " grabbed " << cl.get_shopping_cart()[cl.get_currently_serched_prd()] << " and put it in thr cart" << endl;
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " grabbed " << cl.get_shopping_cart()[cl.get_currently_serched_prd()] << " and put it in the shopping cart" << endl;
     }
     else if (cl.get_activity() == "w8 WHM")
     {
-        os << "Client " << cl.get_name() << " " << cl.get_surname() << " is waiting for warehouseman, to get product from magazine" << endl;
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " is waiting for warehouseman, to get"<<cl.get_shopping_cart()[cl.get_currently_serched_prd()].getName() << " from magazine" << endl;
     }
 
     return os;

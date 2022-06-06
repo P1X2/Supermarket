@@ -17,6 +17,7 @@ class Warehouseman : public Employee
 
 	string searched_prd;
 	int served_client;
+	string served_cl_name, served_cl_surname;
 	RNG RNG;
 
 public:
@@ -25,12 +26,14 @@ public:
 	bool get_is_serching_prd();
 	string get_searched_prd();
 	int get_client_id();
+	string get_client_name();
+	string get_client_surname();
 
 	virtual float calculate_salary() override;
 	virtual void set_money_per_hour(float) override;
 	float get_money_per_hour();
 
-	void serch_product(int id, string product); // uwaga tutaj moze sie pierolic
+	void serch_product(int id, string name, string surname, string product); // uwaga tutaj moze sie pierolic
 	void stop_searching();
 	void add_prd_to_pocket(Product prd);
 	void empty_pocket();

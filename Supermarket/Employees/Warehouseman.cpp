@@ -28,6 +28,16 @@ int Warehouseman::get_client_id()
 	return served_client;
 }
 
+string Warehouseman::get_client_name()
+{
+	return served_cl_name;
+}
+
+string Warehouseman::get_client_surname()
+{
+	return served_cl_surname;
+}
+
 
 void Warehouseman::set_money_per_hour(float money)
 {
@@ -50,11 +60,16 @@ float Warehouseman::get_money_per_hour()
 
 
 
-void Warehouseman::serch_product(int id, string product)
+void Warehouseman::serch_product(int id,string name, string surname, string product)
 {
 	is_serching_prd = true;
 	searched_prd = product;
-	this->served_client = id;
+	served_client = id;
+	served_cl_name = name;
+	served_cl_surname = surname;
+
+	set_activity("is going to the magazine");
+	cout << *this;
 	set_busy(RNG.generate_random_number(0, 3));
 }
 
@@ -65,12 +80,32 @@ void Warehouseman::stop_searching()
 
 void Warehouseman::add_prd_to_pocket(Product prd)
 {
+	if (prd.getName() == "")
+	{
+		set_activity("didnt found");
+		cout << *this;
+	}
+	else
+	{
+		set_activity("found");
+		cout << *this;
+	}
 	pocket.push_back(prd);
 }
 
 
 void Warehouseman::empty_pocket()
 {
+	if (get_activity() == "found")
+	{
+		set_activity("gave product to the client");
+		cout << *this;
+	}
+	if (get_activity() == "didnt found")
+	{
+		set_activity("inform there is no more");
+		cout << *this;
+	};
     vector<Product>::iterator it;
     it = pocket.begin();
     pocket.erase(it);
@@ -78,14 +113,26 @@ void Warehouseman::empty_pocket()
 
 ostream& operator<<(ostream& os, Warehouseman& emp)
 {
-	if (emp.get_activity() == " is going to the magazine")
+	if (emp.get_activity() == "is going to the magazine")
 	{
 		os << emp.get_name() << " " << emp.get_surname() << " " << emp.get_activity();
-		os << " to look for " << emp.get_searched_prd() << " for client with id "<< emp.get_client_id() << endl;
+		os << " to look for " << emp.get_searched_prd() << " for client "<< emp.get_client_name() << " " << emp.get_client_surname() << endl;
 	}
-	else if (emp.get_activity() == "gave product to the client ")
+	else if (emp.get_activity() == "gave product to the client")
 	{
-		os << emp.get_name() << " " << emp.get_surname() << " gave " << emp.get_searched_prd() << " to the client with id " << emp.get_client_id();
+		os << emp.get_name() << " " << emp.get_surname() << " gave " << emp.get_searched_prd() << " to the client " << emp.get_client_name() << " " << emp.get_client_surname() << endl;
+	}
+	else if (emp.get_activity() == "inform there is no more")
+	{
+		os << emp.get_name() << " " << emp.get_surname() << " informed client " << emp.get_client_name() << " " << emp.get_client_surname() << ", that there is no " << emp.get_searched_prd() << " in magazine" << endl;
+	}
+	else if (emp.get_activity() == "found")
+	{
+		os << emp.get_name() << " " << emp.get_surname() << " found " << emp.get_searched_prd() << " for the client " << emp.get_client_name() << " " << emp.get_client_surname() << " in magazine" << endl;
+	}
+	else if (emp.get_activity() == "didnt found")
+	{
+		os << emp.get_name() << " " << emp.get_surname() << " did not found " << emp.get_searched_prd() << " for the client " << emp.get_client_name() << " " << emp.get_client_surname() << " in magazine" << endl;
 	}
 	return os;
 }

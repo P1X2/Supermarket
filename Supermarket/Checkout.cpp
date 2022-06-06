@@ -173,7 +173,7 @@ ostream& operator<<(ostream& os, Checkout& check)
 	}
 	else if (check.get_cashier().get_activity() == "scanning client")
 	{
-		os <<endl<<endl<< "Cashier " << check.get_cashier().get_name() << " " << check.get_cashier().get_surname() << " on checkout " << check.id << " is serving client " << check.client_queue[0].get_name()<<" " << check.client_queue[0].get_surname() << endl<<endl <<endl;
+		os <<endl<< "Cashier " << check.get_cashier().get_name() << " " << check.get_cashier().get_surname() << " on checkout " << check.id << " is serving client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << endl;
 	}
 	else if (check.get_cashier().get_activity() == "opened")
 	{
