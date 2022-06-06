@@ -115,6 +115,7 @@
     <ClCompile Include="Bill.cpp" />
     <ClCompile Include="Invoice.cpp" />
     <ClCompile Include="Recipe.cpp" />
+    <ClCompile Include="RegisterBills.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h">
