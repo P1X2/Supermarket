@@ -17,8 +17,7 @@ public:
 	friend class Supermarket_sandbox;
 	friend class Supermarket;
 	
-
+	friend ostream& operator<<(ostream& os , RegisterClient& rc);
 };
 
 //przeci¹¿yæ operator
-ostream operator<<(ostream&, RegisterClient&);

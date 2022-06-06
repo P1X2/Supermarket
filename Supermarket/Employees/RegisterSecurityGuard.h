@@ -1,16 +1,15 @@
 #pragma once
 #include "SecurityGuard.h"
-#include <list>
+#include <vector>
 class RegisterSecurityGuard
 {
-	list<unique_ptr<SecurityGuard>> employees;
+	vector<SecurityGuard> employees;
 public:
 	void add_security_guard(string, string, int, int, float);
 	float count_salaries();
 	int how_many_workers();
 	bool in_register(int);
-	void remove_employee(int);
-	void print_employees();
-	void pass_time_unit();
+
+	friend ostream& operator<<(ostream& os, RegisterSecurityGuard& rc);
 };
 

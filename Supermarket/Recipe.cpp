@@ -20,6 +20,17 @@ int Recipe::count_total()
 	return total;
 }
 
+int Recipe::total_vat()
+{
+	int total = 0;
+	for (Product prod : get_products())
+	{
+		total = total + round(prod.getPrice()/100);
+	}
+	total = count_total() - total;
+	return total;
+}
+
 ostream& Recipe::operator<<(ostream& os)
 {
 	os << endl << "            Recipe" << endl;
@@ -29,6 +40,7 @@ ostream& Recipe::operator<<(ostream& os)
 	{
 		os << prod.getName() << ": " << get_price_with_vat(prod) << " zl" << endl;
 	}
+	os << "Total VAT: " << total_vat() << " zl" << endl;
 	os << "Summary: " << count_total() << " zl" << endl;
 	os << "_________________________________" << endl;
 	return os;

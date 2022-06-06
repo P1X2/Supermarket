@@ -75,3 +75,15 @@ void RegisterWarehouseman::pass_time_unit()
 		emp_ptr->set_busy(emp_ptr->get_busy() - 1);
 	}
 }
+
+
+ostream& operator<<(ostream& os, RegisterWarehouseman& rc)
+{
+	{
+		for (Warehouseman cl : rc.employees)
+		{
+			os << cl << endl;
+		}
+		return os;
+	}
+}

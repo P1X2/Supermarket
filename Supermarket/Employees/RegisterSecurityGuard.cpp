@@ -4,20 +4,20 @@
 
 void RegisterSecurityGuard::add_security_guard(string name, string surname, int hours, int id, float money)
 {
-	unique_ptr<SecurityGuard> guard = make_unique<SecurityGuard>(name, surname, hours, id, money);
-	if (in_register(guard->get_id()))
+	SecurityGuard guard(name, surname, hours, id, money);
+	if (in_register(guard.get_id()))
 	{
 		throw EmployeeAlreadyExistsException();
 	}
-	employees.push_back(move(guard));
+	employees.push_back(guard);
 }
 
 float RegisterSecurityGuard::count_salaries()
 {
 	float sum = 0;
-	for (const auto& emp_ptr : employees)
+	for (SecurityGuard emp_ptr : employees)
 	{
-		sum += emp_ptr->calculate_salary();
+		sum += emp_ptr.calculate_salary();
 	}
 	return sum;
 }
@@ -31,44 +31,21 @@ bool RegisterSecurityGuard::in_register(int id)
 {
 	bool x = false;
 
-	for (const auto& emp_ptr : employees)
+	for (SecurityGuard emp_ptr : employees)
 	{
-		if (id == emp_ptr->get_id()) x = true;
+		if (id == emp_ptr.get_id()) x = true;
 	}
 	return x;
 
 }
 
-void RegisterSecurityGuard::remove_employee(int id)
+ostream& operator<<(ostream& os, RegisterSecurityGuard& rc)
 {
-	if (in_register(id))
 	{
-		for (const auto& emp_ptr : employees)
+		for (SecurityGuard cl : rc.employees)
 		{
-			if (id == emp_ptr->get_id())
-			{
-				employees.remove(emp_ptr); break;
-			}
+			os << cl << endl;
 		}
-	}
-
-	else
-		throw EmployeeDoesNotExistException();
-}
-
-void RegisterSecurityGuard::print_employees()
-{
-	cout << "Security Guards:" << endl;
-	for (const auto& emp_ptr : employees)
-	{
-		emp_ptr->print_employer();
-	}
-}
-
-void RegisterSecurityGuard::pass_time_unit()
-{
-	for (const auto& emp_ptr : employees)
-	{
-		emp_ptr->set_busy(emp_ptr->get_busy() - 1);
+		return os;
 	}
 }
