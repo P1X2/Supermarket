@@ -190,12 +190,14 @@ void FileReader::load_addresses(string path)
 
 
 
-void FileReader::write_to_file()
+void FileReader::write_bills_to_file(RegisterBills& bills)
 {
 	fstream handle;
+	Warehouseman war("ad", "ads", 160, 20, 20);
 	handle.open("bills.txt", ios::out);
 	if (handle.good())
 	{
-		
+		handle << bills;
+		handle.close();
 	}
 }

@@ -12,11 +12,17 @@ void RegisterBills::add_recipe(vector<Product>products)
 	bills.push_back(move(recipe));
 }
 
-ostream& operator<<(ostream& os, const RegisterBills& reg)
+ostream& operator<<(ostream& os, RegisterBills& reg)
 {
+	int i = 0;
 	for (const auto& bill_ptr : reg.bills)
 	{
-		bill_ptr->print_bill();
+		i++;
+		os << "Bill " << i << ": " << endl;
+		bill_ptr->operator<<(os);
+		os << endl;
 	}
+	
 	return os;
 }
+

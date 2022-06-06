@@ -13,19 +13,19 @@ int Invoice::count_total()
 	return total;
 }
 
-void Invoice::print_bill()
+ostream& Invoice::operator<<(ostream& os)
 {
-	cout <<endl<< "            Invoice" << endl;
-	cout << "         Client data:" << endl;
-	cout << "Name: "<<name << " " << surname << endl;;
-	cout << "Address: "<<address;
-	cout <<"_________________________________" << endl;
-	cout << "           Products:" << endl;
+	os << endl << "            Invoice" << endl;
+	os << "         Client data:" << endl;
+	os << "Name: " << name << " " << surname << endl;
+	os << "Address: " << address;
+	os << "_________________________________" << endl;
+	os << "           Products:" << endl;
 	for (Product prod : get_products())
 	{
-		cout << prod.getName() << ": " << round(prod.getPrice()/100) << " zl" << endl;
+		os << prod.getName() << ": " << round(prod.getPrice() / 100) << " zl" << endl;
 	}
-	cout << "Summary: " << count_total() << " zl" << endl;
-	cout << "_________________________________" << endl;
-
+	os << "Summary: " << count_total() << " zl" << endl;
+	os << "_________________________________" << endl;
+	return os;
 }

@@ -8,6 +8,5 @@ class Invoice :
 public:
     Invoice(string name, string surname, Address address,vector<Product> products);
     int count_total();
-    void print_bill();
+    virtual ostream& operator<<(ostream& os);
 };
-

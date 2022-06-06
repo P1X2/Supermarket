@@ -21,8 +21,7 @@ int main()
     //Cashier xd("elo", "xd", 160, 20, 30);
     //std::cout << "Hello World!\n";
     //xd.print_employer();
-   /* Meat xdxd("a", 13123, 23, "ess", "23123", "w");
-    Meat xdx("b", 1122, 3, "elss", "23", "sdew");
+   /* 
     //std::cout << xdxd.VAT() << endl;
     //std::cout << xd.get_busy();
     //vector<Product> a;
@@ -178,19 +177,25 @@ int main()
     //inv.print_bill();
     //return 1;
     //cout << *it;
-    /*RegisterBills sas;
+    FileReader writer;
+    Meat xdxd("a", 13123, 23, "ess", "23123", "w");
+    Meat xdx("b", 1122, 3, "elss", "23", "sdew");
+    RegisterBills sas;
     Address ads("polsza", "kielcze", "war", 12);
     vector<Product> lsl;
     lsl.push_back(xdxd);
     lsl.push_back(xdx);
     sas.add_invoice("das", "dsa", ads, lsl);
     sas.add_recipe(lsl);
-    cout << sas;*/
+    cout << sas;
+    writer.write_bills_to_file(sas);
+    
+    //cout << sas;
     /*Invoice inv("bart", "dab", ads, lsl);
     inv.print_bill();
     Recipe rec(lsl);
-    rec.print_bill();
-    */
+    rec.print_bill();*/
+    
     
 
     Supermarket sprm("products.txt", "names.txt", "addresses.txt");

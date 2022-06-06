@@ -8,6 +8,6 @@ class Recipe :
 public:
     Recipe(vector<Product> products);
     int count_total();
-    void print_bill();
+    virtual ostream& operator<<(ostream& os);
 };
 
