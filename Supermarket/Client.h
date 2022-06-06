@@ -28,7 +28,7 @@ class Client :
     bool recipe;
     bool w8ting = false;
     bool is_done = false;
-    bool rng=true;
+    bool rng = true;
     int currently_serched_prd = 0;
     RNG RNG;
 
@@ -44,14 +44,15 @@ public:
     bool get_is_done();
     vector<Product> get_shopping_cart();
     bool get_recipe();
+
     bool get_is_w8ting();
+    void is_w8ting_end();
 
 
-
-    int serch_product(ProductShelve &shop_shelve);
-    void grab_product( map<Product, int>::iterator it); // modyfikacja 
+    int serch_product(ProductShelve& shop_shelve);
+    void grab_product(map<Product, int>::iterator it); // modyfikacja 
     void grab_product_from_emplyee(Product prd);
-    void ask_question__is_in_stock(RegisterWarehouseman &registerWHM);
+    void ask_question__is_in_stock(RegisterWarehouseman& registerWHM);
 
     void update_currently_serched_product();
 

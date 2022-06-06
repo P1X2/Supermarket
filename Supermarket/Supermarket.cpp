@@ -4,9 +4,9 @@
 
 void Supermarket::simulation(int iterations)
 {
-	
+
 	/*vector<Product> xd;
-	
+
 	for (Address adr : file_reader.addresses)
 	{
 		cout << adr << endl;
@@ -15,7 +15,7 @@ void Supermarket::simulation(int iterations)
 	{
 		cout<<pr.getName()<<"  "<<pr.getBarcode() << endl;
 	}
-	
+
 	generate_employees();
 	int i = 0;
 	cashiers.print_employees();
@@ -35,25 +35,25 @@ void Supermarket::simulation(int iterations)
 
 void Supermarket::generate_employees()
 {
-	int flag1 = 0; 
+	int flag1 = 0;
 
-	for (int i=1;i<=rng_machine.generate_random_number(2, 10);i++)
+	for (int i = 1; i <= rng_machine.generate_random_number(2, 10); i++)
 	{
 		string name = rng_machine.random_string_vector_element(file_reader.names);
 		string surname = rng_machine.random_string_vector_element(file_reader.surnames);
 		int hours = rng_machine.generate_random_number(161, 319);
 		float money_per_hour = rng_machine.generate_random_number(15, 40);
-		cashiers.add_cashier(name,surname,hours,i,money_per_hour);
+		cashiers.add_cashier(name, surname, hours, i, money_per_hour);
 		if (flag1 == 0)
 		{
-			checkouts.push_back(Checkout(Cashier(name, surname, hours, i, money_per_hour),true));
+			checkouts.push_back(Checkout(Cashier(name, surname, hours, i, money_per_hour), true));
 			flag1 += 1;
 		}
-		else 
+		else
 		{
 			checkouts.push_back(Checkout(Checkout(Cashier(name, surname, hours, i, money_per_hour), false)));
 		}
-		
+
 
 
 	}
@@ -90,23 +90,23 @@ void Supermarket::generate_client(int number_to_generate)
 		int shop_cart_len = rng_machine.generate_random_number(1, 20);
 		for (int k = 1; k <= shop_cart_len; k++)
 		{
-			string product = products[rng_machine.generate_random_number(0, products.size()-1)].getName();
+			string product = products[rng_machine.generate_random_number(0, products.size() - 1)].getName();
 			shopping_list.push_back(product);
 		}
-		recipe = rng_machine.generate_random_number(0,2); // impostor wojtas
-		Address sa = file_reader.addresses[rng_machine.generate_random_number(0, file_reader.addresses.size()-1)];
+		recipe = rng_machine.generate_random_number(0, 2); // impostor wojtas
+		Address sa = file_reader.addresses[rng_machine.generate_random_number(0, file_reader.addresses.size() - 1)];
 		Client client(name, surname, shopping_list,
 			sa, recipe);
 		clients.add_client(client);
-		
+
 	}
 }
 
-Supermarket::Supermarket(string products_path,string names_surnames_path,string addresses_path)
+Supermarket::Supermarket(string products_path, string names_surnames_path, string addresses_path)
 {
 	try
 	{
-		products=file_reader.load_products(products_path);
+		products = file_reader.load_products(products_path);
 		file_reader.load_names_surnames(names_surnames_path);
 		file_reader.load_addresses(addresses_path);
 	}
@@ -114,8 +114,8 @@ Supermarket::Supermarket(string products_path,string names_surnames_path,string 
 	{
 		cout << "Caught an exception FileReadError" << endl << e.what() << endl;
 	}
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(499, 500, products.size())); // mod 
-	magazine.set_inventory(products, rng_machine.random_numbers_vector(1, 3, products.size()));
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1, 5, products.size())); // pierwszy produkt musi byc WIDMEMMMMMMMMMMMMMMMMMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size()));
 }
 
 
@@ -155,7 +155,7 @@ void Supermarket::do_shopping() //1
 			}
 			best_checkout->add_client_to_queue(*it);
 			to_delete.push_back(*it);
-				//clients.clients.erase(it); // tutaj sie perdoli dorobic usuwanie koniecznie !!!!!!!!!!!!!!!!!!!!!!!
+			//clients.clients.erase(it); // tutaj sie perdoli dorobic usuwanie koniecznie !!!!!!!!!!!!!!!!!!!!!!!
 			continue;
 
 		}
@@ -209,8 +209,19 @@ void Supermarket::give_prd_to_client() // 3
 			{
 				if (it2->get_surename() == it->served_client)
 				{
-					it2->grab_product_from_emplyee(it->pocket[0]);
-					it->empty_pocket();
+					if (it->pocket[0].getName() == "")
+					{
+						it2->is_w8ting_end();
+						it2->update_currently_serched_product();
+						it->empty_pocket();
+					}
+					else
+					{
+						it2->grab_product_from_emplyee(it->pocket[0]);
+						it2->is_w8ting_end();
+						it2->update_currently_serched_product();
+						it->empty_pocket();
+					}
 				}
 				else
 				{

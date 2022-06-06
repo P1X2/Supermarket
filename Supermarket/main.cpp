@@ -21,7 +21,7 @@ int main()
     //Cashier xd("elo", "xd", 160, 20, 30);
     //std::cout << "Hello World!\n";
     //xd.print_employer();
-    Meat xdxd("a", 13123, 23, "ess", "23123", "w");
+   /* Meat xdxd("a", 13123, 23, "ess", "23123", "w");
     Meat xdx("b", 1122, 3, "elss", "23", "sdew");
     //std::cout << xdxd.VAT() << endl;
     //std::cout << xd.get_busy();
@@ -198,6 +198,7 @@ int main()
     sprm.simulation();
     while (int i = 0 <= 500)
     {
+
         sprm.do_shopping();
         sprm.go_to_magazine();
         sprm.give_prd_to_client();
