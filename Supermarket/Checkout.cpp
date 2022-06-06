@@ -8,7 +8,7 @@ Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0)
 Checkout::Checkout(Cashier checkout_cashier, bool is_open) :checkout_cashier(checkout_cashier), is_open(is_open)
 {}
 
-bool Checkout::scan_product()
+int Checkout::scan_product()
 {
 	int prd_left_to_scan = (current_client_shopping_cart.size()) - (current_shopping_cart_index );
 	if (prd_left_to_scan < this->get_scanning_speed())
@@ -24,7 +24,7 @@ bool Checkout::scan_product()
 			if (i = krk + current_shopping_cart_index - 1)
 			{
 				reset_CSCI();
-				return true;
+				return 1;
 			}
 		}
 	}
@@ -36,7 +36,7 @@ bool Checkout::scan_product()
 			current_cart_profit += current_client_shopping_cart[i].getPrice(); // error
 			current_shopping_cart_index++;
 		}
-		return false;
+		return 0;
 	}
 	
 }
@@ -49,9 +49,9 @@ int Checkout::get_scanning_speed()
 void Checkout::checkout_action()
 {
 	current_client_shopping_cart = client_queue[0].get_shopping_cart();
-	bool flag = scan_product();
+	int flag = scan_product();
 
-	if (flag == true)
+	if (flag == 1)
 	{
 		if (client_queue[0].get_recipe() == true)
 		{
@@ -65,6 +65,10 @@ void Checkout::checkout_action()
 			vector<Client>::iterator it = client_queue.begin();
 			vector<Client>::iterator it2 = client_queue.erase(it);
 		}
+	}
+	else
+	{
+		return;
 	}
 	
 }
