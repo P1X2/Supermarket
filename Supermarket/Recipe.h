@@ -1,9 +1,10 @@
 #pragma once
 #include "Bill.h"
+#include <cmath>
 class Recipe :
     public Bill
 {
-    int get_price_with_vat(Product product);
+    float get_price_with_vat(Product product);
 public:
     Recipe(vector<Product> products);
     int count_total();

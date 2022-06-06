@@ -11,6 +11,7 @@
 #include "Employees/RegisterWarehouseman.h"
 #include "ProductShelve.h"
 #include "Invoice.h"
+#include "Recipe.h"
 
 
 using namespace std;
@@ -175,6 +176,18 @@ int main()
 
     //inv.print_bill();
     //return 1;
+    cout << *it;*/
+    Address ads("polsza", "kielcze", "war", 12);
+    vector<Product> lsl;
+    lsl.push_back(xdxd);
+    lsl.push_back(xdx);
+    Invoice inv("bart", "dab", ads, lsl);
+    inv.print_bill();
+    Recipe rec(lsl);
+    rec.print_bill();
+    
+    
+    return 0;
 
     Supermarket sprm("products.txt", "names.txt", "addresses.txt");
    // sprm.simulation();
