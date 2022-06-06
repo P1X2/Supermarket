@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Employee.h"
+#include"..\products\Product.h"
 #include <vector>
 #include "..\RNG.h"
 
@@ -15,7 +16,7 @@ class Warehouseman : public Employee
 	bool is_serching_prd;
 
 	string searched_prd;
-	string served_client;
+	vector<Product> served_client_shopping_cart;
 	RNG RNG;
 
 public:
@@ -29,7 +30,7 @@ public:
 	virtual void set_money_per_hour(float) override;
 	float get_money_per_hour();
 
-	void serch_product(string surename, string product); // uwaga tutaj moze sie pierolic
+	void serch_product(vector<Product> served_client_shopping_cart, string product); // uwaga tutaj moze sie pierolic
 	void stop_searching();
 	void add_prd_to_pocket(Product prd);
 	void empty_pocket();

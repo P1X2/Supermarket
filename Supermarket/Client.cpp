@@ -21,13 +21,13 @@ string Client::get_name()
 string Client::get_surename()
 {
     return surname;
-
+    
 }
 
 string Client::get_adress()
 {
 
-    return (address.get_country() + ", " + address.get_city() + "\n" + address.get_street() + " " + to_string(address.get_house_number()));
+    return (address.get_country() + ", " + address.get_city() + "\n" + address.get_street() +" " + to_string(address.get_house_number()));
 }
 
 bool Client::get_is_done()
@@ -55,7 +55,7 @@ void Client::is_w8ting_end()
     w8ting = false;
 }
 
-int  Client::serch_product(ProductShelve& shop_shelve)
+int  Client::serch_product(ProductShelve &shop_shelve)
 {
     if (rng == true)
     {
@@ -93,7 +93,7 @@ int  Client::serch_product(ProductShelve& shop_shelve)
     {
         this->set_busy(this->get_busy() - 1);
     }
-
+    
 }
 
 void Client::grab_product(map<Product, int>::iterator it)
@@ -108,13 +108,13 @@ void Client::grab_product_from_emplyee(Product prd)
     check_if_done();
 }
 
-void Client::ask_question__is_in_stock(RegisterWarehouseman& registerWHM)
+void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
 {
     for (vector<Warehouseman>::iterator emp_ptr = registerWHM.employees.begin(); emp_ptr != registerWHM.employees.end(); emp_ptr++)
     {
         if (emp_ptr->get_is_serching_prd() == false)
         {
-            emp_ptr->serch_product(surname, shopping_list[currently_serched_prd]);
+            emp_ptr->serch_product(get_shopping_cart(), shopping_list[currently_serched_prd]);
             return;
         }
         else

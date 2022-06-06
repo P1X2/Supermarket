@@ -114,8 +114,13 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 	{
 		cout << "Caught an exception FileReadError" << endl << e.what() << endl;
 	}
+	Product Ghost("", "", "", 0, 0);
+	vector<Product>::iterator it = products.begin();
 	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1, 5, products.size())); // pierwszy produkt musi byc WIDMEMMMMMMMMMMMMMMMMMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size()));
+	products.insert(it, Ghost);
+	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size())); // prd duch teoretycznie zrobiony
+	vector<Product>::iterator it2 = products.begin();
+	products.erase(it2);
 }
 
 
@@ -207,9 +212,9 @@ void Supermarket::give_prd_to_client() // 3
 		{
 			for (vector<Client>::iterator it2 = clients.clients.begin(); it2 != clients.clients.end(); it2++)
 			{
-				if (it2->get_surename() == it->served_client)
+				if (it2->get_shopping_cart() == it->served_client_shopping_cart)
 				{
-					if (it->pocket[0].getName() == "")
+					if (it->pocket[0].getName() == "") // dorobic prd duch
 					{
 						it2->is_w8ting_end();
 						it2->update_currently_serched_product();
