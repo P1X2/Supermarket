@@ -14,7 +14,7 @@ class ProductShelve
 	map <Product, int> inventory;
 
 public:
-	ProductShelve(vector<Product> prd, vector<int> prd_number);
+	void set_inventory(vector<Product> prods, vector<int> ints);
 
 	void update_inventory(Product prd);
 	map <Product, int> get_inventory();

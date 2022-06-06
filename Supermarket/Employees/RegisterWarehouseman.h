@@ -18,6 +18,7 @@ public:
 	void pass_time_unit();
 	friend class Client;
 	friend class ProductShelve;
+	friend class Supermarket;
 	friend class Supermarket_sandbox;
 };
 

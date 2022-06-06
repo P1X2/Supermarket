@@ -32,7 +32,7 @@ void Employee::set_hours(int new_hours)
 {
 	if (new_hours < 160 or new_hours>320)
 	{
-		throw WorkingHoursError(new_hours);
+		//throw WorkingHoursError(new_hours); // symka changes
 	}
 	else hours = new_hours;
 }

@@ -1,6 +1,6 @@
 #include "ProductShelve.h"+
 
-ProductShelve::ProductShelve(vector<Product> prd, vector<int> prd_number)
+void ProductShelve::set_inventory(vector<Product> prd, vector<int> prd_number)
 {
 	if (prd.size() != prd_number.size())
 	{

@@ -45,12 +45,16 @@ bool Client::get_recipe()
     return recipe;
 }
 
+bool Client::get_is_w8ting()
+{
+    return w8ting;
+}
+
 int  Client::serch_product(ProductShelve &shop_shelve)
 {
     if (rng == true)
     {
-        //set_busy(RNG.generate_random_number(0, 2));
-        set_busy(2);
+        set_busy(RNG.generate_random_number(0, 2));
         rng = false;
     }
     map<Product, int>::iterator it;
@@ -113,6 +117,7 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
             continue;
         }
     }
+    w8ting = true;
 }
 
 void Client::update_currently_serched_product()

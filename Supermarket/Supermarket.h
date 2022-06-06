@@ -31,8 +31,19 @@ class Supermarket
 
 	void generate_client(int=1);
 	void generate_employees();
+
+
+
 public:
 	void simulation(int=1000);
 	Supermarket(string products_path,string names_surnames_path, string addresses_path);
+
+	void do_shopping();
+	void go_to_magazine();
+	void give_prd_to_client();
+	void opening_checkouts();
+	void scan_products();
+
+
 
 };
