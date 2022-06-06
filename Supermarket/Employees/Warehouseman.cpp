@@ -18,6 +18,11 @@ string Warehouseman::get_searched_prd()
 	return searched_prd;
 }
 
+int Warehouseman::get_client_id()
+{
+	return served_client;
+}
+
 
 void Warehouseman::set_money_per_hour(float money)
 {
@@ -66,28 +71,16 @@ void Warehouseman::empty_pocket()
     pocket.erase(it);
 }
 
-void Warehouseman::go_to_magazine()
-{
-	action = "is going to the magazine";
-	set_busy(3);
-}
-
-void Warehouseman::gave_to_client()
-{
-	action = "gave product to the client";
-	set_busy(1);
-}
-
 ostream& operator<<(ostream& os, Warehouseman emp)
 {
-	if (emp.action == "is going to the magazine")
+	if (emp.get_activity() == " is going to the magazine")
 	{
-		os << emp.get_name() << " " << emp.get_surname() << " " << emp.action;
-		os << " to look for " << emp.pocket[0] << endl;
+		os << emp.get_name() << " " << emp.get_surname() << " " << emp.get_activity();
+		os << " to look for " << emp.get_searched_prd() << " for client with id "<< emp.get_client_id() << endl;
 	}
-	else if (emp.action == "gave product to the client")
+	else if (emp.get_activity() == "gave product to the client ")
 	{
-		os << emp.get_name() << " " << emp.get_surname() << " " << emp.action;
+		os << emp.get_name() << " " << emp.get_surname() << " gave " << emp.get_searched_prd() << " to the client with id " << emp.get_client_id();
 	}
 	return os;
 }

@@ -11,6 +11,7 @@ void Supermarket::load_registers()
 void Supermarket::generate_employees()
 {
 	int flag1 = 0;
+	int checkout_id = 1;
 
 	for (int i = 1; i <= rng_machine.generate_random_number(2, 10); i++)
 	{
@@ -21,12 +22,14 @@ void Supermarket::generate_employees()
 		cashiers.add_cashier(name, surname, hours, i, money_per_hour);
 		if (flag1 == 0)
 		{
-			checkouts.push_back(Checkout(Cashier(name, surname, hours, i, money_per_hour), true));
+			checkouts.push_back(Checkout(Cashier(name, surname, hours, i, money_per_hour), true,checkout_id));
 			flag1 += 1;
+			checkout_id++;
 		}
 		else
 		{
-			checkouts.push_back(Checkout(Checkout(Cashier(name, surname, hours, i, money_per_hour), false)));
+			checkouts.push_back(Checkout(Checkout(Cashier(name, surname, hours, i, money_per_hour), false,checkout_id)));
+			checkout_id++;
 		}
 
 

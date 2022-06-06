@@ -1,12 +1,22 @@
 #include "Checkout.h"
 #include <stdexcept>
 
-Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0), is_open(false)
+Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0), is_open(false),id(0)
 {
 }
 
-Checkout::Checkout(Cashier checkout_cashier, bool is_open) :checkout_cashier(checkout_cashier), is_open(is_open)
+Checkout::Checkout(Cashier checkout_cashier, bool is_open,int id) :checkout_cashier(checkout_cashier), is_open(is_open),id(id)
 {}
+
+Cashier Checkout::get_cashier()
+{
+	return checkout_cashier;
+}
+
+void Checkout::set_cashier_activity(string activity)
+{
+	checkout_cashier.set_activity(activity);
+}
 
 int Checkout::scan_product()
 {
@@ -120,11 +130,20 @@ bool Checkout::operator<(const Checkout& second_checkout) const
 	return (client_queue.size() < second_checkout.client_queue.size());
 }
 
-ostream& operator<<(ostream& os, const Checkout& check)
+ostream& operator<<(ostream& os, Checkout& check)
 {
-	if (check.is_open)
+	if (check.get_cashier().get_activity() == "done scanning client")
 	{
-		os << "Cashier on checkout: " << check.checkout_cashier << " Number of clients in line: " << check.client_queue.size() << endl;
+		os << "Cashier on checkout " << check.id << " served client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << endl;
+		os << "The total is " << check.current_cart_profit << "\n\n";
+	}
+	else if (check.get_cashier().get_activity() == "scanning client")
+	{
+		os << "Cashier on checkout " << check.id << " served client " << check.client_queue[0].get_name()<<" " << check.client_queue[0].get_surname() << endl;
+	}
+	else if (check.get_cashier().get_activity() == "opened")
+	{
+		os <<"Checkout with id " << check.id << " has just opened" <<endl;
 	}
 	return os;
 }

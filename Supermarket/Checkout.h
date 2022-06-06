@@ -12,16 +12,20 @@ class Checkout
 	vector<Product> current_client_shopping_cart;
 
 	int current_shopping_cart_index = 0;
+	int id;
 	int current_cart_profit = 0;
 	int profit = 0;
 	bool is_open;
 	int get_scanning_speed();
 public:
 	Checkout();
-	Checkout(Cashier checkout_cashier, bool is_open);
+	Checkout(Cashier checkout_cashier, bool is_open, int id);
+
+	Cashier get_cashier();
+	void set_cashier_activity(string activity);
 	
-	void checkout_action(); //metoda do wywo³ywania w symulacji co obrót pêtli
-	int scan_product(); // do zrobienia jak bedzie g³owna petla czasu
+	void checkout_action(); 
+	int scan_product(); 
 	int get_client_queue_lenght();
 	
 	void reset_CSCI();
@@ -39,7 +43,5 @@ public:
 	friend class Supermarket_sandbox;
 	friend class Supermarket;
 	bool operator<(const Checkout& second_checkout)const;
-	friend ostream& operator<<(ostream& os, const Checkout& check);
+	friend ostream& operator<<(ostream& os, Checkout& check);
 };
-
-ostream& operator<<(ostream& os, const Checkout check);
