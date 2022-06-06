@@ -117,7 +117,7 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 	}
 	Product Ghost("", "", "", 0, 0);
 	vector<Product>::iterator it = products.begin();
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1, 5, products.size())); // pierwszy produkt musi byc WIDMEMMMMMMMMMMMMMMMMMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1000, 5500, products.size())); // pierwszy produkt musi byc WIDMEMMMMMMMMMMMMMMMMMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	products.insert(it, Ghost);
 	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size())); // prd duch teoretycznie zrobiony
 	vector<Product>::iterator it2 = products.begin();
@@ -186,6 +186,7 @@ void Supermarket::do_shopping() //1
 
 		}
 	}
+
 	for (int i = 0; i != to_delete.size(); i++)
 	{
 		for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
@@ -199,6 +200,7 @@ void Supermarket::do_shopping() //1
 			}
 		}
 	}
+	cout << "1";
 }
 
 void Supermarket::go_to_magazine() // 2
@@ -213,7 +215,7 @@ void Supermarket::give_prd_to_client() // 3
 		{
 			for (vector<Client>::iterator it2 = clients.clients.begin(); it2 != clients.clients.end(); it2++)
 			{
-				if (it2->get_shopping_cart() == it->served_client_shopping_cart)
+				if (it2->get_id() == it->served_client)
 				{
 					if (it->pocket[0].getName() == "") // dorobic prd duch
 					{
@@ -239,6 +241,7 @@ void Supermarket::give_prd_to_client() // 3
 		{
 			continue;
 		}
+	cout << "2";
 }
 
 void Supermarket::opening_checkouts() //4
@@ -265,7 +268,7 @@ void Supermarket::opening_checkouts() //4
 			checkouts[opened_checkouts].assign_cashier();
 		}
 	}
-
+	cout << "3";
 }
 
 void Supermarket::scan_products() // 5
@@ -282,5 +285,6 @@ void Supermarket::scan_products() // 5
 		}
 
 	}
+	cout << "4";
 }
 

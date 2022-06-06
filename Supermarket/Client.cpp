@@ -4,6 +4,7 @@ void Client::check_if_done()
 {
     if (shopping_list.size() == currently_serched_prd)
     {
+        cout << "isdone" << endl;
         is_done = true;
     }
 }
@@ -59,6 +60,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 {
     if (rng == true)
     {
+        cout << "sukanie" << endl;
         set_busy(RNG.generate_random_number(0, 4));
         rng = false;
     }
@@ -114,7 +116,7 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
     {
         if (emp_ptr->get_is_serching_prd() == false)
         {
-            emp_ptr->serch_product(get_shopping_cart(), shopping_list[currently_serched_prd]);
+            emp_ptr->serch_product(get_id(), shopping_list[currently_serched_prd]);
             return;
         }
         else

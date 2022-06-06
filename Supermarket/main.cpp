@@ -197,7 +197,8 @@ int main()
    // sprm.simulation();
     sprm.simulation();
    // sprm.ghost_prd();
-    while (int i = 0 <= 500)
+    int i = 0;
+    while (i <= 50)
     {
         sprm.do_shopping();
         sprm.go_to_magazine();
@@ -206,6 +207,10 @@ int main()
         sprm.scan_products();
 
         i++;
+        if (i == 50)
+        {
+            continue;
+        }
     }
 }
 
