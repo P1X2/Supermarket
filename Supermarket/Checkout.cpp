@@ -6,7 +6,9 @@ Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0), is_open(false),id
 }
 
 Checkout::Checkout(Cashier checkout_cashier, bool is_open,int id) :checkout_cashier(checkout_cashier), is_open(is_open),id(id)
-{}
+{
+	set_cashier_activity("opened");
+}
 
 Cashier Checkout::get_cashier()
 {
@@ -20,6 +22,7 @@ void Checkout::set_cashier_activity(string activity)
 
 int Checkout::scan_product()
 {
+	//set_cashier_activity("scanning client");
 	int prd_left_to_scan = (current_client_shopping_cart.size()) - (current_shopping_cart_index );
 	if (prd_left_to_scan < this->get_scanning_speed())
 	{
@@ -71,6 +74,7 @@ void Checkout::checkout_action()
 		}
 		else
 		{
+			//set_cashier_activity("done scanning client");
 			invoice(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
 			vector<Client>::iterator it2 = client_queue.erase(it);

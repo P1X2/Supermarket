@@ -105,7 +105,7 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 
 	Product Ghost("", "", "", 0, 0);
 	vector<Product>::iterator it = products.begin();
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1000, 5500, products.size())); 
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(50, 100, products.size())); 
 	products.insert(it, Ghost);
 	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size()));
 	vector<Product>::iterator it2 = products.begin();
@@ -293,6 +293,12 @@ void Supermarket::simulation(int iterations)
 			int chance = 15;
 			randomly_generate_client(chance);
 		}
+		cout << clients << endl << endl << endl;
+		for (Checkout check : checkouts)
+		{
+			cout << check;
+		}
+
 		it++;
 	}
 
