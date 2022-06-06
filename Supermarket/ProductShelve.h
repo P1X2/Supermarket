@@ -21,5 +21,7 @@ public:
 
 	void who_is_looking_for_prd(RegisterWarehouseman &registerWHM);
 	Product search_prd(string prd_name);
+
+	friend class Supermarket;
 };
 

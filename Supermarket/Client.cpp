@@ -50,6 +50,11 @@ bool Client::get_is_w8ting()
     return w8ting;
 }
 
+void Client::is_w8ting_end()
+{
+    w8ting = false;
+}
+
 int  Client::serch_product(ProductShelve &shop_shelve)
 {
     if (rng == true)

@@ -112,10 +112,18 @@
     <ClCompile Include="Supermarket_sandbox.cpp">
       <Filter>cpp\supermarket</Filter>
     </ClCompile>
-    <ClCompile Include="Bill.cpp" />
-    <ClCompile Include="Invoice.cpp" />
-    <ClCompile Include="Recipe.cpp" />
-    <ClCompile Include="RegisterBills.cpp" />
+    <ClCompile Include="Invoice.cpp">
+      <Filter>cpp\bills</Filter>
+    </ClCompile>
+    <ClCompile Include="Bill.cpp">
+      <Filter>cpp\bills</Filter>
+    </ClCompile>
+    <ClCompile Include="Recipe.cpp">
+      <Filter>cpp\bills</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterBills.cpp">
+      <Filter>cpp\bills</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h">
@@ -229,6 +237,9 @@
     <ClInclude Include="Recipe.h">
       <Filter>h\bills</Filter>
     </ClInclude>
+    <ClInclude Include="RegisterBills.h">
+      <Filter>h\bills</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="names.txt">
@@ -286,6 +297,9 @@
     </Filter>
     <Filter Include="h\bills">
       <UniqueIdentifier>{2ed67dbf-d2e5-43a0-8cdd-999086e2c017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\bills">
+      <UniqueIdentifier>{fb8aeb28-ceb7-4460-8930-afd465b8318a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

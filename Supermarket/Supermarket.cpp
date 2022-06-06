@@ -114,8 +114,8 @@ Supermarket::Supermarket(string products_path,string names_surnames_path,string 
 	{
 		cout << "Caught an exception FileReadError" << endl << e.what() << endl;
 	}
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(499, 500, products.size())); // mod 
-	magazine.set_inventory(products, rng_machine.random_numbers_vector(1, 3, products.size()));
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1, 5, products.size())); // pierwszy produkt musi byc WIDMEMMMMMMMMMMMMMMMMMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size()));
 }
 
 
@@ -209,8 +209,19 @@ void Supermarket::give_prd_to_client() // 3
 			{
 				if (it2->get_surename() == it->served_client)
 				{
-					it2->grab_product_from_emplyee(it->pocket[0]);
-					it->empty_pocket();
+					if (it->pocket[0].getName() == "")
+					{
+						it2->is_w8ting_end();
+						it2->update_currently_serched_product();
+						it->empty_pocket();
+					}
+					else
+					{
+						it2->grab_product_from_emplyee(it->pocket[0]);
+						it2->is_w8ting_end();
+						it2->update_currently_serched_product();
+						it->empty_pocket();
+					}
 				}
 				else
 				{

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Employee.h"
+#include "..\products\Product.h"
 #include <vector>
 #include "..\RNG.h"
 

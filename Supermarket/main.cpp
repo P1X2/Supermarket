@@ -196,6 +196,7 @@ int main()
     Supermarket sprm("products.txt", "names.txt", "addresses.txt");
    // sprm.simulation();
     sprm.simulation();
+   // sprm.ghost_prd();
     while (int i = 0 <= 500)
     {
         sprm.do_shopping();

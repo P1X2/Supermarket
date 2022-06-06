@@ -4,15 +4,15 @@
 
 Product::Product(string Name, string Producer,string barcode, int price, int calories) :name(Name), producer(Producer), barcode(barcode)
 {
-	if (price <= 0)
-	{
-		throw NegativePriceException();
-	}
+	//if (price <= 0)
+	//{
+	//	throw NegativePriceException();             // mod zb dzia³a³o
+	//}
 
-	if (calories <= 0)
-	{
-		throw NegativeCaloriesException();
-	}
+	//if (calories <= 0)
+	//{
+	//	throw NegativeCaloriesException();
+	//}
 
 	this->price = price;
 	this->calories = calories;

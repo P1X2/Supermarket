@@ -22,10 +22,6 @@ public:
 	vector <string> surnames;
 	vector <Address> addresses;
 	
-
-
-
-
 	void load_names_surnames(string);
 	vector<Product> load_products(string);
 	void load_addresses(string);

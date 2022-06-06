@@ -44,8 +44,9 @@ public:
     bool get_is_done();
     vector<Product> get_shopping_cart();
     bool get_recipe();
-    bool get_is_w8ting();
 
+    bool get_is_w8ting();
+    void is_w8ting_end();
 
 
     int serch_product(ProductShelve &shop_shelve);
