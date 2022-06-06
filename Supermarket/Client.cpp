@@ -1,11 +1,17 @@
 #include "Client.h"
+#include <stdexcept>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
+#include <cstdlib>
 
 void Client::check_if_done()
 {
     if (shopping_list.size() == currently_serched_prd)
     {
         set_activity("done shopping");
-        cout << *this;
+        cout <<endl <<*this<< endl;
+        Sleep(2000);
         is_done = true;
         set_activity("in queue");
     }
@@ -67,7 +73,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 {
     if (rng == true)
     {
-        set_busy(RNG.generate_random_number(0, 4));
+        set_busy(RNG.generate_random_number(0, 3));
         rng = false;
     }
     map<Product, int>::iterator it;
@@ -106,8 +112,12 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 
 void Client::grab_product(map<Product, int>::iterator it)
 {
+
     shopping_cart.push_back(it->first);
     set_activity("shopping");
+    cout << *this;
+    //Sleep(1000);
+
 }
 
 void Client::grab_product_from_emplyee(Product prd)
@@ -126,7 +136,7 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
             emp_ptr->serch_product(get_id(), shopping_list[currently_serched_prd]);
             return;
         }
-        else //co sie dzieje jak nie znajdzie
+        else 
         {
             continue;
         }
@@ -148,8 +158,8 @@ ostream& operator<<(ostream& os, Client& cl)
     }
     else if (cl.get_activity() == "shopping")
     {
-        //mikolaj is sus
-        os << "Client " << cl.get_name() << " " << cl.get_surname() << " grabbed " << cl.get_shopping_cart()[cl.get_currently_serched_prd()-1] << " and put it in thr cart" << endl;
+        //wojtas is sus
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " grabbed " << cl.get_shopping_cart()[cl.get_currently_serched_prd()] << " and put it in thr cart" << endl;
     }
     else if (cl.get_activity() == "w8 WHM")
     {

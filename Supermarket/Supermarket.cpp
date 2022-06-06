@@ -74,7 +74,7 @@ void Supermarket::generate_client(int number_to_generate)
 		shopping_list.clear();
 		name = rng_machine.random_string_vector_element(file_reader.names);
 		surname = rng_machine.random_string_vector_element(file_reader.surnames);
-		int shop_cart_len = rng_machine.generate_random_number(1, 20);
+		int shop_cart_len = rng_machine.generate_random_number(3, 20);
 		for (int k = 1; k <= shop_cart_len; k++)
 		{
 			string product = products[rng_machine.generate_random_number(0, products.size() - 1)].getName();
@@ -245,7 +245,7 @@ void Supermarket::opening_checkouts() //4
 	}
 
 	float new_checkout_condition = clients_checkout_sum / opened_checkouts;
-	if (new_checkout_condition >= 6)
+	if (new_checkout_condition >= 2)
 	{
 		if (opened_checkouts == checkouts.size())
 		{
@@ -292,11 +292,6 @@ void Supermarket::simulation(int iterations)
 		{
 			int chance = 15;
 			randomly_generate_client(chance);
-		}
-		cout << clients << endl << endl << endl;
-		for (Checkout check : checkouts)
-		{
-			cout << check;
 		}
 
 		it++;

@@ -1,5 +1,9 @@
 #include "Checkout.h"
 #include <stdexcept>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
+#include <cstdlib>
 
 Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0), is_open(false),id(0)
 {
@@ -22,12 +26,22 @@ void Checkout::set_cashier_activity(string activity)
 
 int Checkout::scan_product()
 {
-	//set_cashier_activity("scanning client");
+	set_cashier_activity("scanning client");
+	cout << *this;
 	int prd_left_to_scan = (current_client_shopping_cart.size()) - (current_shopping_cart_index );
 	if (prd_left_to_scan < this->get_scanning_speed())
 	{
 		int krk = current_client_shopping_cart.size() - (current_shopping_cart_index);
 		int index = current_shopping_cart_index;
+
+		if (krk == 0)
+		{
+			set_cashier_activity("done scanning client");
+			cout << *this;
+			Sleep(2000);
+			reset_CSCI();
+			return 1;
+		}
 
 		for (int i = index; i < krk+index; i++)
 		{
@@ -36,6 +50,9 @@ int Checkout::scan_product()
 			current_shopping_cart_index++;
 			if (i = krk + current_shopping_cart_index - 1)
 			{
+				set_cashier_activity("done scanning client");
+				cout << *this;
+				Sleep(2000);
 				reset_CSCI();
 				return 1;
 			}
@@ -68,13 +85,18 @@ void Checkout::checkout_action()
 	{
 		if (client_queue[0].get_recipe() == true)
 		{
+			checkout_cashier.set_activity("recipe");
+			cout << *this;
+			Sleep(2000);
 			recipe(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
 			client_queue.erase(it);
 		}
 		else
 		{
-			//set_cashier_activity("done scanning client");
+			checkout_cashier.set_activity("invoice");
+			cout << *this;
+			Sleep(2000);
 			invoice(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
 			vector<Client>::iterator it2 = client_queue.erase(it);
@@ -109,14 +131,18 @@ void Checkout::release_cashier()
 void Checkout::assign_cashier()
 {
 	is_open = true;
+	set_cashier_activity("opened");
+	cout << *this;
 }
 
 void Checkout::recipe(Client cl)
 {
+
 }
 
 void Checkout::invoice(Client cl)
 {
+
 }
 
 void Checkout::update_CCSC()
@@ -138,16 +164,28 @@ ostream& operator<<(ostream& os, Checkout& check)
 {
 	if (check.get_cashier().get_activity() == "done scanning client")
 	{
-		os << "Cashier on checkout " << check.id << " served client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << endl;
-		os << "The total is " << check.current_cart_profit << "\n\n";
+		os << endl << endl << endl << "Cashier " << check.get_cashier().get_name() << " " << check.get_cashier().get_surname() << " on checkout " << check.id << " served client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << endl << endl << "Products:          Price:" << endl << endl;
+		for (int i = 0; i != check.client_queue[0].get_shopping_cart().size();i++)
+		{
+			os << check.client_queue[0].get_shopping_cart()[i] << " ---> " << check.client_queue[0].get_shopping_cart()[i].getPrice() << endl;
+		}
+		os << "Total: " << check.current_cart_profit <<endl<<endl;
 	}
 	else if (check.get_cashier().get_activity() == "scanning client")
 	{
-		os << "Cashier on checkout " << check.id << " served client " << check.client_queue[0].get_name()<<" " << check.client_queue[0].get_surname() << endl;
+		os <<endl<<endl<< "Cashier " << check.get_cashier().get_name() << " " << check.get_cashier().get_surname() << " on checkout " << check.id << " is serving client " << check.client_queue[0].get_name()<<" " << check.client_queue[0].get_surname() << endl<<endl <<endl;
 	}
 	else if (check.get_cashier().get_activity() == "opened")
 	{
-		os <<"Checkout with id " << check.id << " has just opened" <<endl;
+		os <<endl<<"Checkout with id " << check.id << " has just opened" <<endl;
+	}
+	else if (check.get_cashier().get_activity() == "recipe")
+	{
+		os << "Client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname()<<" recived recipe" << endl<<endl << endl;
+	}
+	else if (check.get_cashier().get_activity() == "invoice")
+	{
+		os << "Client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << " recived invoice" << endl<<endl << endl;
 	}
 	return os;
 }

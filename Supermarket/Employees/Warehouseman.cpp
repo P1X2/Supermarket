@@ -1,6 +1,11 @@
 #include "Warehouseman.h"
 #include "SalaryError.h"
 #include "..\Supermarket.h"
+#include <stdexcept>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
+#include <cstdlib>
 
 Warehouseman::Warehouseman(string n, string sur, int h, int iden, float mon) :
 	Employee(n, sur, h, iden)

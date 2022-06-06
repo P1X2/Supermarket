@@ -69,6 +69,6 @@ bool Product::operator<(const Product& second_product) const
 
 ostream& operator<<(ostream& os, const Product& prod)
 {
-	os << prod.name << " price: " << prod.price;
+	os << prod.name;
 	return os;
 }

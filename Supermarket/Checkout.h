@@ -3,6 +3,9 @@
 #include "Client.h"
 #include "RegisterClient.h"
 #include <ostream>
+#include "Invoice.h"
+#include "Recipe.h"
+#include "RegisterBills.h"
 
 class Checkout
 {
@@ -27,16 +30,15 @@ public:
 	void checkout_action(); 
 	int scan_product(); 
 	int get_client_queue_lenght();
-	
-	void reset_CSCI();
+
 	void release_cashier();
 	void assign_cashier();
 
 	void recipe(Client cl);
 	void invoice(Client cl);
 
+	void reset_CSCI();
 	void update_CCSC();
-	void update_profit();
 
 	void add_client_to_queue(Client client);
 
