@@ -7,7 +7,6 @@ Recipe::Recipe(vector<Product> products) : Bill(products) {}
 float Recipe::get_price_with_vat(Product prod)
 {
 	float vat = prod.get_vat();
-	cout << vat << endl;
 	return round(((prod.getPrice() + prod.getPrice() * (vat / 100)) / 100));
 }
 

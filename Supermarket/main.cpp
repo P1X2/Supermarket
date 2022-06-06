@@ -12,6 +12,7 @@
 #include "ProductShelve.h"
 #include "Invoice.h"
 #include "Recipe.h"
+#include "RegisterBills.h"
 
 
 using namespace std;
@@ -20,8 +21,8 @@ int main()
     //Cashier xd("elo", "xd", 160, 20, 30);
     //std::cout << "Hello World!\n";
     //xd.print_employer();
-    //Meat xdxd("a", 1, 23, "ess", "23123", "w");
-    //Meat xdx("b", 12, 3, "elss", "23", "sdew");
+    Meat xdxd("a", 13123, 23, "ess", "23123", "w");
+    Meat xdx("b", 1122, 3, "elss", "23", "sdew");
     //std::cout << xdxd.VAT() << endl;
     //std::cout << xd.get_busy();
     //vector<Product> a;
@@ -176,31 +177,36 @@ int main()
 
     //inv.print_bill();
     //return 1;
-    cout << *it;*/
+    //cout << *it;
+    RegisterBills sas;
     Address ads("polsza", "kielcze", "war", 12);
     vector<Product> lsl;
     lsl.push_back(xdxd);
     lsl.push_back(xdx);
-    Invoice inv("bart", "dab", ads, lsl);
+    sas.add_invoice("das", "dsa", ads, lsl);
+    sas.add_recipe(lsl);
+    cout << sas;
+    /*Invoice inv("bart", "dab", ads, lsl);
     inv.print_bill();
     Recipe rec(lsl);
     rec.print_bill();
+    */
     
-    
-    return 0;
+   
 
-    Supermarket sprm("products.txt", "names.txt", "addresses.txt");
+   // Supermarket sprm("products.txt", "names.txt", "addresses.txt");
+   //// sprm.simulation();
    // sprm.simulation();
-    sprm.simulation();
-    while (int i = 0 <= 500)
-    {
-        sprm.do_shopping();
-        sprm.go_to_magazine();
-        sprm.give_prd_to_client();
-        sprm.opening_checkouts();
-        sprm.scan_products();
+   // while (int i = 0 <= 500)
+   // {
+   //     sprm.do_shopping();
+   //     sprm.go_to_magazine();
+   //     sprm.give_prd_to_client();
+   //     sprm.opening_checkouts();
+   //     sprm.scan_products();
 
-        i++;
-    }
+   //     i++;
+   // }
+    return 0;
 }
 
