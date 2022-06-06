@@ -11,6 +11,7 @@
 #include "Employees/RegisterCashiers.h"
 #include "Employees/RegisterWarehouseman.h"
 #include "Address.h"
+#include "RegisterBills.h"
 
 
 
@@ -26,6 +27,6 @@ public:
 	vector<Product> load_products(string);
 	void load_addresses(string);
 
-	void write_to_file();
+	void write_bills_to_file(RegisterBills& bills);
 };
 

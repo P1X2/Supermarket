@@ -251,6 +251,7 @@
     <Text Include="addresses.txt">
       <Filter>h\txt files</Filter>
     </Text>
+    <Text Include="bills.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="cpp">

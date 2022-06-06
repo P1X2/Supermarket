@@ -20,15 +20,16 @@ int Recipe::count_total()
 	return total;
 }
 
-void Recipe::print_bill()
+ostream& Recipe::operator<<(ostream& os)
 {
-	cout << endl << "            Recipe" << endl;
-	cout << "_________________________________" << endl;
-	cout << "           Products:" << endl;
+	os << endl << "            Recipe" << endl;
+	os << "_________________________________" << endl;
+	os << "           Products:" << endl;
 	for (Product prod : get_products())
 	{
-		cout << prod.getName() << ": " << get_price_with_vat(prod) << " zl" << endl;
+		os << prod.getName() << ": " << get_price_with_vat(prod) << " zl" << endl;
 	}
-	cout << "Summary: " << count_total() << " zl" << endl;
-	cout << "_________________________________" << endl;
+	os << "Summary: " << count_total() << " zl" << endl;
+	os << "_________________________________" << endl;
+	return os;
 }

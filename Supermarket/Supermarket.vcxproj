@@ -211,6 +211,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="addresses.txt" />
+    <Text Include="bills.txt" />
     <Text Include="names.txt" />
     <Text Include="products.txt" />
   </ItemGroup>

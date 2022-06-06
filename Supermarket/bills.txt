@@ -1,0 +1,23 @@
+Bill 1: 
+
+            Invoice
+         Client data:
+Name: das dsa
+Address: polsza kielcze war 12
+_________________________________
+           Products:
+a: 131 zl
+b: 11 zl
+Summary: 142 zl
+_________________________________
+
+Bill 2: 
+
+            Recipe
+_________________________________
+           Products:
+a: 151 zl
+b: 13 zl
+Summary: 164 zl
+_________________________________
+
