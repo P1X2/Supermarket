@@ -8,25 +8,35 @@ Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0)
 Checkout::Checkout(Cashier checkout_cashier, bool is_open) :checkout_cashier(checkout_cashier), is_open(is_open)
 {}
 
-void Checkout::scan_product()
+bool Checkout::scan_product()
 {
-	int cs = current_shopping_cart_index;
-	if (current_client_shopping_cart.size() - (cs + 1) < this->get_scanning_speed())
+	int prd_left_to_scan = (current_client_shopping_cart.size()) - (current_shopping_cart_index );
+	if (prd_left_to_scan < this->get_scanning_speed())
 	{
-		int krk = current_client_shopping_cart.size() - (cs+1);
-		for (int i = current_shopping_cart_index; i < krk+current_shopping_cart_index; i++)
+		int krk = current_client_shopping_cart.size() - (current_shopping_cart_index);
+		int index = current_shopping_cart_index;
+
+		for (int i = index; i < krk+index; i++)
 		{
 			current_cart_profit += current_client_shopping_cart[i].getPrice();
+			profit += current_cart_profit;
 			current_shopping_cart_index++;
+			if (i = krk + current_shopping_cart_index - 1)
+			{
+				reset_CSCI();
+				return true;
+			}
 		}
 	}
 	else
 	{
-		for (int i = current_shopping_cart_index; i < get_scanning_speed() + cs; i++)
+		int index = current_shopping_cart_index;
+		for (int i = index; i < get_scanning_speed() + index; i++) // impostor wojtaz
 		{
-			current_cart_profit += current_client_shopping_cart[i].getPrice();
+			current_cart_profit += current_client_shopping_cart[i].getPrice(); // error
 			current_shopping_cart_index++;
 		}
+		return false;
 	}
 	
 }
@@ -38,11 +48,10 @@ int Checkout::get_scanning_speed()
 
 void Checkout::checkout_action()
 {
-	if (current_shopping_cart_index < current_client_shopping_cart.size())
-	{
-		scan_product();
-	}
-	else
+	current_client_shopping_cart = client_queue[0].get_shopping_cart();
+	bool flag = scan_product();
+
+	if (flag == true)
 	{
 		if (client_queue[0].get_recipe() == true)
 		{
@@ -56,24 +65,22 @@ void Checkout::checkout_action()
 			vector<Client>::iterator it = client_queue.begin();
 			vector<Client>::iterator it2 = client_queue.erase(it);
 		}
-
 	}
 	
 }
 
-int Checkout::total()
-{
-	int total = 0;
-	for (vector<Product>::iterator it = current_client_shopping_cart.begin(); it != current_client_shopping_cart.end(); it++)
-	{
-		total = total + it->getPrice();
-	}
-	return total;
-}
+
+
 
 int Checkout::get_client_queue_lenght()
 {
 	return client_queue.size();
+}
+
+void Checkout::reset_CSCI()
+{
+	current_shopping_cart_index = 0;
+	current_cart_profit = 0;
 }
 
 void Checkout::release_cashier()
@@ -97,11 +104,6 @@ void Checkout::invoice(Client cl)
 void Checkout::update_CCSC()
 {
 	current_client_shopping_cart = client_queue[0].get_shopping_cart();
-}
-
-void Checkout::update_profit()
-{
-	profit += total();
 }
 
 void Checkout::add_client_to_queue(Client client)

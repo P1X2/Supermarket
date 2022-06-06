@@ -2,7 +2,7 @@
 
 void Client::check_if_done()
 {
-    if (shopping_cart.size() == currently_serched_prd)
+    if (shopping_list.size() == currently_serched_prd)
     {
         is_done = true;
     }
@@ -54,7 +54,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 {
     if (rng == true)
     {
-        set_busy(RNG.generate_random_number(0, 2));
+        set_busy(RNG.generate_random_number(0, 4));
         rng = false;
     }
     map<Product, int>::iterator it;
@@ -123,6 +123,11 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
 void Client::update_currently_serched_product()
 {
     currently_serched_prd++;
+}
+
+bool Client::operator==(const Client& second_client) const
+{
+    return (name == second_client.name and surname == second_client.surname and shopping_list == second_client.shopping_list);
 }
 
 ostream& operator<<(ostream& os, const Client& cl)

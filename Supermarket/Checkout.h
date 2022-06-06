@@ -11,9 +11,9 @@ class Checkout
 	vector<Client> client_queue;
 	vector<Product> current_client_shopping_cart;
 
-	int current_shopping_cart_index;
-	int current_cart_profit;
-	int profit;
+	int current_shopping_cart_index = 0;
+	int current_cart_profit = 0;
+	int profit = 0;
 	bool is_open;
 	int get_scanning_speed();
 public:
@@ -21,11 +21,10 @@ public:
 	Checkout(Cashier checkout_cashier, bool is_open);
 	
 	void checkout_action(); //metoda do wywo³ywania w symulacji co obrót pêtli
-	void scan_product(); // do zrobienia jak bedzie g³owna petla czasu
-	int total();
+	bool scan_product(); // do zrobienia jak bedzie g³owna petla czasu
 	int get_client_queue_lenght();
 	
-
+	void reset_CSCI();
 	void release_cashier();
 	void assign_cashier();
 

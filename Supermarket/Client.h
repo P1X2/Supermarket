@@ -56,6 +56,7 @@ public:
     void update_currently_serched_product();
 
     friend ostream& operator<<(ostream& os, const Client& cl);
+    bool operator==(const Client& second_client)const;
 };
 
 ostream& operator<<(ostream& os, const Client& cl);

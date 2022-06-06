@@ -4,7 +4,7 @@
 class Cashier : public Employee
 {
 	float money_per_hour;
-	bool on_checkout;
+	bool on_checkout  =true;
 public:
 	Cashier(string, string, int, int, float);
 	virtual float calculate_salary() override;

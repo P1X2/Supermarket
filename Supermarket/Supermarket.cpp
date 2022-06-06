@@ -114,7 +114,7 @@ Supermarket::Supermarket(string products_path,string names_surnames_path,string 
 	{
 		cout << "Caught an exception FileReadError" << endl << e.what() << endl;
 	}
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1, 3, products.size()));
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(499, 500, products.size())); // mod 
 	magazine.set_inventory(products, rng_machine.random_numbers_vector(1, 3, products.size()));
 }
 
@@ -136,30 +136,34 @@ Supermarket::Supermarket(string products_path,string names_surnames_path,string 
 
 void Supermarket::do_shopping() //1
 {
+	vector<Client> to_delete;
+
 	for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
 	{
 
-		if (it->get_is_done() == true)
+		if (it->get_is_done() == true) // idzie do kasy
 		{
-			Checkout best_checkout;
+			vector<Checkout>::iterator best_checkout;
 			int min_queue = 9999999;
-			for (vector<Checkout>::iterator it2 = checkouts.begin(); it2 != checkouts.end(); it++)
+			for (vector<Checkout>::iterator it2 = checkouts.begin(); it2 != checkouts.end(); it2++)
 			{
-				if (it2->get_client_queue_lenght() <= min_queue)
+				if (it2->get_client_queue_lenght() <= min_queue && it2->is_open == true)
 				{
-					best_checkout = *it2;
+					best_checkout = it2;
+					min_queue = it2->get_client_queue_lenght();
 				}
 			}
-			best_checkout.add_client_to_queue(*it);
-			clients.clients.erase(it);
+			best_checkout->add_client_to_queue(*it);
+			to_delete.push_back(*it);
+				//clients.clients.erase(it); // tutaj sie perdoli dorobic usuwanie koniecznie !!!!!!!!!!!!!!!!!!!!!!!
 			continue;
 
 		}
 		if (it->get_is_w8ting() == true)
 		{
-			continue;
+			continue; // czeka na pracownika
 		}
-		else
+		else // szuka prd
 		{
 			int flag = it->serch_product(shop_shelve);
 			if (flag == 1)
@@ -176,6 +180,13 @@ void Supermarket::do_shopping() //1
 
 		}
 	}
+
+	for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
+	{
+		if ()
+	}
+
+
 }
 
 void Supermarket::go_to_magazine() // 2

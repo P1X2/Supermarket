@@ -176,7 +176,7 @@ int main()
 
     //inv.print_bill();
     //return 1;
-    cout << *it;*/
+ /*   cout << *it;
     Address ads("polsza", "kielcze", "war", 12);
     vector<Product> lsl;
     lsl.push_back(xdxd);
@@ -185,9 +185,8 @@ int main()
     inv.print_bill();
     Recipe rec(lsl);
     rec.print_bill();
+    */
     
-    
-    return 0;
 
     Supermarket sprm("products.txt", "names.txt", "addresses.txt");
    // sprm.simulation();

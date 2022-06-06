@@ -17,10 +17,11 @@ string RNG::random_string_vector_element(vector<string> vec)
 
 vector<int> RNG::random_numbers_vector(int min, int max,int n)
 {
+
     vector<int> random_numbers;
     for (int i = 1; i <= n; i++)
     {
-        random_numbers.push_back(n);
+        random_numbers.push_back(generate_random_number(min,max));
     }
     return random_numbers;
 }
