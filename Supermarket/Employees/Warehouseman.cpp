@@ -71,7 +71,7 @@ void Warehouseman::empty_pocket()
     pocket.erase(it);
 }
 
-ostream& operator<<(ostream& os, Warehouseman emp)
+ostream& operator<<(ostream& os, Warehouseman& emp)
 {
 	if (emp.get_activity() == " is going to the magazine")
 	{
