@@ -187,3 +187,15 @@ void FileReader::load_addresses(string path)
 	}
 	
 }
+
+
+
+void FileReader::write_to_file()
+{
+	fstream handle;
+	handle.open("bills.txt", ios::out);
+	if (handle.good())
+	{
+		
+	}
+}

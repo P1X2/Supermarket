@@ -10,7 +10,7 @@
 #include "RegisterClient.h"
 #include "RNG.h"
 #include "FileReader.h"
-
+#include "RegisterBills.h"
 
 
 class Supermarket
@@ -44,7 +44,7 @@ public:
 	void give_prd_to_client();
 	void opening_checkouts();
 	void scan_products();
-
+	void randomly_generate_client(int percent);
 
 
 };

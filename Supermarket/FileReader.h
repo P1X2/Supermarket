@@ -25,5 +25,7 @@ public:
 	void load_names_surnames(string);
 	vector<Product> load_products(string);
 	void load_addresses(string);
+
+	void write_to_file();
 };
 
