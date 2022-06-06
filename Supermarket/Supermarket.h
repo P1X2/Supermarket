@@ -28,6 +28,7 @@ class Supermarket
 	RegisterClient clients;
 
 	FileReader file_reader;
+	int last_client_id=0;
 
 	void generate_client(int=1);
 	void generate_employees();

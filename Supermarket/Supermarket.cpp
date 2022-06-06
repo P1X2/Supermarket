@@ -95,7 +95,8 @@ void Supermarket::generate_client(int number_to_generate)
 		}
 		recipe = rng_machine.generate_random_number(0, 2); // impostor wojtas
 		Address sa = file_reader.addresses[rng_machine.generate_random_number(0, file_reader.addresses.size() - 1)];
-		Client client(name, surname, shopping_list,
+		last_client_id++;
+		Client client(name, surname,last_client_id, shopping_list,
 			sa, recipe);
 		clients.add_client(client);
 

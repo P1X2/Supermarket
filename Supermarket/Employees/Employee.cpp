@@ -3,14 +3,13 @@
 using namespace std;
 
 Employee::Employee(string n, string sur, int h,int iden):
-	Person()
+	Person(iden)
 {
 	name = n;
 	surname = sur;
 	set_hours(h);
 	vector<int> schedule{};
 	calculate_schedule();
-	id = iden;
 }
 
 string Employee::get_name()
@@ -62,14 +61,9 @@ void Employee::print_employer()
 	cout << "   Salary: " << calculate_salary() << endl;
 }
 
-bool Employee::operator==(const Employee emp)const {
-	return (id == emp.id);
-}
 
-int Employee::get_id()
-{
-	return id;
-}
+
+
 
 float Employee::calculate_salary() { return 0; }
 

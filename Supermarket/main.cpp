@@ -193,19 +193,20 @@ int main()
     */
     
 
-    Supermarket sprm("products.txt", "names.txt", "addresses.txt");
+   // Supermarket sprm("products.txt", "names.txt", "addresses.txt");
+   //// sprm.simulation();
+
    // sprm.simulation();
-    sprm.simulation();
-    while (int i = 0 <= 500)
-    {
+   // while (int i = 0 <= 500)
+   // {
 
-        sprm.do_shopping();
-        sprm.go_to_magazine();
-        sprm.give_prd_to_client();
-        sprm.opening_checkouts();
-        sprm.scan_products();
+   //     sprm.do_shopping();
+   //     sprm.go_to_magazine();
+   //     sprm.give_prd_to_client();
+   //     sprm.opening_checkouts();
+   //     sprm.scan_products();
 
-        i++;
-    }
+   //     i++;
+   // }
 }
 
