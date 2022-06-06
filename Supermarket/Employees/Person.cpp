@@ -5,7 +5,6 @@
 Person::Person(int id):id(id)
 {
 	busy = 0;
-	
 }
 
 int Person::get_busy()
@@ -29,6 +28,11 @@ bool Person::is_busy()
 void Person::set_activity(string activity)
 {
 	this->activity = activity;
+}
+
+string Person::get_activity()
+{
+	return activity;
 }
 
 int Person::get_id()

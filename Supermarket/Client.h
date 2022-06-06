@@ -42,10 +42,9 @@ public:
     bool get_is_done();
     vector<Product> get_shopping_cart();
     bool get_recipe();
-
     bool get_is_w8ting();
     void is_w8ting_end();
-
+    int get_currently_serched_prd();
 
     int serch_product(ProductShelve &shop_shelve);
     void grab_product( map<Product, int>::iterator it); // modyfikacja 
@@ -54,7 +53,7 @@ public:
 
     void update_currently_serched_product();
 
-    friend ostream& operator<<(ostream& os, const Client& cl);
+    friend ostream& operator<<(ostream& os, Client& cl);
 };
 
 ostream& operator<<(ostream& os, const Client& cl);

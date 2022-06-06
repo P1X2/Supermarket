@@ -193,6 +193,9 @@ int main()
     */
     
 
+
+
+
     Supermarket sprm("products.txt", "names.txt", "addresses.txt");
     sprm.load_registers();
     sprm.simulation(30);
