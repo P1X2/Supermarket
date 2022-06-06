@@ -77,7 +77,7 @@ void Supermarket::generate_client(int number_to_generate)
 			string product = products[rng_machine.generate_random_number(0, products.size() - 1)].getName();
 			shopping_list.push_back(product);
 		}
-		recipe = rng_machine.generate_random_number(0, 2); // impostor wojtas
+		recipe = rng_machine.generate_random_number(0, 2); 
 		Address sa = file_reader.addresses[rng_machine.generate_random_number(0, file_reader.addresses.size() - 1)];
 		last_client_id++;
 		Client client(name, surname,last_client_id, shopping_list,
@@ -99,11 +99,12 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 	{
 		cout << "Caught an exception FileReadError" << endl << e.what() << endl;
 	}
+
 	Product Ghost("", "", "", 0, 0);
 	vector<Product>::iterator it = products.begin();
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1000, 5500, products.size())); // pierwszy produkt musi byc WIDMEMMMMMMMMMMMMMMMMMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(1000, 5500, products.size())); 
 	products.insert(it, Ghost);
-	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size())); // prd duch teoretycznie zrobiony
+	magazine.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size()));
 	vector<Product>::iterator it2 = products.begin();
 	products.erase(it2);
 }
@@ -120,7 +121,7 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
+// DOROBIC CZEKNKO PO WZIOECIU PRD Z MAGAZYNU
 
 
 
@@ -145,7 +146,6 @@ void Supermarket::do_shopping() //1
 			}
 			best_checkout->add_client_to_queue(*it);
 			to_delete.push_back(*it);
-			//clients.clients.erase(it); // tutaj sie perdoli dorobic usuwanie koniecznie !!!!!!!!!!!!!!!!!!!!!!!
 			continue;
 
 		}

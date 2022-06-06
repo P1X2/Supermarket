@@ -4,8 +4,10 @@ void Client::check_if_done()
 {
     if (shopping_list.size() == currently_serched_prd)
     {
-        cout << "Client " << name<<" " << surname <<" has ended shopping, now he's going to checkout"<< endl;
+        set_activity("done shopping");
+        cout << *this;
         is_done = true;
+        set_activity("in queue");
     }
 }
 
@@ -54,6 +56,11 @@ bool Client::get_is_w8ting()
 void Client::is_w8ting_end()
 {
     w8ting = false;
+}
+
+int Client::get_currently_serched_prd()
+{
+    return currently_serched_prd;
 }
 
 int  Client::serch_product(ProductShelve &shop_shelve)
@@ -131,12 +138,20 @@ void Client::update_currently_serched_product()
     currently_serched_prd++;
 }
 
-ostream& operator<<(ostream& os, const Client& cl)
+ostream& operator<<(ostream& os, Client& cl)
 {
-    os << cl.name << " " << cl.surname << " Shopping cart: ";
-    for (Product prod : cl.shopping_cart)
+    if (cl.get_activity() == "done shopping")
     {
-        os << prod << ",";
+        os<< "Client " << cl.get_name() << " " << cl.get_surname() << " has ended shopping, now he's going to checkout" << endl;
     }
+    else if (cl.get_activity() == "shopping")
+    {
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " grabbed " << cl.get_shopping_cart()[cl.get_currently_serched_prd()] << "and put it in thr cart" << endl;
+    }
+    else if (cl.get_activity() == "w8 WHM")
+    {
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " is waiting for warehouseman, to get product from magazine" << endl;
+    }
+
     return os;
 }
