@@ -1,7 +1,7 @@
 #include "Checkout.h"
 #include <stdexcept>
 
-Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0)
+Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0), is_open(false)
 {
 }
 
