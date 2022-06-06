@@ -107,6 +107,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 void Client::grab_product(map<Product, int>::iterator it)
 {
     shopping_cart.push_back(it->first);
+    set_activity("shopping");
 }
 
 void Client::grab_product_from_emplyee(Product prd)
@@ -125,12 +126,13 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
             emp_ptr->serch_product(get_id(), shopping_list[currently_serched_prd]);
             return;
         }
-        else
+        else //co sie dzieje jak nie znajdzie
         {
             continue;
         }
     }
     w8ting = true;
+    set_activity("w8 WHM");
 }
 
 void Client::update_currently_serched_product()
@@ -146,7 +148,8 @@ ostream& operator<<(ostream& os, Client& cl)
     }
     else if (cl.get_activity() == "shopping")
     {
-        os << "Client " << cl.get_name() << " " << cl.get_surname() << " grabbed " << cl.get_shopping_cart()[cl.get_currently_serched_prd()] << "and put it in thr cart" << endl;
+        //mikolaj is sus
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " grabbed " << cl.get_shopping_cart()[cl.get_currently_serched_prd()-1] << " and put it in thr cart" << endl;
     }
     else if (cl.get_activity() == "w8 WHM")
     {

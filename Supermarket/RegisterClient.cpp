@@ -27,7 +27,7 @@ ostream& operator<<(ostream& os, RegisterClient& rc)
 {
 	for (Client cl : rc.clients)
 	{
-		os << cl << endl;
+		os << cl;
 	}
 	return os;
 }
