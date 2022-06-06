@@ -162,6 +162,7 @@
     <ClCompile Include="Employees\RegisterWarehouseman.cpp" />
     <ClCompile Include="Employees\RegisterSecurityGuard.cpp" />
     <ClCompile Include="Recipe.cpp" />
+    <ClCompile Include="RegisterBills.cpp" />
     <ClCompile Include="RegisterClient.cpp" />
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="FileReader.cpp" />
@@ -201,6 +202,7 @@
     <ClInclude Include="Employees\RegisterWarehouseman.h" />
     <ClInclude Include="Employees\RegisterSecurityGuard.h" />
     <ClInclude Include="Recipe.h" />
+    <ClInclude Include="RegisterBills.h" />
     <ClInclude Include="RegisterClient.h" />
     <ClInclude Include="RNG.h" />
     <ClInclude Include="FileReader.h" />

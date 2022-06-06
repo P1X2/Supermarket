@@ -128,7 +128,7 @@ int main()
 
 
 
-    vector<string> p;
+    /*vector<string> p;
     p.push_back("b");
     Address ad("awa", "bw","af", 12);
     Client cl("a", "b",p , ad, false);
@@ -151,7 +151,7 @@ int main()
             continue;
         }
         i++;
-    }
+    }*/
 
     
 
