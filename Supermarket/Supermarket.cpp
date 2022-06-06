@@ -17,7 +17,7 @@ void Supermarket::simulation(int iterations)
 	}
 
 	generate_employees();
-	int i = 0;
+	
 	cashiers.print_employees();
 	warehousemen.print_employees();
 	security_guards.print_employees();*/
@@ -27,10 +27,11 @@ void Supermarket::simulation(int iterations)
 	{
 		cout << cl.get_name() << " " << cl.get_surename() << " "<<cl.get_adress() << endl;
 	}*/
-	//while (iterations<++i)
-	//{
-	//	
-	//}
+	int i = 0;
+	/*while (iterations < ++i)
+	{
+		
+	}*/
 }
 
 void Supermarket::generate_employees()
@@ -72,6 +73,14 @@ void Supermarket::generate_employees()
 		int hours = rng_machine.generate_random_number(160, 320);
 		float money_per_hour = rng_machine.generate_random_number(500, 1000);
 		security_guards.add_security_guard(name, surname, hours, j + 4, money_per_hour);
+	}
+}
+
+void Supermarket::randomly_generate_client(int percent)
+{
+	if (rng_machine.generate_random_number(1, 101) < percent)
+	{
+		generate_client();
 	}
 }
 
