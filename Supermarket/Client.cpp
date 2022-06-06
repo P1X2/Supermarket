@@ -8,7 +8,8 @@ void Client::check_if_done()
     }
 }
 
-Client::Client(string name, string surname, vector<string> shopping_list, Address adderss, bool recipe) : name(name), surname(surname), shopping_list(shopping_list),
+Client::Client(string name, string surname, int id,vector<string> shopping_list, Address adderss, bool recipe) : Person(id),
+name(name),surname(surname),shopping_list(shopping_list),
 address(adderss), recipe(recipe)
 {
 }
@@ -18,10 +19,9 @@ string Client::get_name()
     return name;
 }
 
-string Client::get_surename()
+string Client::get_surname()
 {
     return surname;
-    
 }
 
 string Client::get_adress()
@@ -114,7 +114,7 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
     {
         if (emp_ptr->get_is_serching_prd() == false)
         {
-            emp_ptr->serch_product(surname, shopping_list[currently_serched_prd]);
+            emp_ptr->serch_product(get_shopping_cart(), shopping_list[currently_serched_prd]);
             return;
         }
         else
@@ -128,11 +128,6 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
 void Client::update_currently_serched_product()
 {
     currently_serched_prd++;
-}
-
-bool Client::operator==(const Client& second_client) const
-{
-    return (name == second_client.name and surname == second_client.surname and shopping_list == second_client.shopping_list);
 }
 
 ostream& operator<<(ostream& os, const Client& cl)

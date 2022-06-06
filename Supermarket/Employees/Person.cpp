@@ -2,9 +2,10 @@
 #include <stdexcept>
 
 
-Person::Person()
+Person::Person(int id):id(id)
 {
 	busy = 0;
+	
 }
 
 int Person::get_busy()
@@ -23,4 +24,13 @@ void Person::set_busy(int bus)
 bool Person::is_busy()
 {
 	return busy > 0;
+}
+
+int Person::get_id()
+{
+	return id;
+}
+
+bool Person::operator==(const Person emp)const {
+	return (id == emp.id);
 }

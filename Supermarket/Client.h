@@ -8,7 +8,6 @@
 #include "Address.h"
 #include <stdexcept>
 #include "ProductShelve.h"
-#include "Employees/Warehouseman.h"
 #include "RNG.h"
 
 
@@ -19,7 +18,6 @@ using namespace std;
 class Client :
     public Person
 {
-
     string name, surname;
     vector<string> shopping_list;
     vector<Product> shopping_cart;
@@ -28,7 +26,7 @@ class Client :
     bool recipe;
     bool w8ting = false;
     bool is_done = false;
-    bool rng=true;
+    bool rng = true;
     int currently_serched_prd = 0;
     RNG RNG;
 
@@ -36,10 +34,10 @@ class Client :
     void check_if_done();
 
 public:
-    Client(string name, string surname, vector<string> shopping_list, Address adderss, bool recipe);
+    Client(string name, string surname,int id, vector<string> shopping_list, Address adderss, bool recipe);
 
     string get_name();
-    string get_surename();
+    string get_surname();
     string get_adress();
     bool get_is_done();
     vector<Product> get_shopping_cart();
@@ -57,7 +55,6 @@ public:
     void update_currently_serched_product();
 
     friend ostream& operator<<(ostream& os, const Client& cl);
-    bool operator==(const Client& second_client)const;
 };
 
 ostream& operator<<(ostream& os, const Client& cl);

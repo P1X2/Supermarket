@@ -40,11 +40,11 @@ float Warehouseman::get_money_per_hour()
 
 
 
-void Warehouseman::serch_product(string surename, string product)
+void Warehouseman::serch_product(vector<Product> served_client_shopping_cart, string product)
 {
 	is_serching_prd = true;
 	searched_prd = product;
-	served_client = surename;
+	this->served_client_shopping_cart = served_client_shopping_cart;
 	set_busy(RNG.generate_random_number(0, 3));
 }
 
