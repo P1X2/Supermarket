@@ -1,39 +1,39 @@
-﻿juice,sok porzeczkowy,polmost,1,5,10
-juice,sok pomaranczowy,tymbark,11,3,9
-juice,sok jablkowy,polmost,12,2,8
-juice,sok pomidorowy,tymbark,13,7,7
-juice,sok jablko-mieta,polmost,14,12,17
-juice,sok brzoskwiniowy,tymbark,15,3,60
-juice,sok cebulowy,polmost,16,25,2
-juice,sok burakowy,riviva,17,34,1
-juice,sok rzepakowy,polmost,18,1,10
-juice,sok bananowy,riviva,19,9,10
-juice,sok multiwitamina,polmost,20,12,10
-juice,sok,riviva,21,7,10
-juice,lodoherbata,riviva,22,5,10
-juice,sok bmw,polmost,23,6,10
-juice,dobry sok,polmost,24,5,10
-fruit,banan,ksiaze arabi,25,4,afryka
-fruit,jablko,ksiaze arabi,26,5,afryka
-fruit,porzeczka,ksiaze arabi,27,6,polska
-fruit,cytryna,ksiaze arabi,28,9,kanada
-fruit,pomidor,supersam,29,10,grenlandia
-fruit,mandarynka,supersam,30,2,rosja
-fruit,banan krzywy,orlen,31,31,azja
-fruit,banan prosty,orlen,32,45,ameryka
-fruit,ogorek,orlen,33,41,polska
-meat,lopatka,pan mirek,34,13,swinia
-meat,szynka,pan mirek,35,22,krowa
-meat,boczek,biedronka,36,30,indyk
-meat,noga,supersam,37,12,kon
-meat,parownka,kebab,38,99,niewiadomo
-meat,kielbasa,pan mirek,39,120,swinia
-meat,watrobka,biedronka,40,3,swinia
-whiskey,jack daniels,ksiaze arabi,41,50,40
-whiskey,ballantines,orlen,42,60,40
-whiskey,jack daniels green,ksiaze arabi,43,30,40
-whiskey,jack daniels red,supersam,44,50,10
-whiskey,jim beam,ksiaze arabi,45,50,20
-whiskey,bimber,pan mirek,46,10,70
-whiskey,spirytus,ksiaze arabi,47,250,100
-whiskey,plyn do dezynfekcji,orlen,48,100,99
+﻿juice,sok porzeczkowy,polmost,1123,5,10
+juice,sok pomaranczowy,tymbark,1112,3,9
+juice,sok jablkowy,polmost,4212,2,8
+juice,sok pomidorowy,tymbark,2113,7,7
+juice,sok jablko-mieta,polmost,1214,12,17
+juice,sok brzoskwiniowy,tymbark,5415,3,60
+juice,sok cebulowy,polmost,1653,25,2
+juice,sok burakowy,riviva,1237,34,1
+juice,sok rzepakowy,polmost,1128,1,10
+juice,sok bananowy,riviva,1965,9,10
+juice,sok multiwitamina,polmost,4520,12,10
+juice,sok,riviva,221,7,10
+juice,lodoherbata,riviva,1222,5,10
+juice,sok bmw,polmost,232,6,10
+juice,dobry sok,polmost,264,5,10
+fruit,banan,ksiaze arabi,257,4,afryka
+fruit,jablko,ksiaze arabi,286,5,afryka
+fruit,porzeczka,ksiaze arabi,927,6,polska
+fruit,cytryna,ksiaze arabi,278,9,kanada
+fruit,pomidor,supersam,292,10,grenlandia
+fruit,mandarynka,supersam,430,2,rosja
+fruit,banan krzywy,orlen,315,31,azja
+fruit,banan prosty,orlen,326,45,ameryka
+fruit,ogorek,orlen,337,41,polska
+meat,lopatka,pan mirek,634,13,swinia
+meat,szynka,pan mirek,355,22,krowa
+meat,boczek,biedronka,364,30,indyk
+meat,noga,supersam,373,12,kon
+meat,parownka,kebab,338,99,niewiadomo
+meat,kielbasa,pan mirek,539,120,swinia
+meat,watrobka,biedronka,470,3,swinia
+whiskey,jack daniels,ksiaze arabi,441,50,40
+whiskey,ballantines,orlen,422,60,40
+whiskey,jack daniels green,ksiaze arabi,443,30,40
+whiskey,jack daniels red,supersam,443,50,10
+whiskey,jim beam,ksiaze arabi,465,50,20
+whiskey,bimber,pan mirek,476,10,70
+whiskey,spirytus,ksiaze arabi,437,250,100
+whiskey,plyn do dezynfekcji,orlen,468,100,99

@@ -91,7 +91,7 @@ void Supermarket::generate_client(int number_to_generate)
 			sa, recipe);
 		client.set_activity("Enter");
 		cout << client;
-		Sleep(100);
+		//Sleep(100);
 		clients.add_client(client);
 
 	}

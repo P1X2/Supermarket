@@ -228,3 +228,25 @@ void FileReader::write_warehouseman_to_simulation_file(Warehouseman& warehousema
 		handle.close();
 	}
 }
+
+void FileReader::write_invoice_to_file(Invoice& invoice)
+{
+	fstream handle;
+	handle.open("simulation.txt", ios::app);
+	if (handle.good())
+	{
+		invoice.operator<<(handle);
+		handle.close();
+	}
+}
+
+void FileReader::write_recipe_to_file(Recipe& recipe)
+{
+	fstream handle;
+	handle.open("simulation.txt", ios::app);
+	if (handle.good())
+	{
+		recipe.operator<<(handle);
+		handle.close();
+	}
+}

@@ -90,7 +90,7 @@ void Warehouseman::add_prd_to_pocket(Product prd)
 		cout << *this;
 		FileReader writer;
 		writer.write_warehouseman_to_simulation_file(*this);
-		Sleep(1000);
+		//Sleep(1000);
 	}
 	else
 	{
@@ -98,7 +98,7 @@ void Warehouseman::add_prd_to_pocket(Product prd)
 		cout << *this;
 		FileReader writer;
 		writer.write_warehouseman_to_simulation_file(*this);
-		Sleep(1000);
+		//Sleep(1000);
 	}
 	pocket.push_back(prd);
 }
@@ -112,7 +112,7 @@ void Warehouseman::empty_pocket()
 		cout << *this;
 		FileReader writer;
 		writer.write_warehouseman_to_simulation_file(*this);
-		Sleep(1000);
+		//Sleep(1000);
 	}
 	if (get_activity() == "didnt found")
 	{
@@ -120,7 +120,7 @@ void Warehouseman::empty_pocket()
 		cout << *this;
 		FileReader writer;
 		writer.write_warehouseman_to_simulation_file(*this);
-		Sleep(1000);
+		//Sleep(1000);
 	};
     vector<Product>::iterator it;
     it = pocket.begin();

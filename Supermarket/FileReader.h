@@ -38,5 +38,7 @@ public:
 	void write_warehouseman_to_simulation_file(Warehouseman& warehouseman);
 
 	void write_bills_to_file(RegisterBills& bills);
+	void write_invoice_to_file(Invoice& invoice);
+	void write_recipe_to_file(Recipe& recipe);
 };
 
