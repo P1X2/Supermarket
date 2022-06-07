@@ -6,7 +6,6 @@
 #include "Client.h"
 #include "Employees/RegisterCashiers.h"
 #include "Employees/RegisterWarehouseman.h"
-#include "Employees/RegisterSecurityGuard.h"
 #include "RegisterClient.h"
 #include "RNG.h"
 #include "FileReader.h"
@@ -23,7 +22,6 @@ class Supermarket
 	RNG rng_machine;
 	RegisterCashiers cashiers;
 	RegisterWarehouseman warehousemen;
-	RegisterSecurityGuard security_guards;
 	RegisterClient clients;
 
 	FileReader file_reader;

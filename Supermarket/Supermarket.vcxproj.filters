@@ -22,9 +22,6 @@
     <ClCompile Include="Checkout.cpp">
       <Filter>cpp\items</Filter>
     </ClCompile>
-    <ClCompile Include="products\DataBase.cpp">
-      <Filter>cpp\supermarket</Filter>
-    </ClCompile>
     <ClCompile Include="Employees\Employee.cpp">
       <Filter>cpp\emp</Filter>
     </ClCompile>
@@ -52,9 +49,6 @@
     <ClCompile Include="Employees\Person.cpp">
       <Filter>cpp\emp</Filter>
     </ClCompile>
-    <ClCompile Include="Employees\Manager.cpp">
-      <Filter>cpp\emp</Filter>
-    </ClCompile>
     <ClCompile Include="products\Meat.cpp">
       <Filter>cpp\products</Filter>
     </ClCompile>
@@ -79,9 +73,6 @@
     <ClCompile Include="Employees\SalaryError.cpp">
       <Filter>cpp\errors</Filter>
     </ClCompile>
-    <ClCompile Include="Employees\SecurityGuard.cpp">
-      <Filter>cpp\emp</Filter>
-    </ClCompile>
     <ClCompile Include="Supermarket.cpp">
       <Filter>cpp\supermarket</Filter>
     </ClCompile>
@@ -103,13 +94,7 @@
     <ClCompile Include="FileReader.cpp">
       <Filter>cpp\items</Filter>
     </ClCompile>
-    <ClCompile Include="Employees\RegisterSecurityGuard.cpp">
-      <Filter>cpp\supermarket</Filter>
-    </ClCompile>
     <ClCompile Include="RegisterClient.cpp">
-      <Filter>cpp\supermarket</Filter>
-    </ClCompile>
-    <ClCompile Include="Supermarket_sandbox.cpp">
       <Filter>cpp\supermarket</Filter>
     </ClCompile>
     <ClCompile Include="Invoice.cpp">
@@ -141,9 +126,6 @@
     <ClInclude Include="Employees\catch.hpp">
       <Filter>h\itmes</Filter>
     </ClInclude>
-    <ClInclude Include="products\DataBase.h">
-      <Filter>h\supermarket</Filter>
-    </ClInclude>
     <ClInclude Include="Employees\Employee.h">
       <Filter>h\emp</Filter>
     </ClInclude>
@@ -164,9 +146,6 @@
     </ClInclude>
     <ClInclude Include="products\Juice.h">
       <Filter>h\prd</Filter>
-    </ClInclude>
-    <ClInclude Include="Employees\Manager.h">
-      <Filter>h\emp</Filter>
     </ClInclude>
     <ClInclude Include="products\Meat.h">
       <Filter>h\prd</Filter>
@@ -201,9 +180,6 @@
     <ClInclude Include="Employees\SalaryError.h">
       <Filter>h\errors</Filter>
     </ClInclude>
-    <ClInclude Include="Employees\SecurityGuard.h">
-      <Filter>h\emp</Filter>
-    </ClInclude>
     <ClInclude Include="Supermarket.h">
       <Filter>h\supermarket</Filter>
     </ClInclude>
@@ -216,16 +192,10 @@
     <ClInclude Include="Employees\Warehouseman.h">
       <Filter>h\emp</Filter>
     </ClInclude>
-    <ClInclude Include="Employees\RegisterSecurityGuard.h">
-      <Filter>h\supermarket</Filter>
-    </ClInclude>
     <ClInclude Include="Client.h">
       <Filter>h</Filter>
     </ClInclude>
     <ClInclude Include="RegisterClient.h">
-      <Filter>h\supermarket</Filter>
-    </ClInclude>
-    <ClInclude Include="Supermarket_sandbox.h">
       <Filter>h\supermarket</Filter>
     </ClInclude>
     <ClInclude Include="Bill.h">

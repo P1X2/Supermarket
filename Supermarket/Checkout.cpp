@@ -82,9 +82,9 @@ int Checkout::scan_product()
 	else
 	{
 		int index = current_shopping_cart_index;
-		for (int i = index; i < get_scanning_speed() + index; i++) // impostor wojtaz
+		for (int i = index; i < get_scanning_speed() + index; i++) 
 		{
-			current_cart_profit += current_client_shopping_cart[i].getPrice(); // error
+			current_cart_profit += current_client_shopping_cart[i].getPrice(); 
 			current_shopping_cart_index++;
 		}
 		return 0;

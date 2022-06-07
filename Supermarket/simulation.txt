@@ -1,0 +1,59 @@
+Client Pawel Zalewski grabbed noga and put it in the shopping cart
+Client Dobromil Kolodziej grabbed sok cebulowy and put it in the shopping cart
+Client Korneliusz Tomaszewski grabbed jim beam and put it in the shopping cart
+Client Emil Szulc grabbed banan prosty and put it in the shopping cart
+Client Arkadiusz Nowak grabbed sok cebulowy and put it in the shopping cart
+Client Heronim Piotrowski grabbed noga and put it in the shopping cart
+Client Bruno Lis grabbed jim beam and put it in the shopping cart
+Client Emil Szulc grabbed sok jablkowy and put it in the shopping cart
+Client Arkadiusz Nowak grabbed lodoherbata and put it in the shopping cart
+Client Franciszek Lewandowski grabbed bimber and put it in the shopping cart
+Client Borys Lis grabbed jack daniels green and put it in the shopping cart
+Client Bruno Lis grabbed lopatka and put it in the shopping cart
+Client Korneliusz Tomaszewski grabbed jack daniels and put it in the shopping cart
+Client Lucjan Jakubowski grabbed lodoherbata and put it in the shopping cart
+Client Cezary Jaworski grabbed pomidor and put it in the shopping cart
+Client Borys Lis grabbed banan krzywy and put it in the shopping cart
+Client Dobromil Kolodziej grabbed jack daniels green and put it in the shopping cart
+Client Heronim Piotrowski grabbed sok brzoskwiniowy and put it in the shopping cart
+Client Franciszek Lewandowski grabbed watrobka and put it in the shopping cart
+Client Bruno Lis grabbed sok brzoskwiniowy and put it in the shopping cart
+Client Bruno Lis has ended shopping, now he's going to checkout
+Client Arkadiusz Szulc grabbed dobry sok and put it in the shopping cart
+Client Cezary Jaworski grabbed ballantines and put it in the shopping cart
+
+Cashier Bruno Maciejewski on checkout 1 is serving client Bruno Lis
+Client Lucjan Jakubowski grabbed cytryna and put it in the shopping cart
+Client Heronim Piotrowski grabbed banan and put it in the shopping cart
+Client Borys Lis grabbed lodoherbata and put it in the shopping cart
+
+Cashier Bruno Maciejewski on checkout 1 is serving client Bruno Lis
+
+
+
+Cashier Bruno Maciejewski on checkout 1 served client Bruno Lis
+
+
+            Invoice
+         Client data:
+Name: Bruno Lis
+Address: Djibouti Christchurch Brzozowa 12
+_________________________________
+           Products:
+jim beam: 4 zl
+lopatka: 6 zl
+sok brzoskwiniowy: 54 zl
+Summary: 64 zl
+_________________________________
+Client Bruno Lis recived recipe
+
+
+Client Dobromil Kolodziej grabbed ballantines and put it in the shopping cart
+Client Korneliusz Tomaszewski grabbed sok burakowy and put it in the shopping cart
+Client Korneliusz Tomaszewski has ended shopping, now he's going to checkout
+Client Franciszek Lewandowski grabbed sok jablko-mieta and put it in the shopping cart
+Damian Mroz is going to the magazine to look for jack daniels green for client Cezary Jaworski
+Client Cezary Szulc grabbed dobry sok and put it in the shopping cart
+Client Bruno Cieslak grabbed sok and put it in the shopping cart
+Client Fabian Wojcik grabbed lopatka and put it in the shopping cart
+Client Bruno Lis grabbed boczek and put it in the shopping cart

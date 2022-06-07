@@ -1,13 +1,15 @@
 #pragma once
 #include "Employees/Cashier.h"
 #include "Employees/Employee.h"
-#include "Employees/Manager.h"
 #include "Employees/Person.h"
 #include "FileReadError.h"
 #include <vector>
 #include "ProductShelve.h"
-#include "products/DataBase.h"
-#include "products/DataBase.h"
+#include "products/Friut.h"
+#include "products/Juice.h"
+#include "products/Meat.h"
+#include "products/Whiskey.h"
+#include "products/Product.h"
 #include "Client.h"
 #include "Employees/RegisterCashiers.h"
 #include "Employees/RegisterWarehouseman.h"
@@ -15,9 +17,6 @@
 #include "RegisterBills.h"
 #include "RegisterClient.h"
 #include "Checkout.h"
-#include "Employees/RegisterWarehouseman.h"
-#include "Employees/RegisterSecurityGuard.h"
-
 
 
 class FileReader

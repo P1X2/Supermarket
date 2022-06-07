@@ -138,16 +138,13 @@
     <ClCompile Include="Employees\Employee.cpp" />
     <ClCompile Include="Employees\EmployeeAlreadyExistsException.cpp" />
     <ClCompile Include="Employees\EmployeeDoesNotExistException.cpp" />
-    <ClCompile Include="Employees\Manager.cpp" />
     <ClCompile Include="Employees\SalaryError.cpp" />
-    <ClCompile Include="Employees\SecurityGuard.cpp" />
     <ClCompile Include="Employees\testEMP.cpp" />
     <ClCompile Include="Employees\Warehouseman.cpp" />
     <ClCompile Include="Employees\WorkingHoursError.cpp" />
     <ClCompile Include="Employees\Person.cpp" />
     <ClCompile Include="FileReadError.cpp" />
     <ClCompile Include="products\BarcodeNotUniqueException.cpp" />
-    <ClCompile Include="products\DataBase.cpp" />
     <ClCompile Include="products\Friut.cpp" />
     <ClCompile Include="products\Juice.cpp" />
     <ClCompile Include="products\Meat.cpp" />
@@ -160,14 +157,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Employees\RegisterCashiers.cpp" />
     <ClCompile Include="Employees\RegisterWarehouseman.cpp" />
-    <ClCompile Include="Employees\RegisterSecurityGuard.cpp" />
     <ClCompile Include="Recipe.cpp" />
     <ClCompile Include="RegisterBills.cpp" />
     <ClCompile Include="RegisterClient.cpp" />
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="Supermarket.cpp" />
-    <ClCompile Include="Supermarket_sandbox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />
@@ -179,9 +174,7 @@
     <ClInclude Include="Employees\Employee.h" />
     <ClInclude Include="Employees\EmployeeAlreadyExistsException.h" />
     <ClInclude Include="Employees\EmployeeDoesNotExistException.h" />
-    <ClInclude Include="Employees\Manager.h" />
     <ClInclude Include="Employees\SalaryError.h" />
-    <ClInclude Include="Employees\SecurityGuard.h" />
     <ClInclude Include="Employees\Warehouseman.h" />
     <ClInclude Include="Employees\WorkingHoursError.h" />
     <ClInclude Include="Employees\Person.h" />
@@ -189,7 +182,6 @@
     <ClInclude Include="Invoice.h" />
     <ClInclude Include="ProductShelve.h" />
     <ClInclude Include="products\BarcodeNotUniqueException.h" />
-    <ClInclude Include="products\DataBase.h" />
     <ClInclude Include="products\Friut.h" />
     <ClInclude Include="products\Juice.h" />
     <ClInclude Include="products\Meat.h" />
@@ -200,14 +192,12 @@
     <ClInclude Include="products\Whiskey.h" />
     <ClInclude Include="Employees\RegisterCashiers.h" />
     <ClInclude Include="Employees\RegisterWarehouseman.h" />
-    <ClInclude Include="Employees\RegisterSecurityGuard.h" />
     <ClInclude Include="Recipe.h" />
     <ClInclude Include="RegisterBills.h" />
     <ClInclude Include="RegisterClient.h" />
     <ClInclude Include="RNG.h" />
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="Supermarket.h" />
-    <ClInclude Include="Supermarket_sandbox.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="addresses.txt" />
