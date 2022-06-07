@@ -1,5 +1,5 @@
 #pragma once
-
+class FileReader;
 #include <string>
 #include <vector>
 #include <map>

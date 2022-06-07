@@ -6,12 +6,6 @@
 #include"RNG.h"
 using namespace std;
 
-void FileReader::set_saving_files(string bills, string simulation)
-{
-	bills_file = bills;
-	simulation_file = simulation;
-}
-
 void FileReader::load_names_surnames(string path)
 {
 	fstream handle;
@@ -203,44 +197,34 @@ void FileReader::write_bills_to_file(RegisterBills& bills)
 	}
 }
 
-void FileReader::write_clients_to_simulation_file(RegisterClient register_clients)
+void FileReader::write_client_to_simulation_file(Client& client)
 {
 	fstream handle;
-	handle.open(bills_file, ios::app);
+	handle.open("simulation.txt", ios::app);
 	if (handle.good())
 	{
-		handle << register_clients;
+		handle << client;
 		handle.close();
 	}
 }
-//
-//void FileReader::write_checkout_to_simulation_file(Checkout checkout)
-//{
-//	fstream handle;
-//	handle.open(bills_file, ios::app);
-//	if (handle.good())
-//	{
-//		handle << checkout;
-//		handle.close();
-//	}
-////}
-void FileReader::write_warehousemen_to_simulation_file(RegisterWarehouseman warehousemen)
+
+void FileReader::write_checkout_to_simulation_file(Checkout checkout)
 {
 	fstream handle;
-	handle.open(bills_file, ios::app);
+	handle.open("bills.txt", ios::app);
 	if (handle.good())
 	{
-		handle << warehousemen;
+		handle << checkout;
 		handle.close();
 	}
 }
-void FileReader::write_securityguard_to_simulation_file(RegisterSecurityGuard scurity_guard)
+void FileReader::write_warehouseman_to_simulation_file(Warehouseman& warehouseman)
 {
 	fstream handle;
-	handle.open(bills_file, ios::app);
+	handle.open("simulation.txt", ios::app);
 	if (handle.good())
 	{
-		handle << scurity_guard;
+		handle << warehouseman;
 		handle.close();
 	}
 }

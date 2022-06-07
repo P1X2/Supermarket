@@ -1,4 +1,5 @@
 #pragma once
+class FileReader;
 #include "Employees/Cashier.h"
 #include "Client.h"
 #include "RegisterClient.h"
