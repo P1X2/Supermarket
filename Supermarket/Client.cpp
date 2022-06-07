@@ -4,6 +4,7 @@
 #include <Windows.h>
 #endif
 #include <cstdlib>
+#include "FileReader.h"
 
 void Client::check_if_done()
 {
@@ -11,6 +12,8 @@ void Client::check_if_done()
     {
         set_activity("done shopping");
         cout <<endl <<*this<< endl;
+        FileReader writer;
+        writer.write_client_to_simulation_file(*this);
         Sleep(2000);
         is_done = true;
         set_activity("in queue");
@@ -121,6 +124,8 @@ void Client::grab_product(map<Product, int>::iterator it)
     shopping_cart.push_back(it->first); // nie tu
     set_activity("shopping");
     cout << *this;
+    FileReader writer;
+    writer.write_client_to_simulation_file(*this);
     Sleep(1000);
 
 }
@@ -142,6 +147,8 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
             w8ting = true;
             set_activity("w8 WHM");
             cout << *this;
+            FileReader writer;
+            writer.write_client_to_simulation_file(*this);
             Sleep(1000);
             return;
         }

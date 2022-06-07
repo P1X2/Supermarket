@@ -33,12 +33,10 @@ public:
 	void load_names_surnames(string);
 	vector<Product> load_products(string);
 	void load_addresses(string);
-	void set_saving_files(string bills, string simulation);
 
-	void write_clients_to_simulation_file(RegisterClient register_clients);
+	void write_client_to_simulation_file(Client& client);
 	void write_checkout_to_simulation_file(Checkout checkout);
-	void write_warehousemen_to_simulation_file(RegisterWarehouseman warehousemen);
-	void write_securityguard_to_simulation_file(RegisterSecurityGuard scurity_guard);
+	void write_warehouseman_to_simulation_file(Warehouseman& warehouseman);
 
 	void write_bills_to_file(RegisterBills& bills);
 };

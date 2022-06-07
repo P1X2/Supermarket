@@ -4,6 +4,7 @@
 #include <Windows.h>
 #endif
 #include <cstdlib>
+#include "FileReader.h"
 
 Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0), is_open(false),id(0)
 {
@@ -28,6 +29,8 @@ int Checkout::scan_product()
 {
 	set_cashier_activity("scanning client");
 	cout << *this;
+	FileReader writer;
+	writer.write_checkout_to_simulation_file(*this);
 	int prd_left_to_scan = (current_client_shopping_cart.size()) - (current_shopping_cart_index );
 	if (prd_left_to_scan < this->get_scanning_speed())
 	{
@@ -38,6 +41,8 @@ int Checkout::scan_product()
 		{
 			set_cashier_activity("done scanning client");
 			cout << *this;
+			FileReader writer;
+			writer.write_checkout_to_simulation_file(*this);
 			Sleep(2000);
 			reset_CSCI();
 			return 1;
@@ -52,6 +57,8 @@ int Checkout::scan_product()
 			{
 				set_cashier_activity("done scanning client");
 				cout << *this;
+				FileReader writer;
+				writer.write_checkout_to_simulation_file(*this);
 				Sleep(2000);
 				reset_CSCI();
 				return 1;
@@ -87,8 +94,8 @@ void Checkout::checkout_action()
 		{
 			checkout_cashier.set_activity("recipe");
 			cout << *this;
-			checkout_cashier.set_activity("Leave");
-			cout << *this;
+			FileReader writer;
+			writer.write_checkout_to_simulation_file(*this);
 			Sleep(2000);
 			recipe(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
@@ -96,10 +103,14 @@ void Checkout::checkout_action()
 		}
 		else
 		{
+			FileReader writer;
 			checkout_cashier.set_activity("invoice");
 			cout << *this;
+			writer.write_checkout_to_simulation_file(*this);
 			checkout_cashier.set_activity("Leave");
 			cout << *this;
+			
+			writer.write_checkout_to_simulation_file(*this);
 
 			Sleep(2000);
 			invoice(client_queue[0]);
@@ -138,6 +149,8 @@ void Checkout::assign_cashier()
 	is_open = true;
 	set_cashier_activity("opened");
 	cout << *this;
+	FileReader writer;
+	writer.write_checkout_to_simulation_file(*this);
 }
 
 void Checkout::recipe(Client cl)
