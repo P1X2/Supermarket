@@ -6,12 +6,15 @@
 #include <cstdlib>
 #include "FileReader.h"
 
+
+
 Checkout::Checkout():checkout_cashier("empty", "empty",0,0,0), is_open(false),id(0)
 {
 }
 
 Checkout::Checkout(Cashier checkout_cashier, bool is_open,int id) :checkout_cashier(checkout_cashier), is_open(is_open),id(id)
 {
+
 	set_cashier_activity("opened");
 }
 
@@ -165,7 +168,19 @@ void Checkout::recipe(Client cl)
 
 void Checkout::invoice(Client cl)
 {
+	if (cl.get_recipe() == true)
+				{
+					vector<Product> prod =cl.get_shopping_cart();
 
+				}
+				else
+				{
+					string name = cl.get_name();
+					string surname = cl.get_surname();
+					Address adr = cl.address;
+					vector<Product> prod = cl.get_shopping_cart();
+					(name, surname, adr, prod);
+				}
 }
 
 void Checkout::update_CCSC()

@@ -1,78 +1,80 @@
 
-Checkout with id 2 has just opened
-
-Cashier Czeslaw Wlodarczyk on checkout 1 is serving client Korneliusz Wysocki
-
-
-
-Cashier Czeslaw Wlodarczyk on checkout 1 served client Korneliusz Wysocki
-
-Products:          Price:
-
-sok rzepakowy ---> 18
-pomidor ---> 29
-sok rzepakowy ---> 18
-Total: 18
-
-Client Korneliusz Wysocki recived recipe
-
-
-
-Cashier Czeslaw Wlodarczyk on checkout 1 is serving client Ignacy Stepien
-
-Cashier Kewin Bąk on checkout 2 is serving client Ignacy Stepien
-
-Cashier Czeslaw Wlodarczyk on checkout 1 is serving client Ignacy Stepien
-
-
-
-Cashier Czeslaw Wlodarczyk on checkout 1 served client Ignacy Stepien
-
-Products:          Price:
-
-sok burakowy ---> 17
-porzeczka ---> 27
-ballantines ---> 42
-Total: 86
-
-Client Ignacy Stepien recived recipe
-
-
-
-Cashier Kewin Bąk on checkout 2 is serving client Ignacy Stepien
-
-
-
-Cashier Kewin Bąk on checkout 2 served client Ignacy Stepien
-
-Products:          Price:
-
-sok burakowy ---> 17
-porzeczka ---> 27
-ballantines ---> 42
-Total: 86
-
-Client Ignacy Stepien recived recipe
-
-
-
-Cashier Fabian Lewandowski on checkout 1 is serving client Franciszek Stepien
+Cashier Korneliusz Wojcik on checkout 1 is serving client Jaroslaw Mazur
 
 Checkout with id 2 has just opened
 
-Cashier Fabian Lewandowski on checkout 1 is serving client Franciszek Stepien
+Cashier Korneliusz Wojcik on checkout 1 is serving client Jaroslaw Mazur
 
 
 
-Cashier Fabian Lewandowski on checkout 1 served client Franciszek Stepien
+Cashier Korneliusz Wojcik on checkout 1 served client Jaroslaw Mazur
 
 Products:          Price:
 
-sok ---> 21
+sok multiwitamina ---> 20
+dobry sok ---> 24
+sok multiwitamina ---> 20
+Total: 64
+
+Client Jaroslaw Mazur recived recipe
+
+
+
+Cashier Korneliusz Wojcik on checkout 1 is serving client Czeslaw Szulc
+
+Cashier Borys Kowalczyk on checkout 2 is serving client Boleslaw Szulc
+
+Cashier Korneliusz Wojcik on checkout 1 is serving client Czeslaw Szulc
+
+
+
+Cashier Korneliusz Wojcik on checkout 1 served client Czeslaw Szulc
+
+Products:          Price:
+
+kielbasa ---> 39
+mandarynka ---> 30
 bimber ---> 46
-szynka ---> 35
-Total: 102
+Total: 115
 
-Client Franciszek Stepien recived invoice
+Client Czeslaw Szulc recived invoice
+
+
+
+Checkout with id 2 has just opened
+
+Cashier Cezary Mazur on checkout 1 is serving client Ernest Sadowska
+
+
+
+Cashier Cezary Mazur on checkout 1 served client Ernest Sadowska
+
+Products:          Price:
+
+sok brzoskwiniowy ---> 15
+ballantines ---> 42
+sok rzepakowy ---> 18
+Total: 15
+
+Client Ernest Sadowska recived invoice
+
+
+
+Cashier Cezary Mazur on checkout 1 is serving client Przemyslaw Jaworski
+
+Cashier Bruno Wojcik on checkout 2 is serving client Przemyslaw Jaworski
+
+
+
+Cashier Bruno Wojcik on checkout 2 served client Przemyslaw Jaworski
+
+Products:          Price:
+
+sok pomidorowy ---> 13
+banan ---> 25
+cytryna ---> 28
+Total: 13
+
+Client Przemyslaw Jaworski recived recipe
 
 

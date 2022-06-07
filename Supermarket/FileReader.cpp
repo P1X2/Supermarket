@@ -211,7 +211,7 @@ void FileReader::write_client_to_simulation_file(Client& client)
 void FileReader::write_checkout_to_simulation_file(Checkout checkout)
 {
 	fstream handle;
-	handle.open("bills.txt", ios::app);
+	handle.open("simulation.txt", ios::app);
 	if (handle.good())
 	{
 		handle << checkout;

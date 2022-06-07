@@ -1,72 +1,114 @@
-Client Krzysztof Pawlak grabbed kielbasa and put it in the shopping cart
-Client Korneliusz Jasinski grabbed cytryna and put it in the shopping cart
-Client Bruno Szewczyk grabbed mandarynka and put it in the shopping cart
-Client Korneliusz Wysocki grabbed sok rzepakowy and put it in the shopping cart
-Client Ignacy Stepien grabbed sok burakowy and put it in the shopping cart
-Client Korneliusz Wysocki grabbed pomidor and put it in the shopping cart
-Client Kacper Zalewski grabbed sok burakowy and put it in the shopping cart
-Client Korneliusz Jasinski grabbed sok rzepakowy and put it in the shopping cart
-Client Bruno Szewczyk grabbed sok brzoskwiniowy and put it in the shopping cart
-Client Ariel Lewandowski grabbed jablko and put it in the shopping cart
-Client Krzysztof Pawlak grabbed boczek and put it in the shopping cart
-Client Krzysztof Szymczak grabbed parownka and put it in the shopping cart
-Client Jaroslaw Szymczak grabbed parownka and put it in the shopping cart
-Client Pawel Zielinski grabbed pomidor and put it in the shopping cart
-Client Ludwik Szymczak grabbed watrobka and put it in the shopping cart
-Client Cezary Kolodziej grabbed sok bananowy and put it in the shopping cart
-Client Kacper Zalewski grabbed sok bmw and put it in the shopping cart
-Client Krzysztof Szymczak grabbed sok jablko-mieta and put it in the shopping cart
-Client Ignacy Stepien grabbed porzeczka and put it in the shopping cart
-Client Korneliusz Jasinski grabbed lopatka and put it in the shopping cart
-Client Jaroslaw Szymczak grabbed pomidor and put it in the shopping cart
-Client Pawel Zielinski grabbed jack daniels and put it in the shopping cart
-Client Korneliusz Wysocki grabbed sok rzepakowy and put it in the shopping cart
-Client Korneliusz Wysocki has ended shopping, now he's going to checkout
-Client Ignacy Stepien grabbed ballantines and put it in the shopping cart
-Client Ignacy Stepien has ended shopping, now he's going to checkout
-Client Dobromil Walczak grabbed bimber and put it in the shopping cart
-Client Krzysztof Szymczak grabbed sok brzoskwiniowy and put it in the shopping cart
-Client Ludwik Szymczak grabbed spirytus and put it in the shopping cart
-Client Bruno Szewczyk grabbed ballantines and put it in the shopping cart
-Client Kacper Zalewski grabbed kielbasa and put it in the shopping cart
-Client Ariel Lewandowski is waiting for warehouseman, to getprds from magazine
-Client Krzysztof Pawlak grabbed dobry sok and put it in the shopping cart
-Client Jaroslaw Szymczak grabbed jablko and put it in the shopping cart
-Client Cezary Kolodziej grabbed banan prosty and put it in the shopping cart
-Client Krzysztof Szymczak grabbed spirytus and put it in the shopping cart
-Client Pawel Zielinski grabbed sok pomaranczowy and put it in the shopping cart
-Client Ludwik Szymczak grabbed cytryna and put it in the shopping cart
-Client Ludwik Szymczak has ended shopping, now he's going to checkout
-Client Bruno Szewczyk grabbed sok jablkowy and put it in the shopping cart
-Client Czeslaw Jaworski grabbed lopatka and put it in the shopping cart
-Client Korneliusz Jasinski grabbed lodoherbata and put it in the shopping cart
-Client Krzysztof Szymczak grabbed watrobka and put it in the shopping cart
-Client Krzysztof Szymczak has ended shopping, now he's going to checkout
-Client Franciszek Stepien grabbed sok and put it in the shopping cart
-Client Franciszek Stepien grabbed bimber and put it in the shopping cart
-Client Hubert Nowak grabbed sok rzepakowy and put it in the shopping cart
-Client Hubert Wisniewski grabbed sok pomaranczowy and put it in the shopping cart
-Client Kewin Zawadzki grabbed jack daniels and put it in the shopping cart
-Client Korneliusz Baranowski grabbed jack daniels red and put it in the shopping cart
-Client Alex Zawadzki grabbed szynka and put it in the shopping cart
-Client Korneliusz Cieslak grabbed dobry sok and put it in the shopping cart
-Client Hubert Nowak grabbed sok brzoskwiniowy and put it in the shopping cart
-Client Ignacy Kozlowski grabbed cytryna and put it in the shopping cart
-Client Czeslaw Walczak grabbed sok cebulowy and put it in the shopping cart
-Client Franciszek Stepien grabbed szynka and put it in the shopping cart
-Client Franciszek Stepien has ended shopping, now he's going to checkout
-Client Alex Zawadzki grabbed sok pomidorowy and put it in the shopping cart
-Client Korneliusz Cieslak grabbed sok pomidorowy and put it in the shopping cart
-Client Karol Stepien grabbed sok jablkowy and put it in the shopping cart
-Client Hubert Malinowski grabbed dobry sok and put it in the shopping cart
-Client Korneliusz Baranowski grabbed sok brzoskwiniowy and put it in the shopping cart
-Client Korneliusz Cieslak grabbed jack daniels green and put it in the shopping cart
-Client Korneliusz Cieslak has ended shopping, now he's going to checkout
-Client Hubert Nowak grabbed bimber and put it in the shopping cart
-Client Hubert Nowak has ended shopping, now he's going to checkout
-Client Ignacy Kozlowski grabbed mandarynka and put it in the shopping cart
-Client Karol Stepien grabbed jack daniels green and put it in the shopping cart
-Client Krzysztof Cieslak grabbed mandarynka and put it in the shopping cart
-Client Hubert Wisniewski grabbed porzeczka and put it in the shopping cart
-Client Kewin Zawadzki grabbed sok jablkowy and put it in the shopping cart
-Client Hubert Malinowski grabbed ballantines and put it in the shopping cart
+Client Hubert Jaworski grabbed sok rzepakowy and put it in the shopping cart
+Client Przemyslaw Zalewski grabbed boczek and put it in the shopping cart
+Client Hubert Tomaszewski grabbed noga and put it in the shopping cart
+Client Cezary Wojciechowski grabbed boczek and put it in the shopping cart
+Client Cezary Kozlowski grabbed banan prosty and put it in the shopping cart
+Client Mikolaj Zielinski grabbed spirytus and put it in the shopping cart
+Client Roman Mazur grabbed sok cebulowy and put it in the shopping cart
+Client Hubert Jaworski grabbed sok bmw and put it in the shopping cart
+Client Pawel Kolodziej grabbed sok burakowy and put it in the shopping cart
+Client Przemyslaw Zalewski grabbed sok brzoskwiniowy and put it in the shopping cart
+Client Czeslaw Gorecki grabbed cytryna and put it in the shopping cart
+Client Roman Mazur grabbed jack daniels red and put it in the shopping cart
+Client Przemyslaw Kowalczyk grabbed jablko and put it in the shopping cart
+Client Borys Lewandowski grabbed dobry sok and put it in the shopping cart
+Client Roman Piotrowski grabbed sok cebulowy and put it in the shopping cart
+Client Korneliusz Sawicki grabbed sok multiwitamina and put it in the shopping cart
+Client Damian Szulc grabbed plyn do dezynfekcji and put it in the shopping cart
+Client Hubert Tomaszewski grabbed ogorek and put it in the shopping cart
+Client Cezary Wojciechowski grabbed sok multiwitamina and put it in the shopping cart
+Client Pawel Kolodziej grabbed szynka and put it in the shopping cart
+Client Przemyslaw Zalewski grabbed sok multiwitamina and put it in the shopping cart
+Client Cezary Kozlowski grabbed sok brzoskwiniowy and put it in the shopping cart
+Client Mikolaj Zielinski grabbed kielbasa and put it in the shopping cart
+Client Ignacy Szulc grabbed dobry sok and put it in the shopping cart
+Client Damian Lewandowski grabbed porzeczka and put it in the shopping cart
+Client Przemyslaw Kowalczyk grabbed sok cebulowy and put it in the shopping cart
+Ludwik Zielinski is going to the magazine to look for sok brzoskwiniowy for client Roman Piotrowski
+Client Roman Piotrowski is waiting for warehouseman, to getprds from magazine
+Ludwik Zielinski found sok brzoskwiniowy for the client Roman Piotrowski in magazine
+Ludwik Zielinski gave sok brzoskwiniowy to the client Roman Piotrowski
+Ludwik Zielinski is going to the magazine to look for sok brzoskwiniowy for client Cezary Wojciechowski
+Client Cezary Wojciechowski is waiting for warehouseman, to getprds from magazine
+Client Przemyslaw Zalewski grabbed sok jablkowy and put it in the shopping cart
+Client Cezary Kozlowski grabbed plyn do dezynfekcji and put it in the shopping cart
+Client Damian Lewandowski grabbed sok cebulowy and put it in the shopping cart
+Ariel Szymczak is going to the magazine to look for sok brzoskwiniowy for client Emil Lewandowski
+Client Emil Lewandowski is waiting for warehouseman, to getprds from magazine
+Client Korneliusz Sawicki grabbed banan krzywy and put it in the shopping cart
+Client Hubert Jaworski grabbed sok bananowy and put it in the shopping cart
+Client Cezary Kozlowski grabbed boczek and put it in the shopping cart
+Client Mikolaj Zielinski grabbed ballantines and put it in the shopping cart
+Client Roman Mazur grabbed banan krzywy and put it in the shopping cart
+Client Borys Lewandowski grabbed sok rzepakowy and put it in the shopping cart
+Client Damian Szulc grabbed parownka and put it in the shopping cart
+Client Pawel Kolodziej grabbed sok pomaranczowy and put it in the shopping cart
+Ernest Wojciechowski is going to the magazine to look for sok brzoskwiniowy for client Przemyslaw Zalewski
+Client Przemyslaw Zalewski is waiting for warehouseman, to getprds from magazine
+Client Cezary Kozlowski grabbed jack daniels red and put it in the shopping cart
+Client Cezary Kozlowski has ended shopping, now he's going to checkout
+Client Czeslaw Gorecki grabbed jack daniels green and put it in the shopping cart
+Client Roman Piotrowski grabbed banan prosty and put it in the shopping cart
+Ernest Wojciechowski found sok brzoskwiniowy for the client Przemyslaw Zalewski in magazine
+Client Przemyslaw Zalewski has ended shopping, now he's going to checkout
+Ernest Wojciechowski gave sok brzoskwiniowy to the client Przemyslaw Zalewski
+Client Hubert Tomaszewski grabbed szynka and put it in the shopping cart
+Ernest Wojciechowski is going to the magazine to look for sok brzoskwiniowy for client Ignacy Szulc
+Client Ignacy Szulc is waiting for warehouseman, to getprds from magazine
+Client Damian Lewandowski grabbed pomidor and put it in the shopping cart
+Client Damian Lewandowski has ended shopping, now he's going to checkout
+Client Przemyslaw Kowalczyk grabbed sok jablkowy and put it in the shopping cart
+Ludwik Zielinski found sok brzoskwiniowy for the client Cezary Wojciechowski in magazine
+Ludwik Zielinski gave sok brzoskwiniowy to the client Cezary Wojciechowski
+
+Checkout with id 2 has just opened
+
+Cashier Arkadiusz Mroz on checkout 1 is serving client Przemyslaw Zalewski
+Client Hubert Tomaszewski grabbed jack daniels and put it in the shopping cart
+Client Hubert Tomaszewski has ended shopping, now he's going to checkout
+Ludwik Zielinski is going to the magazine to look for sok cebulowy for client Hubert Jaworski
+Client Hubert Jaworski is waiting for warehouseman, to getprds from magazine
+Client Czeslaw Gorecki grabbed sok burakowy and put it in the shopping cart
+Client Roman Mazur grabbed jim beam and put it in the shopping cart
+Client Roman Mazur has ended shopping, now he's going to checkout
+Client Przemyslaw Kowalczyk grabbed banan and put it in the shopping cart
+Client Przemyslaw Kowalczyk has ended shopping, now he's going to checkout
+Client Ernest Jaworski grabbed jack daniels red and put it in the shopping cart
+Ariel Szymczak found sok brzoskwiniowy for the client Emil Lewandowski in magazine
+Ariel Szymczak gave sok brzoskwiniowy to the client Emil Lewandowski
+
+Cashier Arkadiusz Mroz on checkout 1 is serving client Przemyslaw Zalewski
+
+
+
+Cashier Arkadiusz Mroz on checkout 1 served client Przemyslaw Zalewski
+
+Products:          Price:
+
+boczek ---> 36
+sok brzoskwiniowy ---> 15
+sok multiwitamina ---> 20
+sok jablkowy ---> 12
+sok brzoskwiniowy ---> 15
+Total: 98
+
+Client Przemyslaw Zalewski recived recipe
+
+
+Client Heronim Mazur grabbed mandarynka and put it in the shopping cart
+Client Heronim Mazur grabbed ballantines and put it in the shopping cart
+Client Arkadiusz Zawadzki grabbed sok bananowy and put it in the shopping cart
+Client Arkadiusz Zawadzki grabbed cytryna and put it in the shopping cart
+Client Boleslaw Wysocki grabbed sok brzoskwiniowy and put it in the shopping cart
+Client Jedrzej Sokolowski grabbed kielbasa and put it in the shopping cart
+Client Damian Lewandowski grabbed parownka and put it in the shopping cart
+Client Mikolaj Szymczak grabbed szynka and put it in the shopping cart
+Client Kornel Lewandowski grabbed banan krzywy and put it in the shopping cart
+Client Alek Wlodarczyk grabbed porzeczka and put it in the shopping cart
+Client Arkadiusz Zawadzki grabbed sok jablkowy and put it in the shopping cart
+Client Arkadiusz Zawadzki has ended shopping, now he's going to checkout
+Client Ariel Kolodziej grabbed sok jablkowy and put it in the shopping cart
+Client Roman Szulc grabbed banan prosty and put it in the shopping cart
+Client Borys Wysocki grabbed sok brzoskwiniowy and put it in the shopping cart
+Client Czeslaw Piotrowski grabbed boczek and put it in the shopping cart
+Client Lucjan Tomaszewski grabbed lodoherbata and put it in the shopping cart

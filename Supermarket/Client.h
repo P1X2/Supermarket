@@ -21,7 +21,7 @@ class Client :
     string name, surname;
     vector<string> shopping_list;
     vector<Product> shopping_cart;
-    Address address;
+    
 
     bool recipe;
     bool w8ting = false;
@@ -35,7 +35,7 @@ class Client :
 
 public:
     Client(string name, string surname,int id, vector<string> shopping_list, Address adderss, bool recipe);
-
+    Address address;
     string get_name();
     string get_surname();
     string get_adress();
