@@ -121,7 +121,7 @@ int  Client::serch_product(ProductShelve &shop_shelve)
 void Client::grab_product(map<Product, int>::iterator it)
 {
 
-    shopping_cart.push_back(it->first); // nie tu
+    shopping_cart.push_back(it->first);
     set_activity("shopping");
     cout << *this;
     FileReader writer;
@@ -172,7 +172,6 @@ ostream& operator<<(ostream& os, Client& cl)
     }
     else if (cl.get_activity() == "shopping")
     {
-        //wojtas is sus
         os << "Client " << cl.get_name() << " " << cl.get_surname() << " grabbed " << cl.get_shopping_cart()[cl.get_currently_serched_prd()] << " and put it in the shopping cart" << endl;
     }
     else if (cl.get_activity() == "w8 WHM")

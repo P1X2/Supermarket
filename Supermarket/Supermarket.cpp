@@ -47,14 +47,6 @@ void Supermarket::generate_employees()
 		float money_per_hour = rng_machine.generate_random_number(5, 20);
 		warehousemen.add_warehouseman(name, surname, hours, j + 4, money_per_hour);
 	}
-	for (int j = 1; j <= rng_machine.generate_random_number(1, 50); j++)
-	{
-		string name = rng_machine.random_string_vector_element(file_reader.names);
-		string surname = rng_machine.random_string_vector_element(file_reader.surnames);
-		int hours = rng_machine.generate_random_number(160, 320);
-		float money_per_hour = rng_machine.generate_random_number(500, 1000);
-		security_guards.add_security_guard(name, surname, hours, j + 4, money_per_hour);
-	}
 }
 
 void Supermarket::randomly_generate_client(int percent)
@@ -201,12 +193,12 @@ void Supermarket::do_shopping() //1
 
 }
 
-void Supermarket::go_to_magazine() // 2
+void Supermarket::go_to_magazine()
 {
 	magazine.who_is_looking_for_prd(warehousemen);
 }
 
-void Supermarket::give_prd_to_client() // 3
+void Supermarket::give_prd_to_client()
 {
 	for (vector<Warehouseman>::iterator it = warehousemen.employees.begin(); it != warehousemen.employees.end(); it++)
 		if (it->pocket.size() == 1)
@@ -242,7 +234,7 @@ void Supermarket::give_prd_to_client() // 3
 
 }
 
-void Supermarket::opening_checkouts() //4
+void Supermarket::opening_checkouts() 
 {
 	int clients_checkout_sum = 0, opened_checkouts = 0;
 
@@ -269,7 +261,7 @@ void Supermarket::opening_checkouts() //4
 
 }
 
-void Supermarket::scan_products() // 5
+void Supermarket::scan_products()
 {
 	for (vector<Checkout>::iterator it = checkouts.begin(); it != checkouts.end(); it++)
 	{

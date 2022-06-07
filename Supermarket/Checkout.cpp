@@ -46,7 +46,11 @@ int Checkout::scan_product()
 			cout << *this;
 			FileReader writer;
 			writer.write_checkout_to_simulation_file(*this);
-			Sleep(2000);
+			vector<Product> prod = client_queue[0].get_shopping_cart();
+			Recipe rec(prod);
+			rec.operator<<(cout);
+			writer.write_recipe_to_file(rec);
+			
 			reset_CSCI();
 			return 1;
 		}
@@ -62,7 +66,14 @@ int Checkout::scan_product()
 				cout << *this;
 				FileReader writer;
 				writer.write_checkout_to_simulation_file(*this);
-				Sleep(2000);
+				string name = client_queue[0].get_name();
+				string surname = client_queue[0].get_surname();
+				Address adr = client_queue[0].address;
+				vector<Product> prod = client_queue[0].get_shopping_cart();
+				Invoice inv(name, surname, adr, prod);
+				inv.operator<<(cout);
+				writer.write_invoice_to_file(inv);
+				
 				reset_CSCI();
 				return 1;
 			}
@@ -71,9 +82,9 @@ int Checkout::scan_product()
 	else
 	{
 		int index = current_shopping_cart_index;
-		for (int i = index; i < get_scanning_speed() + index; i++) // impostor wojtaz
+		for (int i = index; i < get_scanning_speed() + index; i++) 
 		{
-			current_cart_profit += current_client_shopping_cart[i].getPrice(); // error
+			current_cart_profit += current_client_shopping_cart[i].getPrice(); 
 			current_shopping_cart_index++;
 		}
 		return 0;
@@ -168,19 +179,6 @@ void Checkout::recipe(Client cl)
 
 void Checkout::invoice(Client cl)
 {
-	if (cl.get_recipe() == true)
-				{
-					vector<Product> prod =cl.get_shopping_cart();
-
-				}
-				else
-				{
-					string name = cl.get_name();
-					string surname = cl.get_surname();
-					Address adr = cl.address;
-					vector<Product> prod = cl.get_shopping_cart();
-					(name, surname, adr, prod);
-				}
 }
 
 void Checkout::update_CCSC()
@@ -202,12 +200,7 @@ ostream& operator<<(ostream& os, Checkout& check)
 {
 	if (check.get_cashier().get_activity() == "done scanning client")
 	{
-		os << endl << endl << endl << "Cashier " << check.get_cashier().get_name() << " " << check.get_cashier().get_surname() << " on checkout " << check.id << " served client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << endl << endl << "Products:          Price:" << endl << endl;
-		for (int i = 0; i != check.client_queue[0].get_shopping_cart().size();i++)
-		{
-			os << check.client_queue[0].get_shopping_cart()[i] << " ---> " << check.client_queue[0].get_shopping_cart()[i].getPrice() << endl;
-		}
-		os << "Total: " << check.current_cart_profit <<endl<<endl;
+		os << endl << endl << endl << "Cashier " << check.get_cashier().get_name() << " " << check.get_cashier().get_surname() << " on checkout " << check.id << " served client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << endl << endl;
 	}
 	else if (check.get_cashier().get_activity() == "scanning client")
 	{
