@@ -31,11 +31,6 @@ class Supermarket
 	void generate_employees();
 
 
-
-public:
-	Supermarket(string products_path,string names_surnames_path, string addresses_path);
-
-	void load_registers();
 	void do_shopping();
 	void go_to_magazine();
 	void give_prd_to_client();
@@ -43,5 +38,10 @@ public:
 	void scan_products();
 	void randomly_generate_client(int percent);
 
+public:
+	Supermarket(string products_path,string names_surnames_path, string addresses_path);
+
+
+	void load_registers();
 	void simulation(int iterations);
 };
