@@ -89,9 +89,12 @@ void Supermarket::generate_client(int number_to_generate)
 		last_client_id++;
 		Client client(name, surname,last_client_id, shopping_list,
 			sa, recipe);
+
 		client.set_activity("Enter");
+		file_reader.write_client_to_simulation_file(client);
 		cout << client;
-		Sleep(100);
+
+		Sleep(300);
 		clients.add_client(client);
 
 	}
@@ -125,7 +128,7 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 
-//          Simulation functions
+//																	 Simulation functions
 // 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -142,7 +145,7 @@ void Supermarket::do_shopping() //1
 	for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
 	{
 
-		if (it->get_is_done() == true) // idzie do kasy // czyste
+		if (it->get_is_done() == true) 
 		{
 			vector<Checkout>::iterator best_checkout;
 			int min_queue = 9999999;
@@ -161,14 +164,14 @@ void Supermarket::do_shopping() //1
 		}
 		if (it->get_is_w8ting() == true)
 		{
-			continue; // czeka na pracownika
+			continue; 
 		}
-		else // szuka prd
+		else 
 		{
 			int flag = it->serch_product(shop_shelve);
 			if (flag == 1)
 			{
-				it->ask_question__is_in_stock(warehousemen); // tutaj !!!!!!!!!!!!!!!!
+				it->ask_question__is_in_stock(warehousemen); 
 			}
 			else if (flag == 0)
 			{
@@ -212,7 +215,7 @@ void Supermarket::give_prd_to_client() // 3
 			{
 				if (it2->get_id() == it->served_client)
 				{
-					if (it->pocket[0].getName() == "") // dorobic prd duch
+					if (it->pocket[0].getName() == "") 
 					{
 						it2->is_w8ting_end();
 						it->empty_pocket();
