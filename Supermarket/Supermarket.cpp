@@ -1,4 +1,8 @@
 #include "Supermarket.h"
+#ifdef _WIN32
+#include <Windows.h>
+#endif
+#include <cstdlib>
 
 #pragma once
 
@@ -85,6 +89,9 @@ void Supermarket::generate_client(int number_to_generate)
 		last_client_id++;
 		Client client(name, surname,last_client_id, shopping_list,
 			sa, recipe);
+		client.set_activity("Enter");
+		cout << client;
+		Sleep(100);
 		clients.add_client(client);
 
 	}
@@ -288,10 +295,10 @@ void Supermarket::simulation(int iterations)
 		opening_checkouts();
 		scan_products();
 
-		int i = rng_machine.generate_random_number(1, 4);
+		int i = rng_machine.generate_random_number(2, 4);
 		for (int w = 0; w != i; w++)
 		{
-			int chance = 15;
+			int chance = rng_machine.generate_random_number(15,30);
 			randomly_generate_client(chance);
 		}
 

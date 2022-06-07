@@ -70,6 +70,7 @@ void Warehouseman::serch_product(int id,string name, string surname, string prod
 
 	set_activity("is going to the magazine");
 	cout << *this;
+	Sleep(1000);
 	set_busy(RNG.generate_random_number(0, 3));
 }
 
@@ -84,11 +85,13 @@ void Warehouseman::add_prd_to_pocket(Product prd)
 	{
 		set_activity("didnt found");
 		cout << *this;
+		Sleep(1000);
 	}
 	else
 	{
 		set_activity("found");
 		cout << *this;
+		Sleep(1000);
 	}
 	pocket.push_back(prd);
 }
@@ -100,11 +103,13 @@ void Warehouseman::empty_pocket()
 	{
 		set_activity("gave product to the client");
 		cout << *this;
+		Sleep(1000);
 	}
 	if (get_activity() == "didnt found")
 	{
 		set_activity("inform there is no more");
 		cout << *this;
+		Sleep(1000);
 	};
     vector<Product>::iterator it;
     it = pocket.begin();

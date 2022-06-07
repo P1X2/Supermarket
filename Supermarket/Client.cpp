@@ -121,7 +121,7 @@ void Client::grab_product(map<Product, int>::iterator it)
     shopping_cart.push_back(it->first); // nie tu
     set_activity("shopping");
     cout << *this;
-    //Sleep(1000);
+    Sleep(1000);
 
 }
 
@@ -142,6 +142,7 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
             w8ting = true;
             set_activity("w8 WHM");
             cout << *this;
+            Sleep(1000);
             return;
         }
         else 
@@ -172,6 +173,15 @@ ostream& operator<<(ostream& os, Client& cl)
     {
         os << "Client " << cl.get_name() << " " << cl.get_surname() << " is waiting for warehouseman, to get"<< "prds" << " from magazine" << endl;
     }
+    else if (cl.get_activity() == "Enter")
+    {
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " has entered the supermarket" << endl;
+    }
+    else if (cl.get_activity() == "Leave")
+    {
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " has left the supermarket" << endl;
+    }
+    
 
     return os;
 }

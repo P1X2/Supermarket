@@ -87,6 +87,8 @@ void Checkout::checkout_action()
 		{
 			checkout_cashier.set_activity("recipe");
 			cout << *this;
+			checkout_cashier.set_activity("Leave");
+			cout << *this;
 			Sleep(2000);
 			recipe(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
@@ -96,6 +98,9 @@ void Checkout::checkout_action()
 		{
 			checkout_cashier.set_activity("invoice");
 			cout << *this;
+			checkout_cashier.set_activity("Leave");
+			cout << *this;
+
 			Sleep(2000);
 			invoice(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
