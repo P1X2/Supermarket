@@ -157,7 +157,6 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
             continue;
         }
     }
-
 }
 
 void Client::update_currently_serched_product()
