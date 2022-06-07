@@ -109,6 +109,8 @@
     <ClCompile Include="RegisterBills.cpp">
       <Filter>cpp\bills</Filter>
     </ClCompile>
+    <ClCompile Include="Employees\catch_config.cpp" />
+    <ClCompile Include="test_client.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h">

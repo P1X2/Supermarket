@@ -131,6 +131,8 @@
     <ClCompile Include="Bill.cpp" />
     <ClCompile Include="Checkout.cpp" />
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Employees\catch_config.cpp" />
+    <ClCompile Include="test_client.cpp" />
     <ClCompile Include="Invoice.cpp" />
     <ClCompile Include="ProductShelve.cpp" />
     <ClCompile Include="products\catch_config.cpp" />

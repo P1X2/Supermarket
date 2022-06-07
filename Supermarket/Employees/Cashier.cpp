@@ -9,14 +9,14 @@ Cashier::Cashier(string n, string sur, int h,int iden, float mon) :
 
 void Cashier::set_money_per_hour(float money)
 {
-	//if (money > 40 or money < 15)
-	//	throw SalaryError(15, 40, "cashier", money);
-	 money_per_hour = money; // symka changes
+	if (money > 40 or money < 15)
+		throw SalaryError(15, 40, "cashier", money);
+	 money_per_hour = money;
 }
 
 float Cashier::calculate_salary()
 {
-	return (160 * get_money_per_hour() + (get_hours() - 160) * (get_money_per_hour() + 7));
+	return (160 * get_money_per_hour() + (get_hours() - 160) * (get_money_per_hour() + 5));
 }
 
 float Cashier::get_money_per_hour()
