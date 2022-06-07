@@ -189,7 +189,7 @@ void FileReader::load_addresses(string path)
 void FileReader::write_bills_to_file(RegisterBills& bills)
 {
 	fstream handle;
-	handle.open(bills_file, ios::out);
+	handle.open("bills.txt", ios::out);
 	if (handle.good())
 	{
 		handle << bills;

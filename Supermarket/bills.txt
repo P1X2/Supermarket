@@ -1,0 +1,78 @@
+
+Checkout with id 2 has just opened
+
+Cashier Czeslaw Wlodarczyk on checkout 1 is serving client Korneliusz Wysocki
+
+
+
+Cashier Czeslaw Wlodarczyk on checkout 1 served client Korneliusz Wysocki
+
+Products:          Price:
+
+sok rzepakowy ---> 18
+pomidor ---> 29
+sok rzepakowy ---> 18
+Total: 18
+
+Client Korneliusz Wysocki recived recipe
+
+
+
+Cashier Czeslaw Wlodarczyk on checkout 1 is serving client Ignacy Stepien
+
+Cashier Kewin Bąk on checkout 2 is serving client Ignacy Stepien
+
+Cashier Czeslaw Wlodarczyk on checkout 1 is serving client Ignacy Stepien
+
+
+
+Cashier Czeslaw Wlodarczyk on checkout 1 served client Ignacy Stepien
+
+Products:          Price:
+
+sok burakowy ---> 17
+porzeczka ---> 27
+ballantines ---> 42
+Total: 86
+
+Client Ignacy Stepien recived recipe
+
+
+
+Cashier Kewin Bąk on checkout 2 is serving client Ignacy Stepien
+
+
+
+Cashier Kewin Bąk on checkout 2 served client Ignacy Stepien
+
+Products:          Price:
+
+sok burakowy ---> 17
+porzeczka ---> 27
+ballantines ---> 42
+Total: 86
+
+Client Ignacy Stepien recived recipe
+
+
+
+Cashier Fabian Lewandowski on checkout 1 is serving client Franciszek Stepien
+
+Checkout with id 2 has just opened
+
+Cashier Fabian Lewandowski on checkout 1 is serving client Franciszek Stepien
+
+
+
+Cashier Fabian Lewandowski on checkout 1 served client Franciszek Stepien
+
+Products:          Price:
+
+sok ---> 21
+bimber ---> 46
+szynka ---> 35
+Total: 102
+
+Client Franciszek Stepien recived invoice
+
+

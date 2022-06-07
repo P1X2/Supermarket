@@ -1,5 +1,5 @@
 #pragma once
-
+class FileReader;
 #include "Employee.h"
 #include "..\products\Product.h"
 #include <vector>

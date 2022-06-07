@@ -92,10 +92,15 @@ void Checkout::checkout_action()
 	{
 		if (client_queue[0].get_recipe() == true)
 		{
+			FileReader writer;
 			checkout_cashier.set_activity("recipe");
 			cout << *this;
-			FileReader writer;
 			writer.write_checkout_to_simulation_file(*this);
+
+			checkout_cashier.set_activity("Leave");
+			cout << *this;
+			writer.write_checkout_to_simulation_file(*this);
+
 			Sleep(2000);
 			recipe(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();

@@ -22,7 +22,6 @@
 
 class FileReader
 {
-	string bills_file, simulation_file;
 public:
 
 	vector <string> names;
