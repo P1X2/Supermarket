@@ -46,10 +46,7 @@ int Checkout::scan_product()
 			cout << *this;
 			FileReader writer;
 			writer.write_checkout_to_simulation_file(*this);
-			vector<Product> prod = client_queue[0].get_shopping_cart();
-			Recipe rec(prod);
-			rec.operator<<(cout);
-			writer.write_recipe_to_file(rec);
+			
 			
 			reset_CSCI();
 			return 1;
@@ -66,13 +63,7 @@ int Checkout::scan_product()
 				cout << *this;
 				FileReader writer;
 				writer.write_checkout_to_simulation_file(*this);
-				string name = client_queue[0].get_name();
-				string surname = client_queue[0].get_surname();
-				Address adr = client_queue[0].address;
-				vector<Product> prod = client_queue[0].get_shopping_cart();
-				Invoice inv(name, surname, adr, prod);
-				inv.operator<<(cout);
-				writer.write_invoice_to_file(inv);
+				
 				
 				reset_CSCI();
 				return 1;
@@ -111,11 +102,18 @@ void Checkout::checkout_action()
 			cout << *this;
 			writer.write_checkout_to_simulation_file(*this);
 
+			vector<Product> prod = client_queue[0].get_shopping_cart();
+			Recipe rec(prod);
+			rec.operator<<(cout);
+			writer.write_recipe_to_file(rec);
+
 			checkout_cashier.set_activity("Leave");
 			cout << *this;
 			writer.write_checkout_to_simulation_file(*this);
 
-			Sleep(2000);
+			
+
+			Sleep(2500);
 			recipe(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
 			client_queue.erase(it);
@@ -126,12 +124,23 @@ void Checkout::checkout_action()
 			checkout_cashier.set_activity("invoice");
 			cout << *this;
 			writer.write_checkout_to_simulation_file(*this);
+
+
+			string name = client_queue[0].get_name();
+			string surname = client_queue[0].get_surname();
+			Address adr = client_queue[0].address;
+			vector<Product> prod = client_queue[0].get_shopping_cart();
+			Invoice inv(name, surname, adr, prod);
+			inv.operator<<(cout);
+			writer.write_invoice_to_file(inv);
+
+
 			checkout_cashier.set_activity("Leave");
 			cout << *this;
-			
 			writer.write_checkout_to_simulation_file(*this);
 
-			Sleep(2000);
+
+			Sleep(2500);
 			invoice(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
 			vector<Client>::iterator it2 = client_queue.erase(it);
@@ -168,6 +177,7 @@ void Checkout::assign_cashier()
 	is_open = true;
 	set_cashier_activity("opened");
 	cout << *this;
+	Sleep(1500);
 	FileReader writer;
 	writer.write_checkout_to_simulation_file(*this);
 }
@@ -204,7 +214,7 @@ ostream& operator<<(ostream& os, Checkout& check)
 	}
 	else if (check.get_cashier().get_activity() == "scanning client")
 	{
-		os <<endl<< "Cashier " << check.get_cashier().get_name() << " " << check.get_cashier().get_surname() << " on checkout " << check.id << " is serving client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << endl;
+		os <<endl<< "Cashier " << check.get_cashier().get_name() << " " << check.get_cashier().get_surname() << " on checkout " << check.id << " is serving client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << endl<<endl;
 	}
 	else if (check.get_cashier().get_activity() == "opened")
 	{
@@ -212,11 +222,16 @@ ostream& operator<<(ostream& os, Checkout& check)
 	}
 	else if (check.get_cashier().get_activity() == "recipe")
 	{
-		os << "Client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname()<<" recived recipe" << endl<<endl << endl;
+		os << "Client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname()<<" recived recipe" << endl<<endl ;
 	}
 	else if (check.get_cashier().get_activity() == "invoice")
 	{
-		os << "Client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << " recived invoice" << endl<<endl << endl;
+		os << "Client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << " recived invoice" << endl<<endl;
 	}
+	else if (check.get_cashier().get_activity() == "Leave")
+	{
+		os <<endl<< "Client " << check.client_queue[0].get_name() << " " << check.client_queue[0].get_surname() << " has left the supermarket" << endl << endl << endl;
+	}
+
 	return os;
 }
