@@ -9,7 +9,7 @@
 void Supermarket::load_registers()
 {
 	generate_employees();
-	generate_client(rng_machine.generate_random_number(10,11));
+	generate_client(rng_machine.generate_random_number(10,30));
 }
 
 void Supermarket::generate_employees()
@@ -107,9 +107,9 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 
 	Product Ghost("", "", "", 0, 0);
 	vector<Product>::iterator it = products.begin();
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size())); 
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(2, 3, products.size())); 
 	products.insert(it, Ghost);
-	magazine.set_inventory(products, rng_machine.random_numbers_vector(10, 20, products.size()));
+	magazine.set_inventory(products, rng_machine.random_numbers_vector(3, 5, products.size()));
 	vector<Product>::iterator it2 = products.begin();
 	products.erase(it2);
 }
@@ -248,7 +248,7 @@ void Supermarket::opening_checkouts()
 	}
 
 	float new_checkout_condition = clients_checkout_sum / opened_checkouts;
-	if (new_checkout_condition >= 2)
+	if (new_checkout_condition >= 3)
 	{
 		if (opened_checkouts == checkouts.size())
 		{

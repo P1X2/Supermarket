@@ -73,7 +73,7 @@ void Warehouseman::serch_product(int id,string name, string surname, string prod
 	cout << *this;
 	FileReader writer;
 	writer.write_warehouseman_to_simulation_file(*this);
-	Sleep(1500);
+	Sleep(2500);
 	set_busy(RNG.generate_random_number(0, 3));
 }
 
@@ -90,7 +90,7 @@ void Warehouseman::add_prd_to_pocket(Product prd)
 		cout << *this;
 		FileReader writer;
 		writer.write_warehouseman_to_simulation_file(*this);
-		Sleep(1500);
+		Sleep(2500);
 
 	}
 	else
@@ -99,7 +99,7 @@ void Warehouseman::add_prd_to_pocket(Product prd)
 		cout << *this;
 		FileReader writer;
 		writer.write_warehouseman_to_simulation_file(*this);
-		Sleep(1500);
+		Sleep(2500);
 	}
 	pocket.push_back(prd);
 }
@@ -113,7 +113,7 @@ void Warehouseman::empty_pocket()
 		cout << *this;
 		FileReader writer;
 		writer.write_warehouseman_to_simulation_file(*this);
-		Sleep(2000);
+		Sleep(2500);
 	}
 	if (get_activity() == "didnt found")
 	{
@@ -121,7 +121,7 @@ void Warehouseman::empty_pocket()
 		cout << *this;
 		FileReader writer;
 		writer.write_warehouseman_to_simulation_file(*this);
-		Sleep(2000);
+		Sleep(2500);
 	};
     vector<Product>::iterator it;
     it = pocket.begin();

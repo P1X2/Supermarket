@@ -1,28 +1,41 @@
-// Supermarket.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <map>
-#include"Employees/Cashier.h"
-#include"products/Meat.h"
-#include "products/Juice.h"
 #include "Supermarket.h"
-#include "RNG.h"
-#include "Employees/RegisterWarehouseman.h"
-#include "ProductShelve.h"
-#include "Invoice.h"
-#include "Recipe.h"
-#include "RegisterBills.h"
+#include <sstream>
 
 
 using namespace std;
-int main()
+int main(int argc, char* argv[])
 {
+    if (argc != 5)
+    {
+        throw exception("invaild number of arguments");
+    }
+    string products_path, names_path, addresses_path;
+    int iterations;
+    stringstream stream;
 
+    stream << argv[1];
+    stream >> products_path;
+    stream.clear();
 
+    stream << argv[2];
+    stream >> names_path;
+    stream.clear();
 
-    Supermarket sprm("products.txt", "names.txt", "addresses.txt");
+    stream << argv[3];
+    stream >> addresses_path;
+    stream.clear();
+
+    stream << argv[4];
+    stream >> iterations;
+    stream.clear();
+
+    Supermarket sprm(products_path, names_path, addresses_path);
     sprm.load_registers();
-    sprm.simulation(30);
+    sprm.simulation(iterations);
+
+
+
 }
 

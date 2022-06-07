@@ -16,7 +16,6 @@ void Client::check_if_done()
         writer.write_client_to_simulation_file(*this);
         Sleep(2000);
         is_done = true;
-        set_activity("in queue");
     }
 }
 
@@ -126,7 +125,7 @@ void Client::grab_product(map<Product, int>::iterator it)
     cout << *this;
     FileReader writer;
     writer.write_client_to_simulation_file(*this);
-    Sleep(1000);
+    Sleep(1200);
 
 }
 
@@ -149,7 +148,7 @@ void Client::ask_question__is_in_stock(RegisterWarehouseman &registerWHM)
             cout << *this;
             FileReader writer;
             writer.write_client_to_simulation_file(*this);
-            Sleep(1000);
+            Sleep(1200);
             return;
         }
         else 
@@ -176,7 +175,7 @@ ostream& operator<<(ostream& os, Client& cl)
     }
     else if (cl.get_activity() == "w8 WHM")
     {
-        os << "Client " << cl.get_name() << " " << cl.get_surname() << " is waiting for warehouseman, to get"<< "prds" << " from magazine" << endl;
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " is waiting for warehouseman, to get "<< cl.get_shopping_list()[cl.get_currently_serched_prd()] << endl;
     }
     else if (cl.get_activity() == "Enter")
     {

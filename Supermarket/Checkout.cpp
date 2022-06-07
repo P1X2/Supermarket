@@ -32,6 +32,7 @@ int Checkout::scan_product()
 {
 	set_cashier_activity("scanning client");
 	cout << *this;
+	Sleep(2000);
 	FileReader writer;
 	writer.write_checkout_to_simulation_file(*this);
 	int prd_left_to_scan = (current_client_shopping_cart.size()) - (current_shopping_cart_index );
@@ -113,7 +114,7 @@ void Checkout::checkout_action()
 
 			
 
-			Sleep(2500);
+			Sleep(4500);
 			recipe(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
 			client_queue.erase(it);
@@ -140,7 +141,7 @@ void Checkout::checkout_action()
 			writer.write_checkout_to_simulation_file(*this);
 
 
-			Sleep(2500);
+			Sleep(4500);
 			invoice(client_queue[0]);
 			vector<Client>::iterator it = client_queue.begin();
 			vector<Client>::iterator it2 = client_queue.erase(it);
@@ -177,7 +178,7 @@ void Checkout::assign_cashier()
 	is_open = true;
 	set_cashier_activity("opened");
 	cout << *this;
-	Sleep(1500);
+	Sleep(2500);
 	FileReader writer;
 	writer.write_checkout_to_simulation_file(*this);
 }
