@@ -41,6 +41,7 @@ public:
     string get_adress();
     bool get_is_done();
     vector<Product> get_shopping_cart();
+    vector<string> get_shopping_list();
     bool get_recipe();
     bool get_is_w8ting();
     void is_w8ting_end();

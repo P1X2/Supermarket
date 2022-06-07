@@ -49,6 +49,11 @@ vector<Product> Client::get_shopping_cart()
     return shopping_cart;
 }
 
+vector<string> Client::get_shopping_list()
+{
+    return shopping_list;
+}
+
 bool Client::get_recipe()
 {
     return recipe;
@@ -165,7 +170,7 @@ ostream& operator<<(ostream& os, Client& cl)
     }
     else if (cl.get_activity() == "w8 WHM")
     {
-        os << "Client " << cl.get_name() << " " << cl.get_surname() << " is waiting for warehouseman, to get"<<cl.get_shopping_cart()[cl.get_currently_serched_prd()].getName() << " from magazine" << endl;
+        os << "Client " << cl.get_name() << " " << cl.get_surname() << " is waiting for warehouseman, to get"<< "prds" << " from magazine" << endl;
     }
 
     return os;

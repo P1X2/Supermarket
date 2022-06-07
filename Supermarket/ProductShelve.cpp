@@ -70,6 +70,14 @@ Product ProductShelve::search_prd(string prd_name)
 
 void ProductShelve::update_inventory(Product prd)
 {
-	inventory[prd] -= 1;
+	if (inventory[prd] == 0)
+	{
+		return;
+	}
+	else
+	{
+		inventory[prd] -= 1;
+	}
+
 }
 

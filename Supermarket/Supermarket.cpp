@@ -5,7 +5,7 @@
 void Supermarket::load_registers()
 {
 	generate_employees();
-	generate_client(rng_machine.generate_random_number(2,4));
+	generate_client(rng_machine.generate_random_number(10,11));
 }
 
 void Supermarket::generate_employees()
@@ -74,7 +74,7 @@ void Supermarket::generate_client(int number_to_generate)
 		shopping_list.clear();
 		name = rng_machine.random_string_vector_element(file_reader.names);
 		surname = rng_machine.random_string_vector_element(file_reader.surnames);
-		int shop_cart_len = rng_machine.generate_random_number(3, 20);
+		int shop_cart_len = rng_machine.generate_random_number(3, 5);
 		for (int k = 1; k <= shop_cart_len; k++)
 		{
 			string product = products[rng_machine.generate_random_number(0, products.size() - 1)].getName();
@@ -105,9 +105,9 @@ Supermarket::Supermarket(string products_path, string names_surnames_path, strin
 
 	Product Ghost("", "", "", 0, 0);
 	vector<Product>::iterator it = products.begin();
-	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(0, 1, products.size())); 
+	shop_shelve.set_inventory(products, rng_machine.random_numbers_vector(2, 4, products.size())); 
 	products.insert(it, Ghost);
-	magazine.set_inventory(products, rng_machine.random_numbers_vector(1, 2, products.size()));
+	magazine.set_inventory(products, rng_machine.random_numbers_vector(10, 20, products.size()));
 	vector<Product>::iterator it2 = products.begin();
 	products.erase(it2);
 }
@@ -135,7 +135,7 @@ void Supermarket::do_shopping() //1
 	for (vector<Client>::iterator it = clients.clients.begin(); it != clients.clients.end(); it++)
 	{
 
-		if (it->get_is_done() == true) // idzie do kasy
+		if (it->get_is_done() == true) // idzie do kasy // czyste
 		{
 			vector<Checkout>::iterator best_checkout;
 			int min_queue = 9999999;
@@ -161,10 +161,11 @@ void Supermarket::do_shopping() //1
 			int flag = it->serch_product(shop_shelve);
 			if (flag == 1)
 			{
-				it->ask_question__is_in_stock(warehousemen);
+				it->ask_question__is_in_stock(warehousemen); // tutaj !!!!!!!!!!!!!!!!
 			}
-			if (flag == 0)
+			else if (flag == 0)
 			{
+
 			}
 			else
 			{
@@ -207,7 +208,6 @@ void Supermarket::give_prd_to_client() // 3
 					if (it->pocket[0].getName() == "") // dorobic prd duch
 					{
 						it2->is_w8ting_end();
-						it2->update_currently_serched_product();
 						it->empty_pocket();
 						break;
 					}
@@ -215,7 +215,6 @@ void Supermarket::give_prd_to_client() // 3
 					{
 						it2->grab_product_from_emplyee(it->pocket[0]);
 						it2->is_w8ting_end();
-						it2->update_currently_serched_product();
 						it->empty_pocket();
 						break;
 					}
